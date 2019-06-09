@@ -4,7 +4,13 @@ body {
 
 .App {
   text-align: center;
-  margin: 1em;
-  background-color: white;
 }
 
+.Title {
+    display: inline-block;
+    margin: 1em;
+    padding: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: white;
+}

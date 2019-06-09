@@ -4,7 +4,7 @@ import './App.css';
 function App() {
     return (
         <div className="App">
-            <div>React Turn Based RPG</div>
+            <div className="Title">React Turn Based RPG</div>
         </div>
     );
 }
