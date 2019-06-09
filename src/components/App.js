@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import TitleScreen from './TitleScreen';
 
 function App() {
     return (
         <div className="App">
-            <div className="Title">React Turn Based RPG</div>
+            <TitleScreen />
         </div>
     );
 }
