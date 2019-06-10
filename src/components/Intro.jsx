@@ -6,7 +6,31 @@ class Intro extends React.Component {
         return (
             <div className="intro-container">
                 <div className="intro">
-                    This is where introduction will appear.
+                    <div>
+                        This is where introduction will appear.
+                    </div>
+                    <div>
+                        ...
+                    </div>
+                    <div>
+                        ...
+                    </div>
+                    <div>
+                        ...
+                    </div>
+                    <div>
+                        ...
+                    </div>
+                    <div>
+                        ...
+                    </div>
+                    <div>
+                        ...
+                    </div>
+                    <div>
+                        ...
+                    </div>
+                    <button className="intro-next">Next</button>
                 </div>
             </div>
         );

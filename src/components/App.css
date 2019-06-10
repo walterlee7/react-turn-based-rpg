@@ -22,7 +22,7 @@ body {
     margin-top: 5em;
 }
 
-.start-button {
+.start-button, .intro-next {
     font-size: 20px;
     padding: 1em;
     margin-top: 4em;
@@ -32,7 +32,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
-.start-button:focus {
+.start-button:focus, .intro-next:focus {
     background-color: black;
     color: white;
     outline: 0;
@@ -45,4 +45,9 @@ body {
 .intro {
     background-color: lightblue;
     display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
