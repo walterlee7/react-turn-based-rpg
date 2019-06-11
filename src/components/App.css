@@ -65,7 +65,20 @@ body {
     background-color: rgb(15, 15, 46);
 }
 
-.intro, .game {
+.intro {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+}
+
+.game {
     background-color: lightblue;
     display: inline-block;
     margin: 0.5em;
@@ -78,7 +91,7 @@ body {
 }
 
 .instructions-container {
-    background-color: lightblue;
+    background-color: rgb(37, 90, 189);
     display: inline-block;
     margin: 0.5em;
     margin-top: 2em;
@@ -90,7 +103,7 @@ body {
 }
 
 .instruction-text {
-    background-color: lightblue;
+    background-color: rgb(189, 221, 231);
     display: inline-block;
     margin: 0.5em;
     margin-top: 1em;

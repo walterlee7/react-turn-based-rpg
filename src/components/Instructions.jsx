@@ -17,19 +17,19 @@ class Instructions extends React.Component {
                         <div className="instruction-text">
                             <div>
                                 This game does not have a save feature or checkpoints.
-                        </div>
+                            </div>
                             <br />
                             <div>
                                 This game only has one difficuly setting: Just Don't Die!
-                        </div>
+                            </div>
                             <br />
                             <div>
                                 If your HP goes to zero, the game ends.
-                        </div>
+                            </div>
                             <br />
                             <div>
                                 I may add checkpoints in the future, but no promises.
-                        </div>
+                            </div>
                             <button onClick={() => this.goBack()} className="titlescreen-back">Back</button>
                         </div>
                     </div>
