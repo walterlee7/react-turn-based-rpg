@@ -18,11 +18,23 @@ body {
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
+.instruction-title {
+    display: inline-block;
+    margin: 1em;
+    margin-top: 2em;
+    padding: 1em;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+}
+
 .start-game {
     margin-top: 5em;
 }
 
-.start-button, .intro-next {
+.start-button, .intro-next, #instruction-button, .titlescreen-back {
     font-size: 20px;
     padding: 1em;
     margin-top: 4em;
@@ -38,12 +50,12 @@ body {
     outline: 0;
 }
 
-.intro-container {
+.intro-container, #instructions {
     margin-top: 3em;
     background-color: blue;
 }
 
-.intro {
+.intro, .instruction-text {
     background-color: lightblue;
     display: inline-block;
     margin: 0.5em;

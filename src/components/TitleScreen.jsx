@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Intro from './Intro';
+import Instructions from './Instructions';
 
 class TitleScreen extends React.Component {
     constructor(props) {
@@ -19,6 +20,14 @@ class TitleScreen extends React.Component {
         })
     }
 
+    displayInstructions() {
+        ReactDOM.render(<Instructions />, document.getElementById('intro-div'));
+
+        this.setState({
+            display: 'none'
+        })
+    }
+
     render() {
         return (
             <div id="title-screen" >
@@ -26,6 +35,11 @@ class TitleScreen extends React.Component {
                 <div style={{ display: this.state.display }} id="start-game">
                     <button onClick={() => this.startGame()} className="start-button">
                         Start Game
+                    </button>
+                </div>
+                <div style={{ display: this.state.display }} id="instruction-container">
+                    <button onClick={() => this.displayInstructions()} id="instruction-button">
+                        Instructions
                     </button>
                 </div>
                 <div id='intro-div' />
