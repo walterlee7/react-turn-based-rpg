@@ -20,11 +20,15 @@ class Instructions extends React.Component {
                             </div>
                             <br />
                             <div>
-                                This game only has one difficuly setting: Just Don't Die!
+                                The game difficulty is set to "Don't Die".
                             </div>
                             <br />
                             <div>
                                 If your HP goes to zero, the game ends.
+                            </div>
+                            <br />
+                            <div>
+                                Everything else will be left up to the player to figure out.
                             </div>
                             <br />
                             <div>
