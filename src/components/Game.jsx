@@ -4,10 +4,10 @@ class Game extends React.Component {
 
     render() {
         return (
-            <div className="intro-container">
-                <div className="intro">
+            <div className="game-container">
+                <div className="game">
                     <div>
-                        This is where introduction will appear.
+                        This is where the Game will appear.
                     </div>
                     <div>
                         ...
@@ -30,7 +30,6 @@ class Game extends React.Component {
                     <div>
                         ...
                     </div>
-                    <button className="intro-next">Next</button>
                 </div>
             </div>
         );

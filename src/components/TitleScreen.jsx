@@ -12,7 +12,7 @@ class TitleScreen extends React.Component {
         }
     }
 
-    startGame() {
+    startIntro() {
         ReactDOM.render(<Intro />, document.getElementById('intro-div'));
 
         this.setState({
@@ -31,14 +31,14 @@ class TitleScreen extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div id="title-screen" >
-                    <div style={{ display: this.state.display }} className="title">React Turn Based RPG</div>
-                    <div style={{ display: this.state.display }} id="start-game">
-                        <button onClick={() => this.startGame()} className="start-button">
+                <div style={{ display: this.state.display }} id="title-screen" >
+                    <div className="title">React Turn Based RPG</div>
+                    <div id="start-game">
+                        <button onClick={() => this.startIntro()} className="start-button">
                             Start Game
                     </button>
                     </div>
-                    <div style={{ display: this.state.display }} id="instruction-container">
+                    <div id="instruction-container">
                         <button onClick={() => this.displayInstructions()} id="instruction-button">
                             Instructions
                     </button>
