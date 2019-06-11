@@ -12,7 +12,7 @@ class TitleScreen extends React.Component {
     }
 
     startGame() {
-        ReactDOM.render(<Intro />, document.getElementById('test'));
+        ReactDOM.render(<Intro />, document.getElementById('intro-div'));
 
         this.setState({
             display: 'none'
@@ -28,7 +28,7 @@ class TitleScreen extends React.Component {
                         Start Game
                     </button>
                 </div>
-                <div id='test' />
+                <div id='intro-div' />
             </div>
         );
     }
