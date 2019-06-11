@@ -5,6 +5,8 @@ This will be RPG built with React.
 Component Design:
 
 - Title Screen
+    - Start Game
+    - Instructions
 - Introduction
 
 Future Additions:
