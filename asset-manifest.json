@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-turn-based-rpg/static/css/main.328e25c0.chunk.css",
+    "main.css": "/react-turn-based-rpg/static/css/main.66e6b02f.chunk.css",
     "main.js": "/react-turn-based-rpg/static/js/main.296c9a1d.chunk.js",
     "main.js.map": "/react-turn-based-rpg/static/js/main.296c9a1d.chunk.js.map",
     "runtime~main.js": "/react-turn-based-rpg/static/js/runtime~main.9883d49c.js",
@@ -8,8 +8,8 @@
     "static/js/2.7d012841.chunk.js": "/react-turn-based-rpg/static/js/2.7d012841.chunk.js",
     "static/js/2.7d012841.chunk.js.map": "/react-turn-based-rpg/static/js/2.7d012841.chunk.js.map",
     "index.html": "/react-turn-based-rpg/index.html",
-    "precache-manifest.714359ba6c777ca6544988018481e2fe.js": "/react-turn-based-rpg/precache-manifest.714359ba6c777ca6544988018481e2fe.js",
+    "precache-manifest.781c44cdec06cf25f15aa85a4cb2d2f1.js": "/react-turn-based-rpg/precache-manifest.781c44cdec06cf25f15aa85a4cb2d2f1.js",
     "service-worker.js": "/react-turn-based-rpg/service-worker.js",
-    "static/css/main.328e25c0.chunk.css.map": "/react-turn-based-rpg/static/css/main.328e25c0.chunk.css.map"
+    "static/css/main.66e6b02f.chunk.css.map": "/react-turn-based-rpg/static/css/main.66e6b02f.chunk.css.map"
   }
 }
