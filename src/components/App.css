@@ -61,7 +61,6 @@ body {
 }
 
 .intro-container, #instructions, .game-container {
-    margin-top: 1.5em;
     background-color: rgb(15, 15, 46);
 }
 
