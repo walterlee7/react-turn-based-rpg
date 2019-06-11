@@ -11,6 +11,7 @@ Component Design:
 
 Future Additions:
 
+- Game Container
 - Battle System
 - Menu System
 - JSON
