@@ -9,27 +9,6 @@ class Game extends React.Component {
                     <div>
                         This is where the Game will appear.
                     </div>
-                    <div>
-                        ...
-                    </div>
-                    <div>
-                        ...
-                    </div>
-                    <div>
-                        ...
-                    </div>
-                    <div>
-                        ...
-                    </div>
-                    <div>
-                        ...
-                    </div>
-                    <div>
-                        ...
-                    </div>
-                    <div>
-                        ...
-                    </div>
                 </div>
             </div>
         );

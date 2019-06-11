@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(5, 112, 252);
+    background-color: rgb(15, 72, 146);
 }
 
 .App {
@@ -52,7 +52,7 @@ body {
 
 .intro-container, #instructions, .game-container {
     margin-top: 3em;
-    background-color: blue;
+    background-color: rgb(15, 15, 46);
 }
 
 .intro, .instruction-text, .game {
