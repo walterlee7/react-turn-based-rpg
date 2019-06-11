@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-turn-based-rpg/static/css/main.d31fe9e2.chunk.css",
+    "main.js": "/react-turn-based-rpg/static/js/main.3b274b7f.chunk.js",
+    "main.js.map": "/react-turn-based-rpg/static/js/main.3b274b7f.chunk.js.map",
+    "runtime~main.js": "/react-turn-based-rpg/static/js/runtime~main.9883d49c.js",
+    "runtime~main.js.map": "/react-turn-based-rpg/static/js/runtime~main.9883d49c.js.map",
+    "static/js/2.2df21c95.chunk.js": "/react-turn-based-rpg/static/js/2.2df21c95.chunk.js",
+    "static/js/2.2df21c95.chunk.js.map": "/react-turn-based-rpg/static/js/2.2df21c95.chunk.js.map",
+    "index.html": "/react-turn-based-rpg/index.html",
+    "precache-manifest.753db4effc04a031f727ac6b0de1cab2.js": "/react-turn-based-rpg/precache-manifest.753db4effc04a031f727ac6b0de1cab2.js",
+    "service-worker.js": "/react-turn-based-rpg/service-worker.js",
+    "static/css/main.d31fe9e2.chunk.css.map": "/react-turn-based-rpg/static/css/main.d31fe9e2.chunk.css.map"
+  }
+}
