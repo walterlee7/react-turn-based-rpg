@@ -30,20 +30,23 @@ class TitleScreen extends React.Component {
 
     render() {
         return (
-            <div id="title-screen" >
-                <div style={{ display: this.state.display }} className="title">React Turn Based RPG</div>
-                <div style={{ display: this.state.display }} id="start-game">
-                    <button onClick={() => this.startGame()} className="start-button">
-                        Start Game
+            <React.Fragment>
+                <div id="title-screen" >
+                    <div style={{ display: this.state.display }} className="title">React Turn Based RPG</div>
+                    <div style={{ display: this.state.display }} id="start-game">
+                        <button onClick={() => this.startGame()} className="start-button">
+                            Start Game
                     </button>
-                </div>
-                <div style={{ display: this.state.display }} id="instruction-container">
-                    <button onClick={() => this.displayInstructions()} id="instruction-button">
-                        Instructions
+                    </div>
+                    <div style={{ display: this.state.display }} id="instruction-container">
+                        <button onClick={() => this.displayInstructions()} id="instruction-button">
+                            Instructions
                     </button>
+                    </div>
                 </div>
+
                 <div id='intro-div' />
-            </div>
+            </React.Fragment>
         );
     }
 }
