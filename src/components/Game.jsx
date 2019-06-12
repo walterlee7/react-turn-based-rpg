@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from './assets/clouds.jpg';
 
 class Game extends React.Component {
 
@@ -6,9 +7,7 @@ class Game extends React.Component {
         return (
             <div className="game-container">
                 <div className="main-top">
-                    <div>
-                        This is where the Game will appear.
-                    </div>
+                    <img className="mainImage" src={Image} alt="cloud"></img>
                 </div>
                 <div className="main-middle">
                     <div>
