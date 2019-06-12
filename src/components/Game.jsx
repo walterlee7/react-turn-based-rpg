@@ -5,7 +5,17 @@ class Game extends React.Component {
     render() {
         return (
             <div className="game-container">
-                <div className="game">
+                <div className="main-top">
+                    <div>
+                        This is where the Game will appear.
+                    </div>
+                </div>
+                <div className="main-middle">
+                    <div>
+                        This is where the Game will appear.
+                    </div>
+                </div>
+                <div className="main-bottom">
                     <div>
                         This is where the Game will appear.
                     </div>

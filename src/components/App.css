@@ -77,7 +77,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
-.game {
+.main-top {
     background-color: lightblue;
     display: inline-block;
     margin: 0.5em;
