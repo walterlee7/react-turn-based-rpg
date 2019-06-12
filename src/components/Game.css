@@ -5,28 +5,30 @@
 .main-top {
     background-color: lightblue;
     display: inline-block;
-    margin-top: 1em;
     padding: 0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     font-size: 20px;
-    position: relative;
+}
+
+.mainImage {
+    vertical-align: top;
 }
 
 .main-middle {
     display: flex;
     background-color: rgb(236, 194, 131);
-    margin: 0;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-left: 4em;
+    margin-right: 2em;
     padding: 0.5em;
     font-size: 20px;
 }
 
 .main-bottom {
-    background-color: rgb(55, 39, 197);
+    background-color: rgb(155, 147, 229);
     text-align: center;
-    margin: 0;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
     padding: 0.5em;
     font-size: 20px;
 }
@@ -35,4 +37,5 @@
     border: 1px solid black;
     padding: 2em;
     margin: 0;
+
 }

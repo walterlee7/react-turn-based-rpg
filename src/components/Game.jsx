@@ -8,9 +8,7 @@ class Game extends React.Component {
         return (
             <div className="game-container">
                 <div className="main-top">
-                    <div className="mainImage">
-                        <img src={Image} alt="cloud"></img>
-                    </div>
+                    <img className="mainImage" src={Image} alt="cloud" width={1200}></img>
                 </div>
                 <div className="main-middle">
                     <div className="mainMiddleLeft">
@@ -31,6 +29,7 @@ class Game extends React.Component {
                     </div>
                 </div>
                 <div className="main-bottom">
+                    <img src={Image} width={400} alt="cloud" ></img>
                     <div>
                         This is where the Game will appear.
                     </div>
