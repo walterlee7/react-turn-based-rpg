@@ -1,0 +1,38 @@
+.game-container {
+    background-color: rgb(15, 15, 46);
+}
+
+.main-top {
+    background-color: lightblue;
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0;
+    font-size: 20px;
+    position: relative;
+}
+
+.main-middle {
+    display: flex;
+    background-color: rgb(236, 194, 131);
+    margin: 0;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 0.5em;
+    font-size: 20px;
+}
+
+.main-bottom {
+    background-color: rgb(55, 39, 197);
+    text-align: center;
+    margin: 0;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 0.5em;
+    font-size: 20px;
+}
+
+.mainMiddleRight {
+    border: 1px solid black;
+    padding: 2em;
+    margin: 0;
+}

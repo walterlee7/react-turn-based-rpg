@@ -60,7 +60,7 @@ body {
     outline: 0;
 }
 
-.intro-container, #instructions, .game-container {
+.intro-container, #instructions {
     background-color: rgb(15, 15, 46);
 }
 
@@ -72,22 +72,6 @@ body {
     margin-bottom: 3em;
     border-radius: 10px;
     padding: 1em;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
-}
-
-.mainImage {
-    width: 100%;
-    height: 100%;
-}
-
-.main-top, .main-middle, .main-bottom {
-    background-color: lightblue;
-    margin: 0.5em;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    padding: 0.5em;
     font-size: 20px;
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
