@@ -25,7 +25,7 @@ class Intro extends React.Component {
                 <div style={{ display: this.state.display }} className="intro-container">
                     <div className="intro">
                         <div>
-                            This is where introduction will appear.
+                            This is where the introduction will appear.
                     </div>
                         <div>
                             ...

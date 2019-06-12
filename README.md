@@ -1,6 +1,6 @@
 ## React Turn Based RPG
 
-This will be RPG built with React.
+This will be a turn based RPG built with React.
 
 Component Design:
 
@@ -8,12 +8,20 @@ Component Design:
     - Start Game
     - Instructions
 - Introduction
+- Game Container
 
 Future Additions:
 
-- Game Container
 - Battle System
 - Menu System
+    - Status
+    - Inventory
 - JSON
+- Music
+- Sound
+
+Far Future:
+- Map
+- Shop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
