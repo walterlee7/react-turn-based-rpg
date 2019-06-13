@@ -12,23 +12,27 @@
 }
 
 .mainImage {
+    /* image will fill out div element */
     vertical-align: top;
+    /* these two settings for a responsive image resizing */
+    max-width: 100%;
+    height: auto;
 }
 
 .main-middle {
     display: flex;
-    background-color: rgb(236, 194, 131);
-    margin-left: 4em;
-    margin-right: 2em;
+    background-color: rgb(170, 170, 170);
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     padding: 0.5em;
     font-size: 20px;
 }
 
 .main-bottom {
-    background-color: rgb(155, 147, 229);
+    background-color: rgb(92, 92, 92);
     text-align: center;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     padding: 0.5em;
     font-size: 20px;
 }
@@ -39,3 +43,15 @@
     margin: 0;
 
 }
+
+.main-bottom {
+    text-align: center;
+}
+
+.playerInfo {
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
