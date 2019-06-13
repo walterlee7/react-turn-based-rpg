@@ -8,28 +8,31 @@ class Game extends React.Component {
         return (
             <div className="game-container">
                 <div className="main-top">
-                    <img className="mainImage" src={Image} alt="cloud" width={1150}></img>
+                    <img className="mainImage" src={Image} alt="cloud" width={1100}></img>
                 </div>
                 <div className="main-middle">
                     <div className="mainMiddleLeft">
-                        <div>
+                        <div className="mainTextMiddleLeft">
                             This is where the Game will appear.
                         </div>
-                        <div>
+                        <div className="mainTextMiddleLeft">
+                            This is where the Game will appear.
+                        </div>
+                        <div className="mainTextMiddleLeft">
                             This is where the Game will appear.
                         </div>
                     </div>
                     <div className="mainMiddleRight">
-                        <div>
-                            location
+                        <div className="mainLocationMiddleRight">
+                            House - Front Yard
                         </div>
-                        <button>
+                        <button className="mainMenuMiddleRight">
                             Menu
                         </button>
                     </div>
                 </div>
                 <div className="main-bottom">
-                    <img src={Image} width={250} height={250} alt="cloud" ></img>
+                    <img src={Image} width={200} height={200} alt="cloud" ></img>
                     <div className="playerInfo-container">
                         <div className="playerInfo">
                             Level: 1
