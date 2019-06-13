@@ -22,29 +22,72 @@ class Game extends React.Component {
                             This is where the Game will appear.
                         </div>
                     </div>
-                    <div className="mainMiddleRight">
-                        <div className="mainLocationMiddleRight">
+                </div>
+                <div className="main-bottom">
+                    <div className="mainParty">
+                        <img src={Image} width={200} height={200} alt="cloud" ></img>
+                        <div className="playerInfo-container">
+                            <div className="playerInfo">
+                                Level: 1
+                        </div>
+                            <div className="playerInfo">
+                                HP: 100
+                        </div>
+                            <div className="playerInfo">
+                                SP: 10
+                        </div>
+                        </div>
+                    </div>
+                    <div className="mainParty">
+                        <img src={Image} width={200} height={200} alt="cloud" ></img>
+                        <div className="playerInfo-container">
+                            <div className="playerInfo">
+                                Level: 1
+                        </div>
+                            <div className="playerInfo">
+                                HP: 100
+                        </div>
+                            <div className="playerInfo">
+                                SP: 10
+                        </div>
+                        </div>
+                    </div>
+                    <div className="mainParty">
+                        <img src={Image} width={200} height={200} alt="cloud" ></img>
+                        <div className="playerInfo-container">
+                            <div className="playerInfo">
+                                Level: 1
+                        </div>
+                            <div className="playerInfo">
+                                HP: 100
+                        </div>
+                            <div className="playerInfo">
+                                SP: 10
+                        </div>
+                        </div>
+                    </div>
+                    <div className="mainParty">
+                        <img src={Image} width={200} height={200} alt="cloud" ></img>
+                        <div className="playerInfo-container">
+                            <div className="playerInfo">
+                                Level: 1
+                        </div>
+                            <div className="playerInfo">
+                                HP: 100
+                        </div>
+                            <div className="playerInfo">
+                                SP: 10
+                        </div>
+                        </div>
+                    </div>
+                    <div className="mainMenu-container">
+                        <div className="mainLocation">
                             House - Front Yard
                         </div>
-                        <button className="mainMenuMiddleRight">
+                        <button className="mainMenu">
                             Menu
                         </button>
                     </div>
-                </div>
-                <div className="main-bottom">
-                    <img src={Image} width={200} height={200} alt="cloud" ></img>
-                    <div className="playerInfo-container">
-                        <div className="playerInfo">
-                            Level: 1
-                        </div>
-                        <div className="playerInfo">
-                            HP: 100
-                        </div>
-                        <div className="playerInfo">
-                            SP: 10
-                        </div>
-                    </div>
-
                 </div>
             </div>
         );
