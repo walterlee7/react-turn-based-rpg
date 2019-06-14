@@ -46,72 +46,89 @@ class Game extends React.Component {
                 </div>
                 <div className="main-bottom">
                     <div className="mainParty">
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
+
                         <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lvl: 1
+                            <div className="playerInfoTop">
+                                <div className="playerInfo">
+                                    Lvl: 100
+                                </div>
+                                <div className="playerInfo">
+                                    HP: 999
+                                </div>
+                            </div>
+                            <div className="playerInfoBottom">
+                                <div className="playerInfo">
+                                    SP: 100
+                                </div>
+                                <div className="playerInfo">
+                                    VP: 100
+                                </div>
+                            </div>
                         </div>
-                            <div className="playerInfo">
-                                HP: 100
-                        </div>
-                            <div className="playerInfo">
-                                SP: 100
-                        </div>
-                            <div className="playerInfo">
-                                VP: 100
-                        </div>
-                        </div>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="mainParty">
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
                         <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lvl: 1
+                            <div className="playerInfoTop">
+                                <div className="playerInfo">
+                                    Lvl: 100
+                                </div>
+                                <div className="playerInfo">
+                                    HP: 999
+                                </div>
+                            </div>
+                            <div className="playerInfoBottom">
+                                <div className="playerInfo">
+                                    SP: 100
+                                </div>
+                                <div className="playerInfo">
+                                    VP: 100
+                                </div>
+                            </div>
                         </div>
-                            <div className="playerInfo">
-                                HP: 100
-                        </div>
-                            <div className="playerInfo">
-                                SP: 10
-                        </div>
-                            <div className="playerInfo">
-                                VP: 0
-                        </div>
-                        </div>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="mainParty">
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
                         <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lvl: 1
+                            <div className="playerInfoTop">
+                                <div className="playerInfo">
+                                    Lvl: 100
+                                </div>
+                                <div className="playerInfo">
+                                    HP: 999
+                                </div>
+                            </div>
+                            <div className="playerInfoBottom">
+                                <div className="playerInfo">
+                                    SP: 100
+                                </div>
+                                <div className="playerInfo">
+                                    VP: 100
+                                </div>
+                            </div>
                         </div>
-                            <div className="playerInfo">
-                                HP: 100
-                        </div>
-                            <div className="playerInfo">
-                                SP: 10
-                        </div>
-                            <div className="playerInfo">
-                                VP: 0
-                        </div>
-                        </div>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="mainParty">
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
                         <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lvl: 1
+                            <div className="playerInfoTop">
+                                <div className="playerInfo">
+                                    Lvl: 100
+                                </div>
+                                <div className="playerInfo">
+                                    HP: 999
+                                </div>
+                            </div>
+                            <div className="playerInfoBottom">
+                                <div className="playerInfo">
+                                    SP: 100
+                                </div>
+                                <div className="playerInfo">
+                                    VP: 100
+                                </div>
+                            </div>
                         </div>
-                            <div className="playerInfo">
-                                HP: 100
-                        </div>
-                            <div className="playerInfo">
-                                SP: 10
-                        </div>
-                            <div className="playerInfo">
-                                VP: 0
-                        </div>
-                        </div>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                 </div>
             </div>
