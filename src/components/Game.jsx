@@ -11,7 +11,7 @@ class Game extends React.Component {
                     <div className="mainTopDiv">
                         <img className="mainImage" src={Image} alt="cloud"></img>
                         <div className="mainMenuDiv">
-                            <div>
+                            <div id="mainMenuContainer">
                                 <div className="mainLocation">
                                     Location: House
                                 </div>
@@ -31,16 +31,16 @@ class Game extends React.Component {
                 <div className="main-middle">
                     <div className="mainMiddleLeft">
                         <div className="mainTextMiddleLeft">
-                            This is where the Game will appear.
+                            This is where the text will appear.
                         </div>
                         <div className="mainTextMiddleLeft">
-                            This is where the Game will appear.
+                            This is where the text will appear.
                         </div>
                         <div className="mainTextMiddleLeft">
-                            This is where the Game will appear.
+                            This is where the text will appear.
                         </div>
                         <div className="mainTextMiddleLeft">
-                            This is where the Game will appear.
+                            This is where the text will appear.
                         </div>
                     </div>
                 </div>
