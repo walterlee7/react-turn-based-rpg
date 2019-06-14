@@ -16,11 +16,9 @@ class Game extends React.Component {
                                     Location: House
                                 </div>
                                 <br />
-                                <br />
                                 <div className="mainFloor">
                                     Floor: Front Yard
                                 </div>
-                                <br />
                                 <br />
                                 <button className="mainMenuButton">
                                     Main Menu
