@@ -49,13 +49,16 @@ class Game extends React.Component {
                         <img src={Image} width={150} height={150} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Level: 1
+                                Lvl: 1
                         </div>
                             <div className="playerInfo">
                                 HP: 100
                         </div>
                             <div className="playerInfo">
-                                SP: 10
+                                SP: 100
+                        </div>
+                            <div className="playerInfo">
+                                VP: 100
                         </div>
                         </div>
                     </div>
@@ -63,13 +66,16 @@ class Game extends React.Component {
                         <img src={Image} width={150} height={150} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Level: 1
+                                Lvl: 1
                         </div>
                             <div className="playerInfo">
                                 HP: 100
                         </div>
                             <div className="playerInfo">
                                 SP: 10
+                        </div>
+                            <div className="playerInfo">
+                                VP: 0
                         </div>
                         </div>
                     </div>
@@ -77,13 +83,16 @@ class Game extends React.Component {
                         <img src={Image} width={150} height={150} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Level: 1
+                                Lvl: 1
                         </div>
                             <div className="playerInfo">
                                 HP: 100
                         </div>
                             <div className="playerInfo">
                                 SP: 10
+                        </div>
+                            <div className="playerInfo">
+                                VP: 0
                         </div>
                         </div>
                     </div>
@@ -91,13 +100,16 @@ class Game extends React.Component {
                         <img src={Image} width={150} height={150} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Level: 1
+                                Lvl: 1
                         </div>
                             <div className="playerInfo">
                                 HP: 100
                         </div>
                             <div className="playerInfo">
                                 SP: 10
+                        </div>
+                            <div className="playerInfo">
+                                VP: 0
                         </div>
                         </div>
                     </div>

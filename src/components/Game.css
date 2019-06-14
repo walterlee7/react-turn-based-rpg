@@ -12,10 +12,10 @@
 
 .mainTopDiv {
     display: flex;
-    border-left: 40px solid rgb(54, 38, 2);
-    border-right: 40px solid rgb(54, 38, 2);
-    border-top: 2px solid rgb(92, 63, 0);
-    border-bottom: 2px solid rgb(92, 63, 0);
+    border-left: 40px solid black;
+    border-right: 40px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     max-height: 400px;
     height: 100%;
 }
@@ -34,6 +34,7 @@
     margin: 0.5em;
     padding: 0.5em;
     font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 .mainFloor {
@@ -42,6 +43,7 @@
     margin: 0.8em;
     padding: 0.3em;
     font-size: 12px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 .mainMenuButton {
@@ -82,6 +84,7 @@
 
 .main-bottom {
     background-color: rgb(146, 145, 145);
+    border: 2px solid black;
     text-align: center;
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -107,7 +110,7 @@
     padding: 0.5em;
     background-color: white;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 2000px) {
@@ -136,7 +139,7 @@
 
 @media screen and (max-width: 600px) {
     .main-middle, .main-bottom {
-        width: 500px;
+        width: 550px;
         margin: 0 auto 0 auto;
         height: auto;
     }
