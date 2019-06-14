@@ -46,7 +46,7 @@ class Game extends React.Component {
                 </div>
                 <div className="main-bottom">
                     <div className="mainParty">
-                        <img src={Image} width={150} height={150} alt="cloud" ></img>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
                                 Lvl: 1
@@ -63,7 +63,7 @@ class Game extends React.Component {
                         </div>
                     </div>
                     <div className="mainParty">
-                        <img src={Image} width={150} height={150} alt="cloud" ></img>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
                                 Lvl: 1
@@ -80,7 +80,7 @@ class Game extends React.Component {
                         </div>
                     </div>
                     <div className="mainParty">
-                        <img src={Image} width={150} height={150} alt="cloud" ></img>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
                                 Lvl: 1
@@ -97,7 +97,7 @@ class Game extends React.Component {
                         </div>
                     </div>
                     <div className="mainParty">
-                        <img src={Image} width={150} height={150} alt="cloud" ></img>
+                        <img id="playerImage" src={Image} alt="cloud" ></img>
                         <div className="playerInfo-container">
                             <div className="playerInfo">
                                 Lvl: 1

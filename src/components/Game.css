@@ -103,6 +103,11 @@
     display: inline-flex;
 }
 
+#playerImage {
+    width: 20vh;
+    height: 20vh;
+}
+
 .playerInfo {
     border: 1px solid black;
     display: inline-block;
@@ -220,4 +225,28 @@
         height: auto;
         display: inline-block;
     }
+
+    .main-bottom {
+        column-count: 2;
+    }
+
+    .mainParty {
+        border: 0.5px solid black;
+        margin: 0;
+        padding: 0.5em;
+    }
+
+    #playerImage {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .playerInfo {
+        margin: 0.2em;
+        padding: 0.5em;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 1vh;
+    }
+
 }
