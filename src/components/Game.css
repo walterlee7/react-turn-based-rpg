@@ -78,6 +78,7 @@
     background-color: rgb(170, 170, 170);
     margin-left: 0.5em;
     margin-right: 0.5em;
+    border-bottom: 1px solid black;
     padding: 0.5em;
     font-size: 20px;
 }
@@ -108,9 +109,13 @@
     height: 20vh;
 }
 
-.mainParty {
+.party {
     display: inline-flex;
 }
+
+/* .mainParty2, .mainParty3, .mainParty4 {
+    display: none;
+} */
 
 .playerInfo {
     border: 1px solid black;

@@ -45,8 +45,7 @@ class Game extends React.Component {
                     </div>
                 </div>
                 <div className="main-bottom">
-                    <div className="mainParty">
-
+                    <div className="party mainParty1">
                         <div className="playerInfo-container">
                             <div className="playerInfoTop">
                                 <div className="playerInfo">
@@ -67,7 +66,7 @@ class Game extends React.Component {
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
-                    <div className="mainParty">
+                    <div className="party mainParty2">
                         <div className="playerInfo-container">
                             <div className="playerInfoTop">
                                 <div className="playerInfo">
@@ -88,7 +87,7 @@ class Game extends React.Component {
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
-                    <div className="mainParty">
+                    <div className="party mainParty3">
                         <div className="playerInfo-container">
                             <div className="playerInfoTop">
                                 <div className="playerInfo">
@@ -109,7 +108,7 @@ class Game extends React.Component {
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
-                    <div className="mainParty">
+                    <div className="party mainParty4">
                         <div className="playerInfo-container">
                             <div className="playerInfoTop">
                                 <div className="playerInfo">
