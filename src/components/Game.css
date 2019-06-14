@@ -131,7 +131,7 @@
     font-size: 12px;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 4000px) {
     .main-middle, .main-bottom {
         width: 900px;
         margin: 0 auto 0 auto;
@@ -140,26 +140,70 @@
 }
 
 @media screen and (max-width: 992px) {
+    .mainTopDiv {
+        border: 0;
+    }
+
     .main-middle, .main-bottom {
         width: 800px;
         margin: 0 auto 0 auto;
         height: auto;
     }
+
+    .playerInfo {
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 772px) {
+    .main-top {
+        width: 600px;
+        border: 0;
+        margin: 0 auto 0 auto;
+        height: auto;
+    }
+
+    .mainTopDiv {
+        border: 0;
+    }
+
     .main-middle, .main-bottom {
         width: 600px;
         margin: 0 auto 0 auto;
         height: auto;
     }
+
+    .playerInfo {
+        font-size: 7px;
+    }
+
+    #playerImage {
+        width: 15vh;
+        height: 15vh;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    .main-top {
+        width: 500px;
+        border: 0;
+        margin: 0 auto 0 auto;
+        height: auto;
+    }
+
+    .mainTopDiv {
+        border: 0;
+    }
+
     .main-middle, .main-bottom {
         width: 550px;
         margin: 0 auto 0 auto;
         height: auto;
+    }
+
+    #playerImage {
+        width: 5vh;
+        height: 5vh;
     }
 }
 
@@ -247,7 +291,7 @@
 
     .party {
         border: 0.5px solid black;
-        margin: 0.2em;
+        margin: 0.1em;
         padding: 0.5em;
     }
 
