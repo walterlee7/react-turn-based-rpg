@@ -117,6 +117,10 @@
     display: none;
 } */
 
+.playerInfo-container {
+    width: 30%;
+}
+
 .playerInfo {
     border: 1px solid black;
     display: inline-block;
@@ -241,6 +245,12 @@
         column-count: 2;
     }
 
+    .party {
+        border: 0.5px solid black;
+        margin: 0.2em;
+        padding: 0.5em;
+    }
+
     .mainParty {
         border: 0.1px solid black;
         margin: 0;
@@ -248,8 +258,13 @@
     }
 
     #playerImage {
-        width: 12vh;
-        height: 12vh;
+        width: 15vh;
+        height: 15vh;
+        margin: 0.3em;
+    }
+
+    .playerInfo-container {
+        width: 20%;
     }
 
     .playerInfo {

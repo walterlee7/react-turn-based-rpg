@@ -47,85 +47,85 @@ class Game extends React.Component {
                 <div className="main-bottom">
                     <div className="party mainParty1">
                         <div className="playerInfo-container">
-                            <div className="playerInfoTop">
-                                <div className="playerInfo">
-                                    Lvl: 100
+                            {/* <div className="playerInfoTop"> */}
+                            <div className="playerInfo">
+                                Lvl: 100
                                 </div>
-                                <div className="playerInfo">
-                                    HP: 999
+                            <div className="playerInfo">
+                                HP: 999
                                 </div>
-                            </div>
-                            <div className="playerInfoBottom">
-                                <div className="playerInfo">
-                                    SP: 100
+                            {/* </div>
+                            <div className="playerInfoBottom"> */}
+                            <div className="playerInfo">
+                                SP: 100
                                 </div>
-                                <div className="playerInfo">
-                                    VP: 100
+                            <div className="playerInfo">
+                                VP: 100
                                 </div>
-                            </div>
+                            {/* </div> */}
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="party mainParty2">
                         <div className="playerInfo-container">
-                            <div className="playerInfoTop">
-                                <div className="playerInfo">
-                                    Lvl: 100
+                            {/* <div className="playerInfoTop"> */}
+                            <div className="playerInfo">
+                                Lvl: 100
                                 </div>
-                                <div className="playerInfo">
-                                    HP: 999
+                            <div className="playerInfo">
+                                HP: 999
                                 </div>
-                            </div>
-                            <div className="playerInfoBottom">
-                                <div className="playerInfo">
-                                    SP: 100
+                            {/* </div> */}
+                            {/* <div className="playerInfoBottom"> */}
+                            <div className="playerInfo">
+                                SP: 100
                                 </div>
-                                <div className="playerInfo">
-                                    VP: 100
+                            <div className="playerInfo">
+                                VP: 100
                                 </div>
-                            </div>
+                            {/* </div> */}
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="party mainParty3">
                         <div className="playerInfo-container">
-                            <div className="playerInfoTop">
-                                <div className="playerInfo">
-                                    Lvl: 100
+                            {/* <div className="playerInfoTop"> */}
+                            <div className="playerInfo">
+                                Lvl: 100
                                 </div>
-                                <div className="playerInfo">
-                                    HP: 999
+                            <div className="playerInfo">
+                                HP: 999
                                 </div>
-                            </div>
-                            <div className="playerInfoBottom">
-                                <div className="playerInfo">
-                                    SP: 100
+                            {/* </div>
+                            <div className="playerInfoBottom"> */}
+                            <div className="playerInfo">
+                                SP: 100
                                 </div>
-                                <div className="playerInfo">
-                                    VP: 100
+                            <div className="playerInfo">
+                                VP: 100
                                 </div>
-                            </div>
+                            {/* </div> */}
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="party mainParty4">
                         <div className="playerInfo-container">
-                            <div className="playerInfoTop">
-                                <div className="playerInfo">
-                                    Lvl: 100
+                            {/* <div className="playerInfoTop"> */}
+                            <div className="playerInfo">
+                                Lvl: 100
                                 </div>
-                                <div className="playerInfo">
-                                    HP: 999
+                            <div className="playerInfo">
+                                HP: 999
                                 </div>
-                            </div>
-                            <div className="playerInfoBottom">
-                                <div className="playerInfo">
-                                    SP: 100
+                            {/* </div>
+                            <div className="playerInfoBottom"> */}
+                            <div className="playerInfo">
+                                SP: 100
                                 </div>
-                                <div className="playerInfo">
-                                    VP: 100
+                            <div className="playerInfo">
+                                VP: 100
                                 </div>
-                            </div>
+                            {/* </div> */}
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
