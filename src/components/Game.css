@@ -86,8 +86,8 @@
 .mainTextMiddle {
     float: left;
     font-weight: bold;
-    font-size: 14px;
-    padding: 0.2em;
+    font-size: 16px;
+    margin-bottom: 0.3em;
 }
 
 #textButton {
@@ -389,10 +389,6 @@
         display: inline-block;
     }
 
-    br {
-        display: none;
-    }
-
     .mainMenuDiv {
         margin: 0.2em;
         border: 0;
@@ -437,26 +433,40 @@
     }
 
     .main-middle {
-        width: 95%;
-        margin: 0 auto 0 auto;
-        border-left: 0.1px solid rgb(54, 38, 2);
-        border-right: 0.1px solid rgb(54, 38, 2);
-        border-top: 0.5px solid rgb(92, 63, 0);
-        border-bottom: 0.5px solid rgb(92, 63, 0);
-        height: auto;
+        width: 90%;
+        margin: 0;
+        border-left: 0.1px solid rgb(0, 0, 0);
+        border-right: 0.1px solid rgb(0, 0, 0);
+        border-top: 0.5px solid rgb(0, 0, 0);
+        border-bottom: 0.5px solid rgb(0, 0, 0);
+        max-height: 160px;
+        height: 100%;
         display: inline-block;
     }
 
     .main-bottom {
         width: 95%;
-        border-left: 0.1px solid rgb(54, 38, 2);
-        border-right: 0.1px solid rgb(54, 38, 2);
-        border-top: 0.5px solid rgb(92, 63, 0);
-        border-bottom: 0.5px solid rgb(92, 63, 0);
+        border-left: 0.1px solid black;
+        border-right: 0.1px solid black;
+        border-top: 0.5px solid black;
+        border-bottom: 0.5px solid black;
         margin: 0 auto 0 auto;
         height: auto;
         display: inline-block;
         column-count: 2;
+    }
+
+    .mainTextMiddle {
+        float: left;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: none;
+    }
+
+    #textButton {
+        float: right;
+        margin-bottom: 1em;
+        background-color: white;
     }
 
     .party {

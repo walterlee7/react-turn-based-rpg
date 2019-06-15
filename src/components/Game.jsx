@@ -22,10 +22,26 @@ class Game extends React.Component {
     }
 
     changeText() {
-        let lineArr = ['You walk towards a decrepit looking house.', 'Lydia:', 'Lydia:'];
-        let lineBrr = ['????:', 'Gwendolyn, I am never wrong. Do you have the necklace?', 'Good, I am going home…'];
-        let lineCrr = ['Is this really a good idea, Grandma Lydia?', 'Gwen:', 'Gwen:'];
-        let lineDrr = ['', 'Yes, I do.  It’s hard to forget a 5-pound metal chain with a huge cross attached to it.', "Wait, are you not going in with me? Lydia is nowhere to be found…"];
+        let lineArr = [
+            'You walk towards a decrepit looking house.',
+            'Lydia:',
+            'Lydia:',
+        ];
+        let lineBrr = [
+            '????:',
+            'Gwendolyn, I am never wrong. Do you have the necklace?',
+            'Good, I am going home…'
+        ];
+        let lineCrr = [
+            'Is this really a good idea, Grandma Lydia?',
+            'Gwen:',
+            'Gwen:',
+        ];
+        let lineDrr = [
+            '',
+            'Yes, I do. It’s hard to forget a 5kg chain with a huge cross attached to it.',
+            "Wait, are you not going in with me? Lydia is nowhere to be found…",
+        ];
 
         let textIndex = this.state.textNumber;
         let newIndex = textIndex + 1;
