@@ -85,7 +85,13 @@
 
 .mainTextMiddle {
     float: left;
+    font-weight: bold;
     font-size: 14px;
+}
+
+#textButton {
+    float: right;
+    margin-right: 5em;
 }
 
 .main-bottom {

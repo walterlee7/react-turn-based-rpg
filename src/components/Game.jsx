@@ -3,6 +3,16 @@ import './Game.css';
 import Image from './assets/clouds.jpg';
 
 class Game extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            lineA: '',
+            LineB: '',
+            LineC: '',
+            LineD: ''
+        }
+    }
 
     render() {
         return (
@@ -30,20 +40,18 @@ class Game extends React.Component {
                 <div className="main-middle">
                     <div className="mainTextMiddle-container">
                         <div className="mainTextMiddle">
-                            This is where the text will appear.
+                            {this.state.lineA}
                         </div>
                         <br />
                         <div className="mainTextMiddle">
-                            This is where the text will appear.
+                            {this.state.lineB}
                         </div>
                         <br />
                         <div className="mainTextMiddle">
-                            This is where the text will appear.
+                            {this.state.lineC}
                         </div>
                         <br />
-                        <div className="mainTextMiddle">
-                            This is where the text will appear.
-                        </div>
+                        <button id="textButton">Next</button>
                         <br />
                     </div>
                 </div>
