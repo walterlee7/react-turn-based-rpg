@@ -70,18 +70,22 @@
     /* these two settings for a responsive image resizing */
     max-width: 100%;
     height: auto;
-
     width: 700px;
 }
 
 .main-middle {
     vertical-align: top;
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(180, 180, 180);
     margin-left: 0.5em;
     margin-right: 0.5em;
     border-bottom: 1px solid black;
     padding: 0.5em;
     font-size: 20px;
+}
+
+.mainTextMiddle {
+    float: left;
+    font-size: 14px;
 }
 
 .main-bottom {
@@ -92,12 +96,6 @@
     margin-right: 0.5em;
     padding: 0.5em;
     font-size: 20px;
-}
-
-.mainMiddleRight {
-    border: 1px solid black;
-    padding: 2em;
-    margin: 0;
 }
 
 .main-bottom {
@@ -164,10 +162,6 @@
         display: inline-block;
     }
 
-    br {
-        display: none;
-    }
-
     .mainMenuDiv {
         border: 0;
         max-height: 80px;
@@ -219,6 +213,11 @@
         border-bottom: 0.5px solid rgb(92, 63, 0);
         height: auto;
         display: inline-block;
+    }
+
+    .mainTextMiddle {
+        float: left;
+        font-size: 14px;
     }
 
     .main-bottom {
@@ -273,10 +272,6 @@
         display: inline-block;
     }
 
-    br {
-        display: none;
-    }
-
     .mainMenuDiv {
         border: 0;
         max-height: 40px;
@@ -328,6 +323,11 @@
         border-bottom: 0.5px solid rgb(92, 63, 0);
         height: auto;
         display: inline-block;
+    }
+
+    .mainTextMiddle {
+        float: left;
+        font-size: 14px;
     }
 
     .main-bottom {

@@ -28,19 +28,23 @@ class Game extends React.Component {
                     </div>
                 </div>
                 <div className="main-middle">
-                    <div className="mainMiddleLeft">
-                        <div className="mainTextMiddleLeft">
+                    <div className="mainTextMiddle-container">
+                        <div className="mainTextMiddle">
                             This is where the text will appear.
                         </div>
-                        <div className="mainTextMiddleLeft">
+                        <br />
+                        <div className="mainTextMiddle">
                             This is where the text will appear.
                         </div>
-                        <div className="mainTextMiddleLeft">
+                        <br />
+                        <div className="mainTextMiddle">
                             This is where the text will appear.
                         </div>
-                        <div className="mainTextMiddleLeft">
+                        <br />
+                        <div className="mainTextMiddle">
                             This is where the text will appear.
                         </div>
+                        <br />
                     </div>
                 </div>
                 <div className="main-bottom">
