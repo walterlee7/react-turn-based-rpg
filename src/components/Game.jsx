@@ -11,7 +11,25 @@ class Game extends React.Component {
             LineB: '',
             LineC: '',
             LineD: '',
-            textNumber: 0
+            textNumber: 0,
+            location: 'House',
+            floor: 'Front Yard',
+            playerLevelA: 1,
+            playerHitPointsA: 30,
+            playerSpecialPointsA: 10,
+            playerVengancePointsA: 0,
+            playerLevelB: 0,
+            playerHitPointsB: 0,
+            playerSpecialPointsB: 0,
+            playerVengancePointsB: 0,
+            playerLevelC: 0,
+            playerHitPointsC: 0,
+            playerSpecialPointsC: 0,
+            playerVengancePointsC: 0,
+            playerLevelD: 0,
+            playerHitPointsD: 0,
+            playerSpecialPointsD: 0,
+            playerVengancePointsD: 0,
         }
 
         this.changeText = this.changeText.bind(this);
@@ -65,11 +83,11 @@ class Game extends React.Component {
                         <div className="mainMenuDiv">
                             <div id="mainMenuContainer">
                                 <div className="mainLocation">
-                                    Location: House
+                                    Location: {this.state.location}
                                 </div>
                                 <br />
                                 <div className="mainFloor">
-                                    Floor: Front Yard
+                                    Floor: {this.state.floor}
                                 </div>
                                 <br />
                                 <button className="mainMenuButton">
@@ -105,68 +123,68 @@ class Game extends React.Component {
                     <div className="party mainParty1">
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Lv: 100
-                                </div>
+                                Lv: {this.state.playerLevelA}
+                            </div>
                             <div className="playerInfo">
-                                HP: 999
-                                </div>
+                                HP: {this.state.playerHitPointsA}
+                            </div>
                             <div className="playerInfo">
-                                SP: 100
-                                </div>
+                                SP: {this.state.playerSpecialPointsA}
+                            </div>
                             <div className="playerInfo">
-                                VP: 100
-                                </div>
+                                VP: {this.state.playerVengancePointsA}
+                            </div>
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="party mainParty2">
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Lv: 100
-                                </div>
+                                Lv: {this.state.playerLevelB}
+                            </div>
                             <div className="playerInfo">
-                                HP: 999
-                                </div>
+                                HP: {this.state.playerHitPointsB}
+                            </div>
                             <div className="playerInfo">
-                                SP: 100
-                                </div>
+                                SP: {this.state.playerSpecialPointsB}
+                            </div>
                             <div className="playerInfo">
-                                VP: 100
-                                </div>
+                                VP: {this.state.playerVengancePointsB}
+                            </div>
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="party mainParty3">
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Lv: 100
-                                </div>
+                                Lv: {this.state.playerLevelC}
+                            </div>
                             <div className="playerInfo">
-                                HP: 999
-                                </div>
+                                HP: {this.state.playerHitPointsC}
+                            </div>
                             <div className="playerInfo">
-                                SP: 100
-                                </div>
+                                SP: {this.state.playerSpecialPointsC}
+                            </div>
                             <div className="playerInfo">
-                                VP: 100
-                                </div>
+                                VP: {this.state.playerVengancePointsC}
+                            </div>
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
                     <div className="party mainParty4">
                         <div className="playerInfo-container">
                             <div className="playerInfo">
-                                Lv: 100
-                                </div>
+                                Lv: {this.state.playerLevelD}
+                            </div>
                             <div className="playerInfo">
-                                HP: 999
-                                </div>
+                                HP: {this.state.playerHitPointsD}
+                            </div>
                             <div className="playerInfo">
-                                SP: 100
-                                </div>
+                                SP: {this.state.playerSpecialPointsD}
+                            </div>
                             <div className="playerInfo">
-                                VP: 100
-                                </div>
+                                VP: {this.state.playerVengancePointsD}
+                            </div>
                         </div>
                         <img id="playerImage" src={Image} alt="cloud" ></img>
                     </div>
