@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-turn-based-rpg/static/css/main.b0c6a240.chunk.css",
-    "main.js": "/react-turn-based-rpg/static/js/main.096f8095.chunk.js",
-    "main.js.map": "/react-turn-based-rpg/static/js/main.096f8095.chunk.js.map",
+    "main.css": "/react-turn-based-rpg/static/css/main.393110be.chunk.css",
+    "main.js": "/react-turn-based-rpg/static/js/main.9937ff71.chunk.js",
+    "main.js.map": "/react-turn-based-rpg/static/js/main.9937ff71.chunk.js.map",
     "runtime~main.js": "/react-turn-based-rpg/static/js/runtime~main.9883d49c.js",
     "runtime~main.js.map": "/react-turn-based-rpg/static/js/runtime~main.9883d49c.js.map",
     "static/js/2.88d3e961.chunk.js": "/react-turn-based-rpg/static/js/2.88d3e961.chunk.js",
     "static/js/2.88d3e961.chunk.js.map": "/react-turn-based-rpg/static/js/2.88d3e961.chunk.js.map",
     "index.html": "/react-turn-based-rpg/index.html",
-    "precache-manifest.38b3575b22e99b6aae6f8e8bb9ed970b.js": "/react-turn-based-rpg/precache-manifest.38b3575b22e99b6aae6f8e8bb9ed970b.js",
+    "precache-manifest.54c7b1a5420777ed73cd7e850a4082af.js": "/react-turn-based-rpg/precache-manifest.54c7b1a5420777ed73cd7e850a4082af.js",
     "service-worker.js": "/react-turn-based-rpg/service-worker.js",
-    "static/css/main.b0c6a240.chunk.css.map": "/react-turn-based-rpg/static/css/main.b0c6a240.chunk.css.map",
+    "static/css/main.393110be.chunk.css.map": "/react-turn-based-rpg/static/css/main.393110be.chunk.css.map",
     "static/media/clouds.jpg": "/react-turn-based-rpg/static/media/clouds.a7375243.jpg"
   }
 }
