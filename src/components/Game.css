@@ -135,7 +135,7 @@
     margin: 0.2em;
     padding: 0.5em;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 12px;
 }
 
@@ -267,7 +267,7 @@
         margin: 0.2em;
         padding: 0.5em;
         background-color: white;
-        border-radius: 10px;
+        border-radius: 5px;
         font-size: 1.2vh;
     }
 }
@@ -376,7 +376,7 @@
         margin: 0.2em;
         padding: 0.5em;
         background-color: white;
-        border-radius: 10px;
+        border-radius: 5px;
         font-size: 1.2vh;
     }
 }
@@ -456,17 +456,19 @@
         height: auto;
         display: inline-block;
         column-count: 2;
+        padding: 0;
     }
 
     .mainTextMiddle {
         float: left;
         font-weight: bold;
         font-size: 12px;
-        text-align: none;
+        text-align: initial;
     }
 
     #textButton {
         float: right;
+        margin-right: 0;
         margin-bottom: 1em;
         background-color: white;
     }
@@ -482,6 +484,8 @@
         width: 15vh;
         height: 15vh;
         margin: 0.3em;
+        margin-top: 0.4em;
+        margin-left: 0.8em;
     }
 
     .playerInfo-container {
@@ -489,11 +493,15 @@
     }
 
     .playerInfo {
-        margin: 0.2em;
-        padding: 0.5em;
+        margin-left: 1.2em;
+        padding: 0.2em;
         background-color: white;
-        border-radius: 10px;
-        font-size: 1.2vh;
+        border-radius: 5px;
+        font-size: 1.3vh;
+    }
+
+    .party {
+        padding: 0;
     }
 
 }
