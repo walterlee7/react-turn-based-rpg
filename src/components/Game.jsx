@@ -13,6 +13,7 @@ class Game extends React.Component {
             LineD: '',
             textNumber: 0,
             location: 'House',
+            floorNumber: '1st',
             floor: 'Front Yard',
             playerLevelA: 1,
             playerHitPointsA: 30,
@@ -91,7 +92,7 @@ class Game extends React.Component {
                                 </div>
                                 <br />
                                 <div className="mainFloor">
-                                    Floor: {this.state.floor}
+                                    {this.state.floorNumber} Floor: {this.state.floor}
                                 </div>
                                 <br />
                                 <button className="mainMenuButton">

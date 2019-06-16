@@ -84,7 +84,6 @@
 }
 
 .mainTextMiddle {
-    /* float: left; */
     font-weight: bold;
     font-size: 16px;
     margin-top: 0.3em;
@@ -93,7 +92,7 @@
 #textButton {
     float: right;
     margin-right: 5em;
-    font-size: 12px;
+    font-size: 14px;
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
@@ -105,10 +104,6 @@
     margin-right: 0.5em;
     padding: 0.5em;
     font-size: 20px;
-}
-
-.main-bottom {
-    text-align: center;
     display: inline-flex;
 }
 
@@ -119,14 +114,16 @@
 
 .party {
     display: inline-flex;
+
 }
 
-/* .mainParty2, .mainParty3, .mainParty4 {
+.mainParty2, .mainParty3, .mainParty4 {
     display: none;
-} */
+}
 
 .playerInfo-container {
     width: 30%;
+    max-width: 95px;
 }
 
 .playerInfo {
@@ -238,9 +235,6 @@
         margin: 0 auto 0 auto;
         height: auto;
         display: inline-block;
-    }
-
-    .main-bottom {
         column-count: 2;
         padding: 0.3em;
     }
@@ -348,9 +342,6 @@
         margin: 0.1em;
         height: auto;
         display: inline-block;
-    }
-
-    .main-bottom {
         column-count: 2;
         padding: 0.3em;
     }
