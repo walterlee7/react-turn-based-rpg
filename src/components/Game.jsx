@@ -46,12 +46,12 @@ class Game extends React.Component {
             'Lydia:',
         ];
         let lineBrr = [
-            '????:',
+            '????: Is this really a good idea, Grandma Lydia?',
             'Gwendolyn, I am never wrong. Do you have the necklace?',
             'Good, I am going home…'
         ];
         let lineCrr = [
-            'Is this really a good idea, Grandma Lydia?',
+            '',
             'Gwen:',
             'Gwen:',
         ];
