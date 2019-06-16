@@ -388,8 +388,8 @@
 
 @media screen and (max-width: 420px) {
     .mainParty2, .mainParty3, .mainParty4 {
-        display: none;
-    }
+    display: none;
+}
 
     .mainTopDiv {
         width: 100%;

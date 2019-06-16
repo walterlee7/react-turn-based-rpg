@@ -1,6 +1,7 @@
 import React from 'react';
 import './Game.css';
 import Image from './assets/clouds.jpg';
+import { firstLocationImages } from './assets/firstLocation/firstLocation';
 
 class Game extends React.Component {
     constructor(props) {
@@ -80,11 +81,14 @@ class Game extends React.Component {
     }
 
     render() {
+
+        console.log(firstLocationImages);
+
         return (
             <div className="game-container">
                 <div className="main-top">
                     <div className="mainTopDiv">
-                        <img className="mainImage" src={Image} alt="cloud"></img>
+                        <img className="mainImage" src={firstLocationImages[0].url} alt="location"></img>
                         <div className="mainMenuDiv">
                             <div id="mainMenuContainer">
                                 <div className="mainLocation">
