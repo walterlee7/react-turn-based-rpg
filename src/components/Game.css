@@ -75,6 +75,7 @@
 }
 
 .main-middle {
+    background-image: url("assets/text-back.jpg");
     vertical-align: top;
     background-color: rgb(180, 180, 180);
     margin-left: 0.5em;
