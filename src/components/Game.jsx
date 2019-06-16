@@ -44,21 +44,25 @@ class Game extends React.Component {
             'You walk towards a decrepit looking house.',
             'Lydia:',
             'Lydia:',
+            'Gwen:',
         ];
         let lineBrr = [
             '????: Is this really a good idea, Grandma Lydia?',
             'Gwendolyn, I am never wrong. Do you have the necklace?',
-            'Good, I am going home…'
+            'Good, I am going home…',
+            'I hate it when she does that!!!',
         ];
         let lineCrr = [
             '',
             'Gwen:',
             'Gwen:',
+            '(releases a huge sigh)',
         ];
         let lineDrr = [
             '',
-            'Yes, I do. It’s hard to forget a 5kg chain with a huge cross attached to it.',
-            "Wait, are you not going in with me? Lydia is nowhere to be found…",
+            'Yes, I do. It’s hard to forget a heavy chain with a huge cross attached to it.',
+            "Wait, are you not going in with me? ...Lydia is nowhere to be found…",
+            'Okay, I need to figure out what is messed up about this house.',
         ];
 
         let textIndex = this.state.textNumber;
