@@ -107,7 +107,9 @@ class Game extends React.Component {
         return (
             <React.Fragment>
                 <div style={{ display: this.state.displayMenu }} className="main-menu">
-                    <MainMenu data={this.state} close={this.closeMenu} />
+                    <MainMenu
+                        data={this.state}
+                        close={this.closeMenu} />
                 </div>
                 <div style={{ display: this.state.displayGame }} className="game-container">
                     <div className="main-top">

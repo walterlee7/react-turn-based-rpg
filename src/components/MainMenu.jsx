@@ -3,9 +3,17 @@ import './css/MainMenu.css';
 
 
 class MainMenu extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            str: 1,
+        }
+    }
+
 
     closeMenu() {
-        // console.log(this.props.data);
+        console.log(this.props.data);
         console.log('close menu');
         this.props.close();
     }

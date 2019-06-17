@@ -3,7 +3,7 @@ import React from 'react';
 class Instructions extends React.Component {
 
     goBack() {
-        window.location.reload();
+        this.props.close();
     }
 
     render() {

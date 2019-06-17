@@ -8,8 +8,11 @@ class TitleScreen extends React.Component {
         super(props)
 
         this.state = {
-            display: 'initial'
+            displayTitleScreen: 'initial',
+            displayInstructions: 'none',
         }
+
+        this.closeInstructions = this.closeInstructions.bind(this);
     }
 
     startIntro() {
@@ -21,17 +24,25 @@ class TitleScreen extends React.Component {
     }
 
     displayInstructions() {
-        ReactDOM.render(<Instructions />, document.getElementById('intro-div'));
+        // ReactDOM.render(<Instructions />, document.getElementById('intro-div'));
 
         this.setState({
-            display: 'none'
+            displayTitleScreen: 'none',
+            displayInstructions: 'initial'
+        })
+    }
+
+    closeInstructions() {
+        this.setState({
+            displayTitleScreen: 'initial',
+            displayInstructions: 'none'
         })
     }
 
     render() {
         return (
             <React.Fragment>
-                <div style={{ display: this.state.display }} id="title-screen" >
+                <div style={{ display: this.state.displayTitleScreen }} id="title-screen" >
                     <div className="title">React Turn Based RPG</div>
                     <div id="start-game">
                         <button onClick={() => this.startIntro()} className="start-button">
@@ -45,7 +56,9 @@ class TitleScreen extends React.Component {
                     </div>
                 </div>
 
-                <div id='intro-div' />
+                <div style={{ display: this.state.displayInstructions }} id='intro-div'>
+                    <Instructions close={this.closeInstructions} />
+                </div>
             </React.Fragment>
         );
     }
