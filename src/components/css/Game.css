@@ -1,5 +1,7 @@
 .game-container {
     background-color: rgb(15, 15, 46);
+    min-width: 400px;
+    min-height: 600px;
 }
 
 .main-top {
@@ -110,8 +112,8 @@
 }
 
 #playerImage {
-    width: 20vh;
-    height: 20vh;
+    width: 14vh;
+    height: 14vh;
 }
 
 .party {
@@ -177,8 +179,12 @@
 
     .main-bottom {
         width: 2000px;
-        margin: 0 auto 0 auto;
+        display: inline-block;
         height: 300px;
+    }
+
+    .party {
+        margin: 0.5em;
     }
 
     #playerImage {
@@ -187,26 +193,22 @@
     }
 
     .playerInfo-container {
-        width: 30%;
+        width: 20%;
         max-width: 90px;
     }
 }
 
 
 @media screen and (max-width: 2050px) {
-
+  
     .main-top {
-        width: 1200px;
+        width: 1000px;
         margin: 0 auto 0 auto;
         height: 500px;
     }
 
 
     .mainTopDiv {
-        border-left: 130px solid black;
-        border-right: 40px solid black;
-        border-top: 2px solid black;
-        border-bottom: 0.5px solid black;
         max-height: 500px;
         height: 100%;
     }
@@ -225,16 +227,37 @@
         height: 500px;
     }
 
-    .main-middle, .main-bottom {
-        width: 1200px;
+    .main-middle {
+        width: 1000px;
         margin: 0 auto 0 auto;
         height: 300px;
+    }
+
+    .main-bottom {
+        width: 1000px;
+        margin: 0 auto 0 auto;
+        height: 520px;
+    }
+
+    
+    .mainParty2, .mainParty3, .mainParty4 {
+        display: none;
     }
 }
 
 @media screen and (max-width: 992px) {
+
     .mainTopDiv {
-        border: 0;
+        width: 775px;
+    }
+
+    .main-top {
+        width: 775px;
+    }
+
+    .mainImage {
+        height: 500px;
+        width: 600px;
     }
 
     .main-middle, .main-bottom {
@@ -247,14 +270,22 @@
         font-size: 10px;
     }
 
+    
     .mainParty2, .mainParty3, .mainParty4 {
         display: none;
     }
+
 }
 
 @media screen and (max-width: 772px) {
-    .mainParty2, .mainParty3, .mainParty4 {
-        display: none;
+
+    .main-top {
+        width: 600px;
+    }
+
+    .mainImage {
+        height: 400px;
+        width: 600px;
     }
 
     .mainTopDiv {
@@ -307,12 +338,11 @@
     }
 
     .main-middle {
-        width: 90%;
-        margin-top: 1em;
-        border-left: 0.1px solid rgb(54, 38, 2);
-        border-right: 0.1px solid rgb(54, 38, 2);
-        border-top: 0.5px solid rgb(92, 63, 0);
-        border-bottom: 0.5px solid rgb(92, 63, 0);
+        width: 600px;
+        border-left: 0.1px solid rgb(0, 0, 0);
+        border-right: 0.1px solid rgb(0, 0, 0);
+        border-top: 0.5px solid rgb(0, 0, 0);
+        border-bottom: 0.5px solid rgb(0, 0, 0);
         height: auto;
         display: inline-block;
     }
@@ -323,11 +353,11 @@
     }
 
     .main-bottom {
-        width: 90%;
-        border-left: 0.1px solid rgb(54, 38, 2);
-        border-right: 0.1px solid rgb(54, 38, 2);
-        border-top: 0.5px solid rgb(92, 63, 0);
-        border-bottom: 0.5px solid rgb(92, 63, 0);
+        width: 600px;
+        border-left: 0.1px solid rgb(0, 0, 0);
+        border-right: 0.1px solid rgb(0, 0, 0);
+        border-top: 0.5px solid rgb(0, 0, 0);
+        border-bottom: 0.5px solid rgb(0, 0, 0);
         margin: 0 auto 0 auto;
         height: auto;
         display: inline-block;
@@ -344,8 +374,8 @@
     }
 
     #playerImage {
-        width: 15vh;
-        height: 15vh;
+        width: 12vh;
+        height: 12vh;
         margin: 0.3em;
     }
 
@@ -356,22 +386,27 @@
     .playerInfo {
         margin: 0.2em;
         padding: 0.5em;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         border-radius: 5px;
-        font-size: 1.2vh;
+        font-size: 0.9vh;
     }
+
+    .mainParty2, .mainParty3, .mainParty4 {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
-    .mainParty2, .mainParty3, .mainParty4 {
-        display: none;
+    .main-top {
+        height: 340px;
     }
 
     .mainTopDiv {
         width: 100%;
         margin: 0 auto 0 auto;
         border: 0.5px solid black;
-        height: auto;
+        height: 300px;
         display: inline-block;
     }
 
@@ -380,6 +415,12 @@
         max-height: 40px;
         height: 100%;
     }
+
+    .mainImage {
+        height: 300px;
+        width: 400px;
+    }
+
 
     #mainMenuContainer{
         display: flex;
@@ -420,10 +461,6 @@
     .main-middle {
         width: 95%;
         margin-top: 0.1em;
-        border-left: 0.1px solid rgb(54, 38, 2);
-        border-right: 0.1px solid rgb(54, 38, 2);
-        border-top: 0.5px solid rgb(92, 63, 0);
-        border-bottom: 0.5px solid rgb(92, 63, 0);
         height: auto;
         display: inline-block;
     }
@@ -435,10 +472,6 @@
 
     .main-bottom {
         width: 95%;
-        border-left: 0.1px solid rgb(54, 38, 2);
-        border-right: 0.1px solid rgb(54, 38, 2);
-        border-top: 0.5px solid rgb(92, 63, 0);
-        border-bottom: 0.5px solid rgb(92, 63, 0);
         margin: 0.1em;
         height: auto;
         display: inline-block;
@@ -450,12 +483,12 @@
         border: 0.5px solid black;
         margin: 0.1em;
         padding: 0.3em;
-        background-color: rgba(255, 255, 255, 0.534);
+        background-color: rgba(65, 65, 65, 0.548);
     }
 
     #playerImage {
-        width: 17vh;
-        height: 17vh;
+        width: 11vh;
+        height: 11vh;
         margin: 0.3em;
     }
 
@@ -468,35 +501,35 @@
         padding: 0.5em;
         background-color: white;
         border-radius: 5px;
-        font-size: 1.2vh;
+        font-size: 0.7vh;
+    }
+
+    
+    .mainParty2, .mainParty3, .mainParty4 {
+        display: none;
     }
 }
 
 @media screen and (max-width: 420px) {
-    .mainParty2, .mainParty3, .mainParty4 {
-    display: none;
-    }
-
+    
     .main-top {
-        height: 320px;
+        height: 330px;
     }
 
     .mainTopDiv {
         width: 100%;
         margin: 0 auto 0 auto;
         border: 0.5px solid black;
-        height: 320px;
+        height: 330px;
     }
 
     .mainImage {
         max-width: 100%;
-        height: auto;
+        height: 280px;
         width: 400px;
     }
 
     .mainMenuDiv {
-        margin: 0.2em;
-        border: 0;
         max-height: 40px;
         height: 100%;
     }
@@ -540,32 +573,19 @@
     .main-middle {
         width: 90%;
         margin: 0;
+        height: 160px;
         border-left: 0.1px solid rgb(0, 0, 0);
         border-right: 0.1px solid rgb(0, 0, 0);
         border-top: 0.5px solid rgb(0, 0, 0);
         border-bottom: 0.5px solid rgb(0, 0, 0);
-        max-height: 160px;
-        height: 100%;
         display: inline-block;
     }
 
     .mainTextMiddle-container {
-        height: 300px;
+        height: 160px;
     }
 
-    .main-bottom {
-        width: 95%;
-        border-left: 0.1px solid black;
-        border-right: 0.1px solid black;
-        border-top: 0.5px solid black;
-        border-bottom: 0.5px solid black;
-        margin: 0 auto 0 auto;
-        height: auto;
-        display: inline-block;
-        column-count: 2;
-        padding: 0;
-    }
-
+   
     .mainTextMiddle {
         float: left;
         font-weight: bold;
@@ -580,19 +600,34 @@
         background-color: white;
     }
 
+    .main-bottom {
+        width: 95%;
+        margin: 0 auto 0 auto;
+        border-left: 0.1px solid rgb(0, 0, 0);
+        border-right: 0.1px solid rgb(0, 0, 0);
+        border-top: 0.5px solid rgb(0, 0, 0);
+        border-bottom: 0.5px solid rgb(0, 0, 0);
+        height: auto;
+        column-count: 2;
+        padding: 0;
+    }
+
     .party {
         border: 0.5px solid black;
         margin: 0.1em;
         padding: 0.3em;
-        background-color: rgba(255, 255, 255, 0.534);
+        width: 140px;
+        height: 130px;
+        display: inline-flex;
+        background-color: rgba(100, 100, 100, 0.534);
     }
 
     #playerImage {
         width: 15vh;
         height: 15vh;
-        margin: 0.3em;
+        margin-right: 0.1em;
         margin-top: 0.4em;
-        margin-left: 0.8em;
+        margin-left: 0.1em;
     }
 
     .playerInfo-container {
@@ -600,15 +635,15 @@
     }
 
     .playerInfo {
-        margin-left: 1.2em;
-        padding: 0.2em;
+        margin-left: 0.1em;
+        padding: 0.3em;
         background-color: white;
         border-radius: 5px;
-        font-size: 1.3vh;
+        font-size: 1.2vh;
     }
 
-    .party {
-        padding: 0;
+    .mainParty2, .mainParty3, .mainParty4 {
+        display: none;
     }
 
 }
