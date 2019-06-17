@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Intro from './Intro';
 import Instructions from './Instructions';
 
@@ -9,6 +8,7 @@ class TitleScreen extends React.Component {
 
         this.state = {
             displayTitleScreen: 'initial',
+            displayIntro: 'none',
             displayInstructions: 'none',
         }
 
@@ -16,15 +16,14 @@ class TitleScreen extends React.Component {
     }
 
     startIntro() {
-        ReactDOM.render(<Intro />, document.getElementById('intro-div'));
 
         this.setState({
-            display: 'none'
+            displayTitleScreen: 'none',
+            displayIntro: 'initial',
         })
     }
 
     displayInstructions() {
-        // ReactDOM.render(<Instructions />, document.getElementById('intro-div'));
 
         this.setState({
             displayTitleScreen: 'none',
@@ -56,8 +55,12 @@ class TitleScreen extends React.Component {
                     </div>
                 </div>
 
-                <div style={{ display: this.state.displayInstructions }} id='intro-div'>
+                <div style={{ display: this.state.displayInstructions }} id='instruction-div'>
                     <Instructions close={this.closeInstructions} />
+                </div>
+
+                <div style={{ display: this.state.displayIntro }} id="intro-div">
+                    <Intro />
                 </div>
             </React.Fragment>
         );

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Game from './Game';
 
 class Intro extends React.Component {
@@ -7,22 +6,22 @@ class Intro extends React.Component {
         super(props)
 
         this.state = {
-            display: 'initial'
+            displayIntro: 'initial',
+            displayGame: 'none'
         }
     }
 
     startGame() {
-        ReactDOM.render(<Game />, document.getElementById('game-div'));
-
         this.setState({
-            display: 'none'
+            displayIntro: 'none',
+            displayGame: 'initial'
         })
     }
 
     render() {
         return (
             <React.Fragment>
-                <div style={{ display: this.state.display }} className="intro-container">
+                <div style={{ display: this.state.displayIntro }} className="intro-container">
                     <div className="intro">
                         <div>
                             This is where the introduction will appear.
@@ -52,7 +51,9 @@ class Intro extends React.Component {
                     </div>
                 </div>
 
-                <div id="game-div"></div>
+                <div style={{ display: this.state.displayGame }} id="game-div">
+                    <Game />
+                </div>
             </React.Fragment>
 
         );
