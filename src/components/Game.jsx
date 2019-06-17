@@ -1,5 +1,6 @@
 import React from 'react';
-import './Game.css';
+import './css/Game.css';
+import MainMenu from './MainMenu';
 import Image from './assets/clouds.jpg';
 import { firstLocationImages } from './assets/firstLocation/firstLocation';
 
