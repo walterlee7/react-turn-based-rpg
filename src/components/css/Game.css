@@ -5,17 +5,16 @@
 .main-top {
     background-color: rgb(0, 0, 0);
     text-align: center;
-    display: inline-block;
     padding: 0;
     max-width: 100%;
 }
 
 .mainTopDiv {
     display: flex;
-    border-left: 40px solid black;
-    border-right: 40px solid black;
-    border-top: 2px solid black;
-    border-bottom: 0.5px solid black;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     max-height: 400px;
     height: 100%;
 }
@@ -145,38 +144,34 @@
         width: 2000px;
         margin: 0 auto 0 auto;
         height: 600px;
+        display: flex;
     }
 
     .mainTopDiv {
-        display: flex;
-        border-left: 40px solid black;
-        border-right: 40px solid black;
-        border-top: 2px solid black;
-        border-bottom: 0.5px solid black;
-        max-height: 400px;
-        height: 100%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: 600px;
     }
 
-    
     .mainMenuDiv {
-        background-image: url("../assets/mainBottomBack.jpg");
-        border-left: 1px solid rgb(0, 0, 0);
-        background-color: grey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 600px;
     }
 
     .mainImage {
         max-width: 100%;
         height: 600px;
-        width: 1200px;
+        width: 1100px;
     }
 
     .main-middle {
         width: 2000px;
         margin: 0 auto 0 auto;
+        height: 300px;
+    }
+
+    .mainTextMiddle-container {
         height: 300px;
     }
 
@@ -201,25 +196,39 @@
 @media screen and (max-width: 2050px) {
 
     .main-top {
-        width: 900px;
+        width: 1200px;
         margin: 0 auto 0 auto;
-        height: 300px;
+        height: 500px;
+    }
+
+
+    .mainTopDiv {
+        border-left: 130px solid black;
+        border-right: 40px solid black;
+        border-top: 2px solid black;
+        border-bottom: 0.5px solid black;
+        max-height: 500px;
+        height: 100%;
     }
 
     .mainImage {
         max-width: 100%;
+        height: 500px;
+        width: 800px;
+    }
+
+    .mainTextMiddle-container {
         height: 300px;
-        width: 700px;
     }
 
     .mainMenuDiv {
-        height: 300px;
+        height: 500px;
     }
 
     .main-middle, .main-bottom {
-        width: 900px;
+        width: 1200px;
         margin: 0 auto 0 auto;
-        height: auto;
+        height: 300px;
     }
 }
 
@@ -466,14 +475,23 @@
 @media screen and (max-width: 420px) {
     .mainParty2, .mainParty3, .mainParty4 {
     display: none;
-}
+    }
+
+    .main-top {
+        height: 320px;
+    }
 
     .mainTopDiv {
         width: 100%;
         margin: 0 auto 0 auto;
         border: 0.5px solid black;
+        height: 320px;
+    }
+
+    .mainImage {
+        max-width: 100%;
         height: auto;
-        display: inline-block;
+        width: 400px;
     }
 
     .mainMenuDiv {
@@ -529,6 +547,10 @@
         max-height: 160px;
         height: 100%;
         display: inline-block;
+    }
+
+    .mainTextMiddle-container {
+        height: 300px;
     }
 
     .main-bottom {
