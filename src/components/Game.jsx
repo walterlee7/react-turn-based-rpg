@@ -43,7 +43,7 @@ class Game extends React.Component {
         this.closeMenu = this.closeMenu.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.changeText();
     }
 
