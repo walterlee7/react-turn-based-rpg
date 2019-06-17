@@ -20,7 +20,7 @@ class Game extends React.Component {
             location: 'House',
             floorNumber: '1st',
             floor: 'Front Yard',
-            playerLevelA: 10,
+            playerLevelA: 1,
             playerHitPointsA: 30,
             playerSpecialPointsA: 10,
             playerVengancePointsA: 0,
