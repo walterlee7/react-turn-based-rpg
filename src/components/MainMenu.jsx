@@ -7,7 +7,10 @@ class MainMenu extends React.Component {
         super(props)
 
         this.state = {
-            str: 1,
+            playerLevelA: 2,
+            playerHitPointsA: 35,
+            playerSpecialPointsA: 12,
+            playerVengancePointsA: 1,
         }
     }
 
@@ -15,6 +18,7 @@ class MainMenu extends React.Component {
     closeMenu() {
         console.log(this.props.data);
         console.log('close menu');
+        this.props.statUpdate(this.state);
         this.props.close();
     }
 

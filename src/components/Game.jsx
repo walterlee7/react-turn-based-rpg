@@ -41,6 +41,7 @@ class Game extends React.Component {
         this.changeText = this.changeText.bind(this);
         this.openMainMenu = this.openMainMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
+        this.updateStats = this.updateStats.bind(this);
     }
 
     componentDidMount() {
@@ -100,16 +101,23 @@ class Game extends React.Component {
         })
     }
 
+    updateStats(childNumber) {
+        this.setState({
+            playerLevelA: childNumber.playerLevelA,
+            playerHitPointsA: childNumber.playerHitPointsA,
+            playerSpecialPointsA: childNumber.playerSpecialPointsA,
+            playerVengancePointsA: childNumber.playerVengancePointsA
+        })
+    }
+
     render() {
-
-        //console.log(firstLocationImages);
-
         return (
             <React.Fragment>
                 <div style={{ display: this.state.displayMenu }} className="main-menu">
                     <MainMenu
                         data={this.state}
-                        close={this.closeMenu} />
+                        close={this.closeMenu}
+                        statUpdate={this.updateStats} />
                 </div>
                 <div style={{ display: this.state.displayGame }} className="game-container">
                     <div className="main-top">
