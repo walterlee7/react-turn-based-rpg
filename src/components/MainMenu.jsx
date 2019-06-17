@@ -5,7 +5,9 @@ import './css/MainMenu.css';
 class MainMenu extends React.Component {
 
     closeMenu() {
+        // console.log(this.props.data);
         console.log('close menu');
+        this.props.close();
     }
 
     render() {
@@ -14,12 +16,12 @@ class MainMenu extends React.Component {
                 <div className="instructions-container">
                     <button onClick={() => this.closeMenu()} className="titlescreen-back">Close Menu</button>
                     <div className="instruction-title">
-                        Instructions
+                        Main Menu
                     </div>
                     <div>
                         <div className="instruction-text">
                             <div>
-                                This game does not have a save feature or checkpoints.
+                                Sub Menu
                             </div>
                         </div>
                     </div>

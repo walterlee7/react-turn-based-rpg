@@ -4,6 +4,7 @@ import MainMenu from './MainMenu';
 import Image from './assets/clouds.jpg';
 import { firstLocationImages } from './assets/firstLocation/firstLocation';
 
+
 class Game extends React.Component {
     constructor(props) {
         super(props)
@@ -13,6 +14,8 @@ class Game extends React.Component {
             LineB: '',
             LineC: '',
             LineD: '',
+            displayMenu: 'none',
+            displayGame: 'initial',
             textNumber: 0,
             location: 'House',
             floorNumber: '1st',
@@ -36,6 +39,8 @@ class Game extends React.Component {
         }
 
         this.changeText = this.changeText.bind(this);
+        this.openMainMenu = this.openMainMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
 
     componentWillMount() {
@@ -81,125 +86,145 @@ class Game extends React.Component {
 
     }
 
+    openMainMenu() {
+        this.setState({
+            displayMenu: 'initial',
+            displayGame: 'none'
+        })
+    }
+
+    closeMenu() {
+        this.setState({
+            displayMenu: 'none',
+            displayGame: 'initial'
+        })
+    }
+
     render() {
 
-        console.log(firstLocationImages);
+        //console.log(firstLocationImages);
 
         return (
-            <div className="game-container">
-                <div className="main-top">
-                    <div className="mainTopDiv">
-                        <img className="mainImage" src={firstLocationImages[0].url} alt="location"></img>
-                        <div className="mainMenuDiv">
-                            <div id="mainMenuContainer">
-                                <div className="mainLocation">
-                                    Location: {this.state.location}
-                                </div>
-                                <br />
-                                <div className="mainFloor">
-                                    {this.state.floorNumber} Floor: {this.state.floor}
-                                </div>
-                                <br />
-                                <button className="mainMenuButton">
-                                    Main Menu
+            <React.Fragment>
+                <div style={{ display: this.state.displayMenu }} className="main-menu">
+                    <MainMenu data={this.state} close={this.closeMenu} />
+                </div>
+                <div style={{ display: this.state.displayGame }} className="game-container">
+                    <div className="main-top">
+                        <div className="mainTopDiv">
+                            <img className="mainImage" src={firstLocationImages[0].url} alt="location"></img>
+                            <div className="mainMenuDiv">
+                                <div id="mainMenuContainer">
+                                    <div className="mainLocation">
+                                        Location: {this.state.location}
+                                    </div>
+                                    <br />
+                                    <div className="mainFloor">
+                                        {this.state.floorNumber} Floor: {this.state.floor}
+                                    </div>
+                                    <br />
+                                    <button className="mainMenuButton" onClick={this.openMainMenu}>
+                                        Main Menu
                                 </button>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="main-middle">
+                        <div className="mainTextMiddle-container">
+                            <div className="mainTextMiddle">
+                                {this.state.lineA}
+                            </div>
+                            <br />
+                            <div className="mainTextMiddle">
+                                {this.state.lineB}
+                            </div>
+                            <br />
+                            <div className="mainTextMiddle">
+                                {this.state.lineC}
+                            </div>
+                            <br />
+                            <div className="mainTextMiddle">
+                                {this.state.lineD}
+                            </div>
+                            <br />
+                            <button id="textButton" onClick={() => this.changeText()}>Next</button>
+                            <br />
+                        </div>
+                    </div>
+                    <div className="main-bottom">
+                        <div className="party mainParty1">
+                            <div className="playerInfo-container">
+                                <div className="playerInfo">
+                                    Lv: {this.state.playerLevelA}
+                                </div>
+                                <div className="playerInfo">
+                                    HP: {this.state.playerHitPointsA}
+                                </div>
+                                <div className="playerInfo">
+                                    SP: {this.state.playerSpecialPointsA}
+                                </div>
+                                <div className="playerInfo">
+                                    VP: {this.state.playerVengancePointsA}
+                                </div>
+                            </div>
+                            <img id="playerImage" src={Image} alt="cloud" ></img>
+                        </div>
+                        <div className="party mainParty2">
+                            <div className="playerInfo-container">
+                                <div className="playerInfo">
+                                    Lv: {this.state.playerLevelB}
+                                </div>
+                                <div className="playerInfo">
+                                    HP: {this.state.playerHitPointsB}
+                                </div>
+                                <div className="playerInfo">
+                                    SP: {this.state.playerSpecialPointsB}
+                                </div>
+                                <div className="playerInfo">
+                                    VP: {this.state.playerVengancePointsB}
+                                </div>
+                            </div>
+                            <img id="playerImage" src={Image} alt="cloud" ></img>
+                        </div>
+                        <div className="party mainParty3">
+                            <div className="playerInfo-container">
+                                <div className="playerInfo">
+                                    Lv: {this.state.playerLevelC}
+                                </div>
+                                <div className="playerInfo">
+                                    HP: {this.state.playerHitPointsC}
+                                </div>
+                                <div className="playerInfo">
+                                    SP: {this.state.playerSpecialPointsC}
+                                </div>
+                                <div className="playerInfo">
+                                    VP: {this.state.playerVengancePointsC}
+                                </div>
+                            </div>
+                            <img id="playerImage" src={Image} alt="cloud" ></img>
+                        </div>
+                        <div className="party mainParty4">
+                            <div className="playerInfo-container">
+                                <div className="playerInfo">
+                                    Lv: {this.state.playerLevelD}
+                                </div>
+                                <div className="playerInfo">
+                                    HP: {this.state.playerHitPointsD}
+                                </div>
+                                <div className="playerInfo">
+                                    SP: {this.state.playerSpecialPointsD}
+                                </div>
+                                <div className="playerInfo">
+                                    VP: {this.state.playerVengancePointsD}
+                                </div>
+                            </div>
+                            <img id="playerImage" src={Image} alt="cloud" ></img>
                         </div>
                     </div>
                 </div>
-                <div className="main-middle">
-                    <div className="mainTextMiddle-container">
-                        <div className="mainTextMiddle">
-                            {this.state.lineA}
-                        </div>
-                        <br />
-                        <div className="mainTextMiddle">
-                            {this.state.lineB}
-                        </div>
-                        <br />
-                        <div className="mainTextMiddle">
-                            {this.state.lineC}
-                        </div>
-                        <br />
-                        <div className="mainTextMiddle">
-                            {this.state.lineD}
-                        </div>
-                        <br />
-                        <button id="textButton" onClick={() => this.changeText()}>Next</button>
-                        <br />
-                    </div>
-                </div>
-                <div className="main-bottom">
-                    <div className="party mainParty1">
-                        <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lv: {this.state.playerLevelA}
-                            </div>
-                            <div className="playerInfo">
-                                HP: {this.state.playerHitPointsA}
-                            </div>
-                            <div className="playerInfo">
-                                SP: {this.state.playerSpecialPointsA}
-                            </div>
-                            <div className="playerInfo">
-                                VP: {this.state.playerVengancePointsA}
-                            </div>
-                        </div>
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
-                    </div>
-                    <div className="party mainParty2">
-                        <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lv: {this.state.playerLevelB}
-                            </div>
-                            <div className="playerInfo">
-                                HP: {this.state.playerHitPointsB}
-                            </div>
-                            <div className="playerInfo">
-                                SP: {this.state.playerSpecialPointsB}
-                            </div>
-                            <div className="playerInfo">
-                                VP: {this.state.playerVengancePointsB}
-                            </div>
-                        </div>
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
-                    </div>
-                    <div className="party mainParty3">
-                        <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lv: {this.state.playerLevelC}
-                            </div>
-                            <div className="playerInfo">
-                                HP: {this.state.playerHitPointsC}
-                            </div>
-                            <div className="playerInfo">
-                                SP: {this.state.playerSpecialPointsC}
-                            </div>
-                            <div className="playerInfo">
-                                VP: {this.state.playerVengancePointsC}
-                            </div>
-                        </div>
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
-                    </div>
-                    <div className="party mainParty4">
-                        <div className="playerInfo-container">
-                            <div className="playerInfo">
-                                Lv: {this.state.playerLevelD}
-                            </div>
-                            <div className="playerInfo">
-                                HP: {this.state.playerHitPointsD}
-                            </div>
-                            <div className="playerInfo">
-                                SP: {this.state.playerSpecialPointsD}
-                            </div>
-                            <div className="playerInfo">
-                                VP: {this.state.playerVengancePointsD}
-                            </div>
-                        </div>
-                        <img id="playerImage" src={Image} alt="cloud" ></img>
-                    </div>
-                </div>
-            </div>
+            </React.Fragment >
+
         );
     }
 }

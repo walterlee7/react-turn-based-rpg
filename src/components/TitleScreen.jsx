@@ -8,7 +8,7 @@ class TitleScreen extends React.Component {
         super(props)
 
         this.state = {
-            display: 1
+            display: 'initial'
         }
     }
 
