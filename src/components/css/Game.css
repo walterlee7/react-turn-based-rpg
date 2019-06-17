@@ -112,8 +112,8 @@
 }
 
 #playerImage {
-    width: 14vh;
-    height: 14vh;
+    width: 200px;
+    height: 200px;
 }
 
 .party {
@@ -188,8 +188,9 @@
     }
 
     #playerImage {
-        width: 14vh;
-        height: 14vh;
+        margin: 0.1em;
+        width: 15vh;
+        height: 15vh;
     }
 
     .playerInfo-container {
@@ -200,13 +201,12 @@
 
 
 @media screen and (max-width: 2050px) {
-  
+
     .main-top {
         width: 1000px;
         margin: 0 auto 0 auto;
         height: 500px;
     }
-
 
     .mainTopDiv {
         max-height: 500px;
@@ -230,19 +230,37 @@
     .main-middle {
         width: 1000px;
         margin: 0 auto 0 auto;
-        height: 300px;
+        height: 180px;
+    }
+
+    .playerInfo-container {
+        width: 20%;
+        max-width: 40px;
+        padding-top: 0.3em;
+        padding-left: 0.3em;
+    }
+
+    .party {
+        width: 220px;
+    }
+
+    #playerImage {
+        margin-top: 0.6em;
+        margin-bottom: 0.4em;
+        margin-left: 0.1em;
+        width: 160px;
+        height: 160px;
     }
 
     .main-bottom {
         width: 1000px;
         margin: 0 auto 0 auto;
-        height: 520px;
+        height: 240px;
     }
 
-    
-    .mainParty2, .mainParty3, .mainParty4 {
+    /* .mainParty2, .mainParty3, .mainParty4 {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 992px) {
@@ -270,7 +288,10 @@
         font-size: 10px;
     }
 
-    
+    .party {
+        width: 220px;
+    }
+
     .mainParty2, .mainParty3, .mainParty4 {
         display: none;
     }
@@ -504,14 +525,14 @@
         font-size: 0.7vh;
     }
 
-    
+
     .mainParty2, .mainParty3, .mainParty4 {
         display: none;
     }
 }
 
 @media screen and (max-width: 420px) {
-    
+
     .main-top {
         height: 330px;
     }
@@ -585,7 +606,7 @@
         height: 160px;
     }
 
-   
+
     .mainTextMiddle {
         float: left;
         font-weight: bold;
