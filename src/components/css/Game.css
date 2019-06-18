@@ -43,7 +43,7 @@
     border: 1px solid black;
     background-color: white;
     margin: 0.8em;
-    padding: 0.3em;
+    padding: 0.5em;
     font-size: 12px;
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
@@ -106,7 +106,7 @@
     text-align: center;
     margin-left: 0.5em;
     margin-right: 0.5em;
-    padding: 0.5em;
+    padding: 0.3em;
     font-size: 20px;
     display: inline-flex;
 }
@@ -119,10 +119,6 @@
 .party {
     display: inline-flex;
     background-color: rgba(255, 255, 255, 0.137);
-}
-
-.mainParty2, .mainParty3, .mainParty4 {
-    display: none;
 }
 
 .playerInfo-container {
@@ -140,6 +136,9 @@
     font-size: 12px;
 }
 
+.mainParty2, .mainParty3, .mainParty4 {
+    display: none;
+}
 
 @media screen and (max-width: 4000px) {
     .main-top {
@@ -241,15 +240,15 @@
     }
 
     .party {
-        width: 220px;
+        width: 230px;
     }
 
     #playerImage {
         margin-top: 1.2em;
         margin-bottom: 0.4em;
-        margin-left: 0.1em;
-        width: 160px;
-        height: 160px;
+        margin-left: 0.2em;
+        width: 170px;
+        height: 170px;
     }
 
     .main-bottom {
@@ -289,7 +288,7 @@
     }
 
     .party {
-        width: 220px;
+        width: 230px;
     }
 
     .mainParty2, .mainParty3, .mainParty4 {
@@ -341,7 +340,7 @@
         background-color: white;
         margin-top: 0.8em;
         margin-right: 1.2em;
-        padding: 0.4em;
+        padding: 0.5em;
         font-size: 14px;
         max-height: 100px;
         height: 100%;
@@ -462,7 +461,7 @@
         background-color: white;
         margin-top: 0.8em;
         margin-right: 1.2em;
-        padding: 0.4em;
+        padding: 0.5em;
         font-size: 14px;
         max-height: 100px;
         height: 100%;
@@ -574,7 +573,7 @@
         background-color: white;
         margin-top: 0.8em;
         margin-right: 1.2em;
-        padding: 0.4em;
+        padding: 0.5em;
         font-size: 14px;
         max-height: 100px;
         height: 100%;

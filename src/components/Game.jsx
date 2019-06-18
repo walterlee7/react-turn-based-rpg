@@ -167,7 +167,7 @@ class Game extends React.Component {
                         <div className="party mainParty1">
                             <div className="playerInfo-container">
                                 <div className="playerInfo">
-                                    Lv: {this.state.playerLevelA}
+                                    LV: {this.state.playerLevelA}
                                 </div>
                                 <div className="playerInfo">
                                     HP: {this.state.playerHitPointsA}
@@ -184,7 +184,7 @@ class Game extends React.Component {
                         <div className="party mainParty2">
                             <div className="playerInfo-container">
                                 <div className="playerInfo">
-                                    Lv: {this.state.playerLevelB}
+                                    LV: {this.state.playerLevelB}
                                 </div>
                                 <div className="playerInfo">
                                     HP: {this.state.playerHitPointsB}
@@ -201,7 +201,7 @@ class Game extends React.Component {
                         <div className="party mainParty3">
                             <div className="playerInfo-container">
                                 <div className="playerInfo">
-                                    Lv: {this.state.playerLevelC}
+                                    LV: {this.state.playerLevelC}
                                 </div>
                                 <div className="playerInfo">
                                     HP: {this.state.playerHitPointsC}
@@ -218,7 +218,7 @@ class Game extends React.Component {
                         <div className="party mainParty4">
                             <div className="playerInfo-container">
                                 <div className="playerInfo">
-                                    Lv: {this.state.playerLevelD}
+                                    LV: {this.state.playerLevelD}
                                 </div>
                                 <div className="playerInfo">
                                     HP: {this.state.playerHitPointsD}
