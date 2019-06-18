@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './css/MainMenu.css';
+import Map from './subComponents/Map';
 
 
 class MainMenu extends React.Component {
@@ -14,6 +16,14 @@ class MainMenu extends React.Component {
         }
     }
 
+    handleClick(num) {
+        if (num === 0) {
+            ReactDOM.render(<Map />, document.getElementById('subMenu-location'));
+        }
+        else {
+            alert('Sub Menu Error');
+        }
+    }
 
     closeMenu() {
         console.log(this.props.data);
@@ -34,6 +44,9 @@ class MainMenu extends React.Component {
                                     Status
                             </button>
                                 <button className="subMenu">
+                                    Skills
+                            </button>
+                                <button className="subMenu">
                                     Inventory
                             </button>
                                 <button className="subMenu">
@@ -42,8 +55,8 @@ class MainMenu extends React.Component {
                                 <button className="subMenu">
                                     Quests
                             </button>
-                                <button className="subMenu">
-                                    Glossary
+                                <button onClick={() => this.handleClick(0)} className="subMenu">
+                                    Map
                             </button>
                             </div>
                         </div>
