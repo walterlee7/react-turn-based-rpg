@@ -219,7 +219,7 @@
     }
 
     .mainTextMiddle-container {
-        height: 180px;
+        height: 220px;
     }
 
     .mainMenuDiv {
@@ -229,7 +229,7 @@
     .main-middle {
         width: 1000px;
         margin: 0 auto 0 auto;
-        height: 200px;
+        height: 220px;
     }
 
     .playerInfo-container {
@@ -593,7 +593,7 @@
     .main-middle {
         width: 90%;
         margin: 0;
-        height: 160px;
+        height: 180px;
         border-left: 0.1px solid rgb(0, 0, 0);
         border-right: 0.1px solid rgb(0, 0, 0);
         border-top: 0.5px solid rgb(0, 0, 0);
@@ -602,7 +602,7 @@
     }
 
     .mainTextMiddle-container {
-        height: 160px;
+        height: 180px;
     }
 
 
