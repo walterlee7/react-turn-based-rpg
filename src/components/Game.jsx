@@ -3,6 +3,7 @@ import './css/Game.css';
 import MainMenu from './MainMenu';
 import Image from './assets/clouds.jpg';
 import { firstLocationImages } from './assets/firstLocation/firstLocation';
+import { playerPortraits } from './assets/playerPortraits/playerPortraits';
 
 
 class Game extends React.Component {
@@ -178,7 +179,7 @@ class Game extends React.Component {
                                     VP: {this.state.playerVengancePointsA}
                                 </div>
                             </div>
-                            <img id="playerImage" src={Image} alt="cloud" ></img>
+                            <img id="playerImage" src={playerPortraits[0].url} alt="player" ></img>
                         </div>
                         <div className="party mainParty2">
                             <div className="playerInfo-container">
