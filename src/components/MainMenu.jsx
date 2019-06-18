@@ -24,19 +24,31 @@ class MainMenu extends React.Component {
 
     render() {
         return (
-            <div id="instructions">
-                <div className="instructions-container">
-                    <button onClick={() => this.closeMenu()} className="titlescreen-back">Close Menu</button>
-                    <div className="instruction-title">
-                        Main Menu
-                    </div>
+            <div id="mainMenu">
+                <div className="mainMenu-container">
+                    <button onClick={() => this.closeMenu()} className="game-back">Close Menu</button>
                     <div>
-                        <div className="instruction-text">
-                            <div>
-                                Sub Menu
+                        <div className="subMenu-container">
+                            <div className="subMenu-div">
+                                <button className="subMenu">
+                                    Status
+                            </button>
+                                <button className="subMenu">
+                                    Inventory
+                            </button>
+                                <button className="subMenu">
+                                    Equipment
+                            </button>
+                                <button className="subMenu">
+                                    Quests
+                            </button>
+                                <button className="subMenu">
+                                    Glossary
+                            </button>
                             </div>
                         </div>
                     </div>
+                    <div id="subMenu-location" />
                 </div>
             </div>
         );

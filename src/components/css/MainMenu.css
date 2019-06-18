@@ -1,0 +1,55 @@
+.game-back {
+    font-size: 15px;
+    padding: 1em;
+    margin-top: 4em;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+}
+
+.mainMenuContainer {
+    background-color: rgb(37, 90, 189);
+    display: inline-block;
+    margin: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0.5em;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.subMenu-container {
+    background-image: url("../assets/text-back.jpg");
+    text-align: center;
+    margin: 0.5em;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+}
+
+.subMenu-div {
+    display: inline-block;
+}
+
+.subMenu {
+    background-color: rgb(3, 3, 105);
+    color: white;
+    border: 1px solid black;
+    margin: 1em;
+    padding: 1em;
+    font-size: 14px;
+}
+
+.subMenu:hover {
+    background-color: rgb(153, 153, 184);
+    color: white;
+}
+
+.subMenu:focus {
+    background-color: rgb(8, 8, 8);
+    color: white;
+}
