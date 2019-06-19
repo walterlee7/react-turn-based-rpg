@@ -17,7 +17,7 @@ class MainMenu extends React.Component {
             playerLevelA: 2,
             playerHitPointsA: 35,
             playerSpecialPointsA: 12,
-            playerVengancePointsA: 1,
+            playerTerrorPointsA: 1,
         }
     }
 

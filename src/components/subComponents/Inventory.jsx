@@ -42,7 +42,7 @@ export default class Inventory extends React.Component {
                         No Item Data
                     </div>
                     <div style={{ display: this.state.keyItemsDisplay }} className="key-items-container">
-                        No Key Item Data
+                        Lydia's Necklace
                     </div>
                 </div>
             </React.Fragment>

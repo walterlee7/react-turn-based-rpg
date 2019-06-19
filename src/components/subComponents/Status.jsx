@@ -13,7 +13,28 @@ export default class Status extends React.Component {
                 </div>
                 <div className="status-text-container">
                     <div className="player1 status-text">
-                        Status will go here.
+                        LV: 1
+                    </div>
+                    <div className="player1 status-text">
+                        HP: 30
+                    </div>
+                    <div className="player1 status-text">
+                        SP: 10
+                    </div>
+                    <div className="player1 status-text">
+                        TP: 0
+                    </div>
+                    <div className="player1 status-text">
+                        STR: 1
+                    </div>
+                    <div className="player1 status-text">
+                        CON: 2
+                    </div>
+                    <div className="player1 status-text">
+                        INT: 5
+                    </div>
+                    <div className="player1 status-text">
+                        SPI: 5
                     </div>
                 </div>
             </React.Fragment>

@@ -24,19 +24,19 @@ class Game extends React.Component {
             playerLevelA: 1,
             playerHitPointsA: 30,
             playerSpecialPointsA: 10,
-            playerVengancePointsA: 0,
+            playerTerrorPointsA: 0,
             playerLevelB: 0,
             playerHitPointsB: 0,
             playerSpecialPointsB: 0,
-            playerVengancePointsB: 0,
+            playerTerrorPointsB: 0,
             playerLevelC: 0,
             playerHitPointsC: 0,
             playerSpecialPointsC: 0,
-            playerVengancePointsC: 0,
+            playerTerrorPointsC: 0,
             playerLevelD: 0,
             playerHitPointsD: 0,
             playerSpecialPointsD: 0,
-            playerVengancePointsD: 0,
+            playerTerrorPointsD: 0,
         }
 
         this.changeText = this.changeText.bind(this);
@@ -107,7 +107,7 @@ class Game extends React.Component {
             playerLevelA: childNumber.playerLevelA,
             playerHitPointsA: childNumber.playerHitPointsA,
             playerSpecialPointsA: childNumber.playerSpecialPointsA,
-            playerVengancePointsA: childNumber.playerVengancePointsA
+            playerTerrorPointsA: childNumber.playerTerrorPointsA
         })
     }
 
@@ -176,7 +176,7 @@ class Game extends React.Component {
                                     SP: {this.state.playerSpecialPointsA}
                                 </div>
                                 <div className="playerInfo">
-                                    VP: {this.state.playerVengancePointsA}
+                                    TP: {this.state.playerTerrorPointsA}
                                 </div>
                             </div>
                             <img id="playerImage" src={playerPortraits[0].url} alt="player" ></img>
@@ -193,7 +193,7 @@ class Game extends React.Component {
                                     SP: {this.state.playerSpecialPointsB}
                                 </div>
                                 <div className="playerInfo">
-                                    VP: {this.state.playerVengancePointsB}
+                                    TP: {this.state.playerTerrorPointsB}
                                 </div>
                             </div>
                             <img id="playerImage" src={Image} alt="cloud" ></img>
@@ -210,7 +210,7 @@ class Game extends React.Component {
                                     SP: {this.state.playerSpecialPointsC}
                                 </div>
                                 <div className="playerInfo">
-                                    VP: {this.state.playerVengancePointsC}
+                                    TP: {this.state.playerTerrorPointsC}
                                 </div>
                             </div>
                             <img id="playerImage" src={Image} alt="cloud" ></img>
@@ -227,7 +227,7 @@ class Game extends React.Component {
                                     SP: {this.state.playerSpecialPointsD}
                                 </div>
                                 <div className="playerInfo">
-                                    VP: {this.state.playerVengancePointsD}
+                                    TP: {this.state.playerTerrorPointsD}
                                 </div>
                             </div>
                             <img id="playerImage" src={Image} alt="cloud" ></img>
