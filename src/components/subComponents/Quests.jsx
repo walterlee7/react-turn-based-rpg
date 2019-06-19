@@ -11,7 +11,6 @@ export default class Quests extends React.Component {
         }
     }
 
-
     mainQuestDisplay() {
         this.setState({
             mainDisplay: 'inline-block',
@@ -54,8 +53,6 @@ export default class Quests extends React.Component {
                     </div>
                 </div>
             </React.Fragment>
-
-
         )
     }
 }
