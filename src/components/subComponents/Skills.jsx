@@ -47,21 +47,21 @@ export default class Skills extends React.Component {
                 </div>
                 <div className="skill-button-container">
                     <button onClick={() => this.physicalSkillsDisplay()} className="skillButton">
-                        Physical
+                        Physical Skills
                     </button>
                     <button onClick={() => this.spiritSkillsDisplay()} className="skillButton">
-                        Spirit
+                        Magic Skills
                     </button>
                     <button onClick={() => this.terrorSkillsDisplay()} className="skillButton">
-                        Terror
+                        Terror Skills
                     </button>
                 </div>
                 <div className="skills">
                     <div style={{ display: this.state.physicalSkillsDisplay }} className="player1 physical-skill-container">
-                        Slash
+                        Slash - Attack Power: 5, SP Cost: 2;
                     </div>
                     <div style={{ display: this.state.spiritSkillsDisplay }} className="player1 spirit-skill-container">
-                        Shine
+                        Shine - Spirit Power: 8, SP Cost: 2;
                     </div>
                     <div style={{ display: this.state.terrorSkillsDisplay }} className="player1 terror-skill-container">
                         No Terror Skills Learned.

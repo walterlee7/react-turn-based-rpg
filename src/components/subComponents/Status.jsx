@@ -42,13 +42,13 @@ export default class Status extends React.Component {
                         Attack Power: 1
                     </div>
                     <div className="player1 status-text">
-                        Spirit Power: 5
+                        Magic Power: 5
                     </div>
                     <div className="player1 status-text">
                         Physical Defense: 1
                     </div>
                     <div className="player1 status-text">
-                        Spirit Defense: 5
+                        Magic Defense: 5
                     </div>
                 </div>
             </React.Fragment>

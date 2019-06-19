@@ -26,7 +26,7 @@
 
 .weapon-container {
     display: inline-block;
-    background-color: rgb(250, 249, 249);
+    background-color: rgb(206, 206, 206);
     padding: 1em;
     margin: 0.5em;
     border: 1px solid black;
@@ -34,7 +34,15 @@
 
 .armor-container {
     display: inline-block;
-    background-color: rgb(250, 249, 249);
+    background-color: rgb(206, 206, 206);
+    padding: 1em;
+    margin: 0.5em;
+    border: 1px solid black;
+}
+
+.accessories-container {
+    display: inline-block;
+    background-color: rgb(206, 206, 206);
     padding: 1em;
     margin: 0.5em;
     border: 1px solid black;
