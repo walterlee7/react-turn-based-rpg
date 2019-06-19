@@ -7,11 +7,28 @@
     background-color: rgb(39, 39, 39);
 }
 
-.quest-container {
-    display: inline-block;
-    background-color: rgb(250, 249, 249);
+.quest-text {
+    text-align: center;
+    font-size: 15px;
     padding: 1em;
     margin: 1em;
+}
+
+.main-quest-container {
+    background-color: rgb(43, 104, 173);
+    color: white;
+    font-weight: bold;
+    padding: 2em;
+    margin: 2em;
+    border: 1px solid black;
+}
+
+.side-quest-container {
+    background-color: rgb(43, 104, 173);
+    color: white;
+    font-weight: bold;
+    padding: 2em;
+    margin: 2em;
     border: 1px solid black;
 }
 
@@ -20,6 +37,7 @@
     background-color: rgb(250, 249, 249);
     padding: 1em;
     margin: 1em;
+    font-weight: bold;
     border: 1px solid black;
 }
 
