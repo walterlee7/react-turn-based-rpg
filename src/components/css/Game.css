@@ -99,6 +99,10 @@
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
+#textButton:focus {
+    outline: none;
+}
+
 .main-bottom {
     background-image: url("../assets/mainBottomBack.jpg");
     background-color: rgb(146, 145, 145);

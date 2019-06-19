@@ -5,9 +5,12 @@ export default class Quests extends React.Component {
     render() {
         return (
             <div className="quest">
-                <div className="quest-container">
-                    No Quest Data
-                    </div>
+                <button className="questButton">
+                    Main Quest
+                </button>
+                <button className="questButton">
+                    Side Quest
+                </button>
             </div>
         )
     }
