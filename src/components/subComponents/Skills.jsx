@@ -3,6 +3,40 @@ import '../css/Skills.css';
 import { playerPortraits } from '../assets/playerPortraits/playerPortraits';
 
 export default class Skills extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            physicalSkillsDisplay: 'none',
+            spiritSkillsDisplay: 'none',
+            terrorSkillsDisplay: 'none',
+        }
+    }
+
+    physicalSkillsDisplay() {
+        this.setState({
+            physicalSkillsDisplay: 'inline-block',
+            spiritSkillsDisplay: 'none',
+            terrorSkillsDisplay: 'none',
+        })
+    }
+
+    spiritSkillsDisplay() {
+        this.setState({
+            spiritSkillsDisplay: 'inline-block',
+            terrorSkillsDisplay: 'none',
+            physicalSkillsDisplay: 'none',
+        })
+    }
+
+    terrorSkillsDisplay() {
+        this.setState({
+            terrorSkillsDisplay: 'inline-block',
+            physicalSkillsDisplay: 'none',
+            spiritSkillsDisplay: 'none',
+        })
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -11,9 +45,26 @@ export default class Skills extends React.Component {
                         <img id="playerSkillsImage" src={playerPortraits[0].url} alt="player" ></img>
                     </div>
                 </div>
+                <div className="skill-button-container">
+                    <button onClick={() => this.physicalSkillsDisplay()} className="skillButton">
+                        Physical
+                    </button>
+                    <button onClick={() => this.spiritSkillsDisplay()} className="skillButton">
+                        Spirit
+                    </button>
+                    <button onClick={() => this.terrorSkillsDisplay()} className="skillButton">
+                        Terror
+                    </button>
+                </div>
                 <div className="skills">
-                    <div className="skills-container">
-                        No Skill Data
+                    <div style={{ display: this.state.physicalSkillsDisplay }} className="player1 physical-skill-container">
+                        Slash
+                    </div>
+                    <div style={{ display: this.state.spiritSkillsDisplay }} className="player1 spirit-skill-container">
+                        Shine
+                    </div>
+                    <div style={{ display: this.state.terrorSkillsDisplay }} className="player1 terror-skill-container">
+                        No Terror Skills Learned.
                     </div>
                 </div>
             </React.Fragment>

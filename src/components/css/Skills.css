@@ -21,10 +21,58 @@
 
 .skills {
     text-align: center;
+    margin: 0.5em;
 }
 
 .skills-container {
     display: inline-block;
     background-color: rgb(250, 249, 249);
     padding: 4em;
+}
+
+.physical-skill-container {
+    display: inline-block;
+    background-color: rgb(250, 249, 249);
+    padding: 1em;
+    margin: 0.5em;
+    border: 1px solid black;
+}
+
+.spirit-skill-container {
+    display: inline-block;
+    background-color: rgb(250, 249, 249);
+    padding: 1em;
+    margin: 0.5em;
+    border: 1px solid black;
+}
+
+.terror-skill-container {
+    display: inline-block;
+    background-color: rgb(250, 249, 249);
+    padding: 1em;
+    margin: 0.5em;
+    border: 1px solid black;
+}
+
+.skill-button-container {
+    background-image: url("../assets/mainBottomBack.jpg");
+    display: inline-block;
+}
+
+.skillButton {
+    display: inline-block;
+    background-color: rgb(250, 249, 249);
+    padding: 1em;
+    margin: 1em;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.skillButton:hover {
+    background-color: rgba(136, 135, 135, 0.63);
+}
+
+.skillButton:focus {
+    background-color: rgb(170, 170, 170);
+    outline: none;
 }
