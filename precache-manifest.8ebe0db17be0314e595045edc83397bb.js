@@ -1,27 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4bd04a4342b9f606bee872afcb12e8c0",
+    "revision": "05da357f58f59a7a4ea10e90fd1ef7de",
     "url": "/react-turn-based-rpg/index.html"
   },
   {
-    "revision": "f89fee9515ee057c33bd",
-    "url": "/react-turn-based-rpg/static/css/main.c7cbd5a2.chunk.css"
+    "revision": "32b9c9e0a66e2ac37704",
+    "url": "/react-turn-based-rpg/static/css/main.00aef00e.chunk.css"
   },
   {
-    "revision": "df143285ec859ffaa4fd",
-    "url": "/react-turn-based-rpg/static/js/2.68e65c7c.chunk.js"
+    "revision": "a9ff8c1d109f3812b064",
+    "url": "/react-turn-based-rpg/static/js/2.b084cea0.chunk.js"
   },
   {
-    "revision": "f89fee9515ee057c33bd",
-    "url": "/react-turn-based-rpg/static/js/main.bdfae6cb.chunk.js"
+    "revision": "32b9c9e0a66e2ac37704",
+    "url": "/react-turn-based-rpg/static/js/main.21f3ad9a.chunk.js"
   },
   {
     "revision": "402ea09176ef310217c2",
     "url": "/react-turn-based-rpg/static/js/runtime~main.9883d49c.js"
   },
   {
+    "revision": "a9164bd86c72f844904d2395a38152cb",
+    "url": "/react-turn-based-rpg/static/media/Adrian.a9164bd8.jpg"
+  },
+  {
+    "revision": "660af5be18031212052b3a4455171f08",
+    "url": "/react-turn-based-rpg/static/media/Ashnoa.660af5be.jpg"
+  },
+  {
     "revision": "811ffd74ae1b05bbb6e7a1a81d8dc849",
     "url": "/react-turn-based-rpg/static/media/Gwen.811ffd74.jpg"
+  },
+  {
+    "revision": "1a79630fea56fad42a498a37cbd36b84",
+    "url": "/react-turn-based-rpg/static/media/Lydia.1a79630f.png"
   },
   {
     "revision": "a73752433441a8a902ce8bfb9c384d93",
