@@ -18,3 +18,13 @@
     margin: 1em;
     padding: 0;
 }
+
+.status-text-container {
+    text-align: center;
+}
+
+.status-text {
+    display: inline-block;
+    padding: 4em;
+    background-color: white;
+}

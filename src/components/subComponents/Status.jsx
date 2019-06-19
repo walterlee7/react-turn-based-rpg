@@ -5,11 +5,18 @@ import { playerPortraits } from '../assets/playerPortraits/playerPortraits';
 export default class Status extends React.Component {
     render() {
         return (
-            <div className="status">
-                <div className="status-container">
-                    <img id="playerStatusImage" src={playerPortraits[0].url} alt="player" ></img>
+            <React.Fragment>
+                <div className="status">
+                    <div className="status-container">
+                        <img id="playerStatusImage" src={playerPortraits[0].url} alt="player" ></img>
+                    </div>
                 </div>
-            </div>
+                <div className="status-text-container">
+                    <div className="player1 status-text">
+                        Status will go here.
+                    </div>
+                </div>
+            </React.Fragment>
         )
     }
 }

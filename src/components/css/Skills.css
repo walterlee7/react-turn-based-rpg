@@ -1,10 +1,26 @@
-.skills {
+.player-skills {
     text-align: center;
     font-size: 20px;
-    border: 1px solid black;
     padding: 1em;
     margin: 1em;
-    background-color: rgb(39, 39, 39);
+}
+
+.player-skills-container {
+    display: inline-block;
+    margin: 0;
+    background-image: url("../assets/mainBottomBack.jpg");
+}
+
+#playerSkillsImage {
+    vertical-align: top;
+    width: 160px;
+    height: 160px;
+    margin: 1em;
+    padding: 0;
+}
+
+.skills {
+    text-align: center;
 }
 
 .skills-container {
