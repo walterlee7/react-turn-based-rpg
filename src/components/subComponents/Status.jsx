@@ -37,6 +37,20 @@ export default class Status extends React.Component {
                         SPI: 5
                     </div>
                 </div>
+                <div className="status-text-container">
+                    <div className="player1 status-text">
+                        Attack Power: 1
+                    </div>
+                    <div className="player1 status-text">
+                        Spirit Power: 5
+                    </div>
+                    <div className="player1 status-text">
+                        Physical Defense: 1
+                    </div>
+                    <div className="player1 status-text">
+                        Spirit Defense: 5
+                    </div>
+                </div>
             </React.Fragment>
         )
     }
