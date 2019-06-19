@@ -12,6 +12,10 @@
     border: 1px solid black;
 }
 
+.inventoryButton:hover {
+    background-color: rgba(136, 135, 135, 0.63);
+}
+
 .inventoryButton:focus {
     background-color: rgb(170, 170, 170);
     outline: none;

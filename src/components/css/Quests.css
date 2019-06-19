@@ -38,6 +38,10 @@
     border: 1px solid black;
 }
 
+.questButton:hover {
+    background-color: rgba(136, 135, 135, 0.63);
+}
+
 .questButton:focus {
     background-color: rgb(170, 170, 170);
     outline: none;
