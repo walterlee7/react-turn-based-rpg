@@ -24,7 +24,7 @@ class Instructions extends React.Component {
                             </div>
                             <br />
                             <div>
-                                If your HP goes to zero, the game ends.
+                                If all character HPs go to zero, the game ends.
                             </div>
                             <br />
                             <div>

@@ -61,7 +61,7 @@ export default class Skills extends React.Component {
                         Slash - Attack Power: 5, SP Cost: 2;
                     </div>
                     <div style={{ display: this.state.spiritSkillsDisplay }} className="player1 spirit-skill-container">
-                        Shine - Spirit Power: 8, SP Cost: 2;
+                        Shine - Magic Power: 8, SP Cost: 2;
                     </div>
                     <div style={{ display: this.state.terrorSkillsDisplay }} className="player1 terror-skill-container">
                         No Terror Skills Learned.
