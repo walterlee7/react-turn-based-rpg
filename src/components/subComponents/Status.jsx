@@ -16,13 +16,19 @@ export default class Status extends React.Component {
                         LV: 1
                     </div>
                     <div className="player1 status-text">
-                        HP: 30
+                        EXP: 0
                     </div>
                     <div className="player1 status-text">
-                        SP: 10
+                        TO LV: 50
                     </div>
                     <div className="player1 status-text">
-                        TP: 0
+                        HP: 30/30
+                    </div>
+                    <div className="player1 status-text">
+                        SP: 10/10
+                    </div>
+                    <div className="player1 status-text">
+                        TP: 0/100
                     </div>
                     <div className="player1 status-text">
                         STR: 1
