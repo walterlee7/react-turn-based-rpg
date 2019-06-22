@@ -16,6 +16,9 @@ export default class Status extends React.Component {
                         LV: 1
                     </div>
                     <div className="player1 status-text">
+                        Class: Spirit Hunter
+                    </div>
+                    <div className="player1 status-text">
                         EXP: 0
                     </div>
                     <div className="player1 status-text">
