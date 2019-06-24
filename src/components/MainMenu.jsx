@@ -24,7 +24,7 @@ class MainMenu extends React.Component {
     closeMenu() {
         console.log(this.props.data);
         console.log('close menu');
-        this.props.statUpdate(this.state);
+        // this.props.statUpdate(this.state);
         this.props.close();
     }
 
