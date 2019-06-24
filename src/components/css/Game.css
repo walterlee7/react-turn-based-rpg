@@ -60,6 +60,10 @@
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
+.mainMenuButton:hover {
+    background-color: grey;
+}
+
 .mainMenuButton:focus {
     outline: 0;
     background-color: black;

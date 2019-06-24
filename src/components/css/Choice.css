@@ -1,0 +1,22 @@
+.choice-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.choice-button {
+    background-color: white;
+    margin: 1em;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+    outline: 0;
+}
+
+.choice-button:hover {
+    background-color: grey;
+}
+
+@media screen and (max-width: 420px) {
+    .choice-button {
+        font-size: 14px;
+    }
+}

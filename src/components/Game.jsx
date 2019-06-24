@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/Game.css';
 import MainMenu from './MainMenu';
+import Choice from './Choice';
 import Image from './assets/clouds.jpg';
 import { firstLocationImages } from './assets/firstLocation/firstLocation';
 import { playerPortraits } from './assets/playerPortraits/playerPortraits';
@@ -12,11 +13,13 @@ class Game extends React.Component {
 
         this.state = {
             lineA: '',
-            LineB: '',
-            LineC: '',
-            LineD: '',
+            lineB: '',
+            lineC: '',
+            lineD: '',
             displayMenu: 'none',
             displayGame: 'initial',
+            choiceMenu: 'none',
+            textMenu: 'initial',
             textNumber: 0,
             location: 'House',
             floorNumber: '1st',
@@ -86,6 +89,15 @@ class Game extends React.Component {
             textNumber: newIndex
         })
 
+        console.log(this.state.textNumber);
+
+        if (this.state.textNumber === 4) {
+            this.setState({
+                choiceMenu: 'initial',
+                textMenu: 'none',
+            })
+        }
+
     }
 
     openMainMenu() {
@@ -142,7 +154,7 @@ class Game extends React.Component {
                         </div>
                     </div>
                     <div className="main-middle">
-                        <div className="mainTextMiddle-container">
+                        <div style={{ display: this.state.textMenu }} className="mainTextMiddle-container">
                             <div className="mainTextMiddle">
                                 {this.state.lineA}
                             </div>
@@ -161,6 +173,9 @@ class Game extends React.Component {
                             <br />
                             <button id="textButton" onClick={() => this.changeText()}>Next</button>
                             <br />
+                        </div>
+                        <div style={{ display: this.state.choiceMenu }} className="choice-container">
+                            <Choice />
                         </div>
                     </div>
                     <div className="main-bottom">
@@ -235,7 +250,6 @@ class Game extends React.Component {
                     </div>
                 </div>
             </React.Fragment >
-
         );
     }
 }
