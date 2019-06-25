@@ -115,6 +115,17 @@ class Game extends React.Component {
     }
 
     updateStats(childNumber) {
+        // console.log('childNumber: ' + childNumber);
+        // console.dir(childNumber);
+
+        if (childNumber.playerHitPointsA <= 0) {
+            childNumber.playerHitPointsA = 0;
+        }
+
+        if (childNumber.playerTerrorPointsA >= 100) {
+            childNumber.playerTerrorPointsA = 100;
+        }
+
         this.setState({
             playerLevelA: childNumber.playerLevelA,
             playerHitPointsA: childNumber.playerHitPointsA,
@@ -175,7 +186,10 @@ class Game extends React.Component {
                             <br />
                         </div>
                         <div style={{ display: this.state.choiceMenu }} className="choice-container">
-                            <Choice />
+                            <Choice
+                                data={this.state}
+                                statUpdate={this.updateStats}
+                            />
                         </div>
                     </div>
                     <div className="main-bottom">

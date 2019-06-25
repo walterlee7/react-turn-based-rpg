@@ -7,6 +7,12 @@ class Choice extends React.Component {
 
         this.state = {
             text: '',
+            player1: {
+                playerLevelA: 0,
+                playerHitPointsA: 0,
+                playerSpecialPointsA: 0,
+                playerTerrorPointsA: 0,
+            }
         }
 
         this.enterHouse = this.enterHouse.bind(this);
@@ -15,16 +21,52 @@ class Choice extends React.Component {
         this.runAway = this.runAway.bind(this);
     }
 
+    componentDidMount() {
+        this.update();
+    }
+
+    update() {
+        console.log(this.props.data.playerLevelA);
+
+        this.setState({
+            player1: {
+                playerLevelA: this.props.data.playerLevelA,
+                playerHitPointsA: this.props.data.playerHitPointsA,
+                playerSpecialPointsA: this.props.data.playerSpecialPointsA,
+                playerTerrorPointsA: this.props.data.playerTerrorPointsA,
+            }
+        })
+    }
+
     enterHouse() {
         this.setState({
             text: 'House is locked for now...'
         })
     }
 
-    checkMysteriousFlower() {
+    async checkMysteriousFlower() {
+
+        // console.log(this.state.player1);
+
         this.setState({
-            text: 'This flower...'
+            text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive<strong className="damage-text"> 5 damage and 5 terror</strong>.</p>
         })
+
+        let flowerDamage = this.props.data.playerHitPointsA - 5;
+        let flowerTerror = this.props.data.playerTerrorPointsA + 5;
+
+        await this.setState({
+            player1: {
+                playerLevelA: this.state.player1.playerLevelA,
+                playerHitPointsA: flowerDamage,
+                playerSpecialPointsA: this.state.player1.playerSpecialPointsA,
+                playerTerrorPointsA: flowerTerror,
+            }
+        })
+
+        console.log(this.state.player1);
+
+        this.props.statUpdate(this.state.player1);
     }
 
     checkMailbox() {

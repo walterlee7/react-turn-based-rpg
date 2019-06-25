@@ -23,6 +23,13 @@
     font-weight: bold;
 }
 
+.damage-text {
+    display: inline-block;
+    color: red;
+    padding: 1px;
+    background-color: rgb(70, 70, 70);
+}
+
 @media screen and (max-width: 420px) {
     .choice-button {
         font-size: 14px;
