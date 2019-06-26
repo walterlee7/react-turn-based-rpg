@@ -26,7 +26,7 @@ class Choice extends React.Component {
     }
 
     update() {
-        console.log(this.props.data.playerLevelA);
+        console.log('update');
 
         this.setState({
             player1: {
@@ -64,7 +64,7 @@ class Choice extends React.Component {
             }
         })
 
-        console.log(this.state.player1);
+        console.log('player: ' + this.state.player1);
 
         this.props.statUpdate(this.state.player1);
     }

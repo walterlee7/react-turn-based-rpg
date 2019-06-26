@@ -6,23 +6,31 @@ export default class Guide extends React.Component {
         super(props)
 
         this.state = {
-            mainDisplay: 'none',
-            sideDisplay: 'none',
+            glossaryDisplay: 'none',
+            tutorialDisplay: 'none',
             glossaryArray: [],
         }
     }
 
-    mainQuestDisplay() {
+    glossaryDisplay() {
+        let glossaryText = [
+            "HP = Hit Points",
+            "SP = Special Points",
+            "LV = Player Level",
+            "TP = Terror Points",
+        ];
+
         this.setState({
-            mainDisplay: 'inline-block',
-            sideDisplay: 'none'
+            glossaryDisplay: 'inline-block',
+            tutorialDisplay: 'none',
+            glossaryArray: glossaryText,
         })
     }
 
-    sideQuestDisplay() {
+    tutorialDisplay() {
         this.setState({
-            sideDisplay: 'inline-block',
-            mainDisplay: 'none'
+            tutorialDisplay: 'inline-block',
+            glossaryDisplay: 'none'
         })
     }
 
@@ -30,18 +38,22 @@ export default class Guide extends React.Component {
         return (
             <React.Fragment>
                 <div className="guide">
-                    <button onClick={() => this.mainQuestDisplay()} className="guideButton">
+                    <button onClick={() => this.glossaryDisplay()} className="guideButton">
                         Glossary
                     </button>
-                    <button onClick={() => this.sideQuestDisplay()} className="guideButton">
+                    <button onClick={() => this.tutorialDisplay()} className="guideButton">
                         Tutorial
                     </button>
                 </div>
                 <div className="guide-text">
-                    <div style={{ display: this.state.mainDisplay }} className="glossary-container">
-                        HP = Hit Points
+                    <div style={{ display: this.state.glossaryDisplay }} className="glossary-container">
+
+                        {this.state.glossaryArray.map((text, index) => {
+                            return (<div key={index}>{text}</div>);
+                        })}
+
                     </div>
-                    <div style={{ display: this.state.sideDisplay }} className="tutorial-container">
+                    <div style={{ display: this.state.tutorialDisplay }} className="tutorial-container">
                         No Tutorial Data.
                     </div>
                 </div>

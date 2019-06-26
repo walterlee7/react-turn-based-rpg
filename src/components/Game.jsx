@@ -89,7 +89,7 @@ class Game extends React.Component {
             textNumber: newIndex
         })
 
-        console.log(this.state.textNumber);
+        console.log('text number: ' + this.state.textNumber);
 
         if (this.state.textNumber === 4) {
             this.setState({
