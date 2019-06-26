@@ -1,0 +1,48 @@
+.guide {
+    text-align: center;
+    background-image: url("../assets/mainBottomBack.jpg");
+    display: inline-block;
+}
+
+.guide-text {
+    text-align: center;
+    font-size: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.glossary-container {
+    background-color: rgb(43, 104, 173);
+    color: white;
+    font-weight: bold;
+    padding: 2em;
+    margin: 2em;
+    border: 1px solid black;
+}
+
+.tutorial-container {
+    background-color: rgb(43, 104, 173);
+    color: white;
+    font-weight: bold;
+    padding: 2em;
+    margin: 2em;
+    border: 1px solid black;
+}
+
+.guideButton {
+    display: inline-block;
+    background-color: rgb(250, 249, 249);
+    padding: 1em;
+    margin: 1em;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.guideButton:hover {
+    background-color: rgba(136, 135, 135, 0.63);
+}
+
+.guideButton:focus {
+    background-color: rgb(170, 170, 170);
+    outline: none;
+}
