@@ -12,12 +12,18 @@
 }
 
 .glossary-container {
-    background-color: rgb(43, 104, 173);
+    background-color: rgb(100, 100, 100);
     color: white;
     font-weight: bold;
     padding: 2em;
     margin: 2em;
     border: 1px solid black;
+}
+
+.glossary-text {
+    text-align: initial;
+    font-size: 14px;
+    padding: 0.5em;
 }
 
 .tutorial-container {
@@ -46,4 +52,3 @@
     background-color: rgb(170, 170, 170);
     outline: none;
 }
-

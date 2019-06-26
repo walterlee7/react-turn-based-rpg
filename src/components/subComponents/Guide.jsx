@@ -14,9 +14,9 @@ export default class Guide extends React.Component {
 
     glossaryDisplay() {
         let glossaryText = [
+            "LV = Player Level",
             "HP = Hit Points",
             "SP = Special Points",
-            "LV = Player Level",
             "TP = Terror Points",
         ];
 
@@ -47,11 +47,9 @@ export default class Guide extends React.Component {
                 </div>
                 <div className="guide-text">
                     <div style={{ display: this.state.glossaryDisplay }} className="glossary-container">
-
                         {this.state.glossaryArray.map((text, index) => {
-                            return (<div key={index}>{text}</div>);
+                            return (<div key={index} className='glossary-text'>{text}</div>);
                         })}
-
                     </div>
                     <div style={{ display: this.state.tutorialDisplay }} className="tutorial-container">
                         No Tutorial Data.
