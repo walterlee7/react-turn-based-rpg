@@ -49,7 +49,7 @@ class Choice extends React.Component {
         // console.log(this.state.player1);
 
         this.setState({
-            text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive<strong className="damage-text"> 5 damage and 5 terror</strong>.</p>
+            text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive<strong className="damage-text"> -5 damage and +5 terror</strong>.</p>
         })
 
         let flowerDamage = this.props.data.playerHitPointsA - 5;

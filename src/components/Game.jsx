@@ -120,6 +120,7 @@ class Game extends React.Component {
 
         if (childNumber.playerHitPointsA <= 0) {
             childNumber.playerHitPointsA = 0;
+            alert('HP is at 0. Game Over...')
         }
 
         if (childNumber.playerTerrorPointsA >= 100) {
