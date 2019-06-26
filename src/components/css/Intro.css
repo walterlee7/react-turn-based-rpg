@@ -1,0 +1,62 @@
+.intro-next {
+    font-size: 20px;
+    padding: 1em;
+    margin-top: 4em;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+    border: none;
+}
+
+.intro-next:hover {
+    background-color: grey;
+}
+
+.intro-next:focus {
+    background-color: black;
+    color: white;
+    outline: 0;
+}
+
+.intro-container {
+    background-color: rgb(15, 15, 46);
+}
+
+.intro {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    width: 400px;
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+}
+
+.intro-one-container {
+    float: left;
+    margin: 1em;
+    width: 300px;
+}
+
+.intro-one {
+    float: left;
+    padding: 0.5em;
+    background-color: grey;
+}
+
+.intro-two-container {
+    float: right;
+    margin: 1em;
+    width: 300px;
+}
+
+.intro-two {
+    float: right;
+    padding: 0.5em;
+    background-color: lightblue;
+}

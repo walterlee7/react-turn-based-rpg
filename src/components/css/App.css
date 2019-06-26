@@ -35,7 +35,7 @@ body {
     margin-top: 5em;
 }
 
-.start-button, .intro-next, #instruction-button {
+.start-button, #instruction-button {
     font-size: 20px;
     padding: 1em;
     margin-top: 4em;
@@ -55,27 +55,14 @@ body {
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
-.start-button:focus, .intro-next:focus {
+.start-button:focus {
     background-color: black;
     color: white;
     outline: 0;
 }
 
-.intro-container, #instructions {
+#instructions {
     background-color: rgb(15, 15, 46);
-}
-
-.intro {
-    background-color: rgb(255, 255, 255);
-    display: inline-block;
-    margin: 0.5em;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    border-radius: 10px;
-    padding: 1em;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 .instructions-container {
