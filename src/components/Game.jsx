@@ -75,7 +75,7 @@ class Game extends React.Component {
             '',
             'Yes, I do. It’s hard to forget a heavy chain with a huge cross attached to it.',
             "Wait, are you not going in with me? ...Lydia is nowhere to be found…",
-            'Okay, I need to figure out what is messed up about this house.',
+            'Okay, I need to figure out what is messed up with this house.',
         ];
 
         let textIndex = this.state.textNumber;
