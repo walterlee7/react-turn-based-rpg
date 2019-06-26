@@ -24,9 +24,10 @@
 }
 
 .intro {
-    background-color: rgb(255, 255, 255);
+    background-image: url("../assets/text-back.jpg");
+    background-repeat: repeat;
     display: inline-block;
-    width: 400px;
+    width: 600px;
     margin: 0.5em;
     margin-top: 3em;
     margin-bottom: 3em;
@@ -39,24 +40,26 @@
 
 .intro-one-container {
     float: left;
-    margin: 1em;
-    width: 300px;
+    margin: 0.5em;
+    width: 500px;
 }
 
 .intro-one {
+    border-radius: 5px;
     float: left;
-    padding: 0.5em;
-    background-color: grey;
+    padding: 1em;
+    background-color: rgb(197, 197, 197);
 }
 
 .intro-two-container {
     float: right;
-    margin: 1em;
-    width: 300px;
+    margin: 0.5em;
+    width: 500px;
 }
 
 .intro-two {
+    border-radius: 5px;
     float: right;
-    padding: 0.5em;
+    padding: 1em;
     background-color: lightblue;
 }

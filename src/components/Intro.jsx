@@ -28,8 +28,10 @@ class Intro extends React.Component {
                             <div className='intro-one'>
                                 ?????:
                             </div>
+                        </div>
+                        <div className='intro-one-container'>
                             <div className='intro-one'>
-                                Hello........
+                                It begins again...
                             </div>
                         </div>
 
@@ -37,10 +39,12 @@ class Intro extends React.Component {
 
                         <div className='intro-two-container'>
                             <div className='intro-two'>
-                                :????
+                                ????:
                             </div>
+                        </div>
+                        <div className='intro-two-container'>
                             <div className='intro-two' >
-                                Hello........
+                                As it always does...
                             </div>
                         </div>
 
@@ -50,8 +54,10 @@ class Intro extends React.Component {
                             <div className='intro-one'>
                                 ?????:
                             </div>
+                        </div>
+                        <div className='intro-one-container'>
                             <div className='intro-one'>
-                                World.........
+                                This is happening sooner than expected...
                             </div>
                         </div>
 
@@ -59,10 +65,12 @@ class Intro extends React.Component {
 
                         <div className='intro-two-container'>
                             <div className='intro-two'>
-                                :????
+                                ????:
                             </div>
+                        </div>
+                        <div className='intro-two-container'>
                             <div className='intro-two'>
-                                World..........
+                                It should not be a problem...
                             </div>
                         </div>
 
