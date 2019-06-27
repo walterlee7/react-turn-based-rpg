@@ -74,6 +74,32 @@ class Intro extends React.Component {
                             </div>
                         </div>
 
+                        <br />
+
+                        <div className='intro-one-container'>
+                            <div className='intro-one'>
+                                ?????:
+                            </div>
+                        </div>
+                        <div className='intro-one-container'>
+                            <div className='intro-one'>
+                                The end is the beginning...
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div className='intro-two-container'>
+                            <div className='intro-two'>
+                                ????:
+                            </div>
+                        </div>
+                        <div className='intro-two-container'>
+                            <div className='intro-two'>
+                                the beginning is the end...
+                            </div>
+                        </div>
+
                         <button onClick={() => this.startGame()} className="intro-next">Next</button>
                     </div>
                 </div>
