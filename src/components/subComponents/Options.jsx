@@ -49,7 +49,7 @@ export default class Options extends React.Component {
                         <br />
                         <div id="sound-switch">
                             <label className="sound-control-label" htmlFor="sound-switch-input">Sound</label>
-                            <input type="checkbox" id="sound-switch-input" />
+                            <input checked type="checkbox" id="sound-switch-input" />
                         </div>
                     </div>
                 </div>
