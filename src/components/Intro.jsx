@@ -32,7 +32,7 @@ class Intro extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <audio id="house-song" src={houseSong}></audio>
+                <audio loop={true} id="house-song" src={houseSong}></audio>
                 <div style={{ display: this.state.displayIntro }} className="intro-container">
                     <div className="intro">
 

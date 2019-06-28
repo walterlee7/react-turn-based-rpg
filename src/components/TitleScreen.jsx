@@ -12,6 +12,7 @@ class TitleScreen extends React.Component {
             displayIntro: 'none',
             displayInstructions: 'none',
             startIntroAudio: false,
+            setLoop: false,
         }
 
         this.closeInstructions = this.closeInstructions.bind(this);
@@ -23,6 +24,7 @@ class TitleScreen extends React.Component {
             displayTitleScreen: 'none',
             displayIntro: 'initial',
             startIntroAudio: true,
+            setLoop: true,
         })
 
         console.log(this.state.startIntroAudio);
@@ -61,7 +63,7 @@ class TitleScreen extends React.Component {
         console.log(this.state.startIntroAudio);
         return (
             <React.Fragment>
-                <audio id="song" src={introSong}></audio>
+                <audio loop={this.state.setLoop} id="song" src={introSong}></audio>
                 <div style={{ display: this.state.displayTitleScreen }} id="title-screen" >
                     <div className="title">React Turn Based RPG</div>
                     <div id="start-game">
