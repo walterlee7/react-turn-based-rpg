@@ -8,6 +8,7 @@ import Equipment from './subComponents/Equipment';
 import Quests from './subComponents/Quests';
 import Map from './subComponents/Map';
 import Guide from './subComponents/Guide';
+import Options from './subComponents/Options';
 
 
 class MainMenu extends React.Component {
@@ -51,6 +52,9 @@ class MainMenu extends React.Component {
         else if (num === 7) {
             ReactDOM.render(<Guide />, document.getElementById('subMenu-location'));
         }
+        else if (num === 8) {
+            ReactDOM.render(<Options />, document.getElementById('subMenu-location'));
+        }
         else {
             alert('Sub Menu Error');
         }
@@ -84,6 +88,9 @@ class MainMenu extends React.Component {
                             </button>
                                 <button onClick={() => this.handleClick(7)} className="subMenu">
                                     Guide
+                            </button>
+                                <button onClick={() => this.handleClick(8)} className="subMenu">
+                                    Options
                             </button>
                             </div>
                         </div>
