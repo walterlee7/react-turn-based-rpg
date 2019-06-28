@@ -9,19 +9,26 @@ Component Design:
     - Instructions
 - Introduction
 - Game Container
+- Choice System
+- Menu System
+    - Status
+    - Skills
+    - Inventory
+    - Equipment
+    - Quests
+    - Map
+    - Guide
+    - Options
+- Music
 
 Future Additions:
 
 - Battle System
-- Menu System
-    - Status
-    - Inventory
 - JSON
-- Music
 - Sound
+- Map
 
 Far Future:
-- Map
 - Shop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
