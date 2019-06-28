@@ -81,7 +81,7 @@ class TitleScreen extends React.Component {
                 </div>
 
                 <div style={{ display: this.state.displayIntro }} id="intro-div">
-                    <Intro data={this.updateAudio} />
+                    <Intro stopIntroMusic={this.updateAudio} />
                 </div>
             </React.Fragment>
         );
