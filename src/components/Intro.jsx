@@ -29,9 +29,9 @@ class Intro extends React.Component {
                 <div style={{ display: this.state.displayIntro }} className="intro-container">
                     <div className="intro">
 
-                        {/* <div className="intro-text-container">
-                            Two mysterious figures meet in an unknown location.
-                        </div> */}
+                        <div className="intro-text-container">
+                            In a dark place, two unknown figures meet.
+                        </div>
 
                         <div className='intro-one-container'>
                             <div className='intro-one'>
