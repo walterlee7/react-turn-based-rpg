@@ -28,6 +28,11 @@ class Intro extends React.Component {
                 {/* <audio id="song" src={introSong} autoPlay={this.props.data}></audio> */}
                 <div style={{ display: this.state.displayIntro }} className="intro-container">
                     <div className="intro">
+
+                        {/* <div className="intro-text-container">
+                            Two mysterious figures meet in an unknown location.
+                        </div> */}
+
                         <div className='intro-one-container'>
                             <div className='intro-one'>
                                 ?????:
@@ -104,7 +109,7 @@ class Intro extends React.Component {
                             </div>
                         </div>
 
-                        <button onClick={() => this.startGame()} className="intro-next">Next</button>
+                        <button onClick={() => this.startGame()} className="intro-next-button">Next</button>
                     </div>
                 </div>
 

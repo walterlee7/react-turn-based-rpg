@@ -1,4 +1,4 @@
-.intro-next {
+.intro-next-button {
     font-size: 20px;
     padding: 1em;
     margin-top: 4em;
@@ -38,6 +38,11 @@
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
+.intro-text-container {
+    margin: 0.5em;
+    width: 500px;
+}
+
 .intro-one-container {
     float: left;
     margin: 0.5em;
@@ -62,4 +67,28 @@
     float: right;
     padding: 1em;
     background-color: lightblue;
+}
+
+@media screen and (max-width: 420px) {
+    .intro {
+        font-size: 12px;
+        margin: 0.5em;
+        max-width: 350px;
+    }
+
+    .intro-next-button {
+        font-size: 12px;
+    }
+
+    .intro-text-container {
+        max-width: 350px;
+    }
+
+    .intro-one-container {
+        max-width: 350px;
+    }
+
+    .intro-two-container {
+        max-width: 300px;
+    }
 }
