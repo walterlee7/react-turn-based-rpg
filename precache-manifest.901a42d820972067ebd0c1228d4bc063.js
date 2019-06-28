@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "552b457dcb235341861c632acf086dbe",
+    "revision": "205a37427586517d8554ae0f5487561a",
     "url": "/react-turn-based-rpg/index.html"
   },
   {
-    "revision": "a0605317421376f4292d",
-    "url": "/react-turn-based-rpg/static/css/main.6fa6f11a.chunk.css"
+    "revision": "af062b89d274ac2d64a7",
+    "url": "/react-turn-based-rpg/static/css/main.af87ce46.chunk.css"
   },
   {
-    "revision": "6a3cc51d99f05c23ebe0",
-    "url": "/react-turn-based-rpg/static/js/2.1a738ad6.chunk.js"
+    "revision": "99259f7a92a5bc460082",
+    "url": "/react-turn-based-rpg/static/js/2.dccfcad3.chunk.js"
   },
   {
-    "revision": "a0605317421376f4292d",
-    "url": "/react-turn-based-rpg/static/js/main.d5f02332.chunk.js"
+    "revision": "af062b89d274ac2d64a7",
+    "url": "/react-turn-based-rpg/static/js/main.606a1cc1.chunk.js"
   },
   {
     "revision": "402ea09176ef310217c2",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cdec17e0a03ef773149cd4cbb95cda07",
     "url": "/react-turn-based-rpg/static/media/front-yard.cdec17e0.jpg"
+  },
+  {
+    "revision": "1a3d2b20bf25119c275457591458bf76",
+    "url": "/react-turn-based-rpg/static/media/intro.1a3d2b20.mp3"
   },
   {
     "revision": "e82df4d94f6d1d0efb339f72f3ef9341",
