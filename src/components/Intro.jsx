@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/Intro.css';
 import Game from './Game';
+// import introSong from './audio/music/intro.mp3';
 
 class Intro extends React.Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class Intro extends React.Component {
 
         this.state = {
             displayIntro: 'initial',
-            displayGame: 'none'
+            displayGame: 'none',
         }
     }
 
@@ -17,11 +18,14 @@ class Intro extends React.Component {
             displayIntro: 'none',
             displayGame: 'initial'
         })
+
+        this.props.data();
     }
 
     render() {
         return (
             <React.Fragment>
+                {/* <audio id="song" src={introSong} autoPlay={this.props.data}></audio> */}
                 <div style={{ display: this.state.displayIntro }} className="intro-container">
                     <div className="intro">
                         <div className='intro-one-container'>
