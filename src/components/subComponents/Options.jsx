@@ -40,14 +40,16 @@ export default class Options extends React.Component {
                         Audio
                     </button>
                 </div>
-                <div className="audio-options-text">
+                <div className="audio-options">
                     <div style={{ display: this.state.audioOptionsDisplay }} className="audio-options-container">
                         <div id="volume-control-switch">
+                            <label id='volume-control-label' htmlFor="volume-range">Volume</label>
                             <input onChange={this.audioVolume} id="volume-range" type="range" />
                         </div>
-                        <div id="audio-switch">
-                            <input type="checkbox" id="audio-switch-input" />
-                            <label className="audio-control-label">Sound</label>
+                        <br />
+                        <div id="sound-switch">
+                            <label className="sound-control-label" htmlFor="sound-switch-input">Sound</label>
+                            <input type="checkbox" id="sound-switch-input" />
                         </div>
                     </div>
                 </div>

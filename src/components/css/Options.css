@@ -8,16 +8,16 @@
     text-align: center;
     font-size: 15px;
     padding: 1em;
-    margin: 1em;
+    margin: 0;
 }
 
 .audio-options-container {
-    background-color: rgb(43, 104, 173);
+    background-color: rgb(0, 0, 0);
     color: white;
     font-weight: bold;
     padding: 2em;
-    margin: 2em;
-    border: 1px solid black;
+    margin: 1em;
+    border: 4px solid white;
 }
 
 .audioOptionsButton {
@@ -36,4 +36,104 @@
 .audioOptionsButton:focus {
     background-color: rgb(170, 170, 170);
     outline: none;
+}
+
+#volume-control-switch {
+    text-align: center;
+    max-width: 150px;
+}
+
+#volume-control-label {
+    max-width: 100px;
+    padding: 1em;
+    margin: 0.5em;
+    font-size: 16px;
+}
+
+#volume-range {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-appearance: none;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#volume-range:hover {
+    opacity: 1;
+}
+
+#volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+input[type=range] {
+    transform: scale(1.1);
+    height: 50px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    transform: scale(1.4);
+}
+
+#sound-switch {
+    max-width: 150px;
+}
+
+.sound-control-label {
+    min-width: 140px;
+    padding: 0.3em;
+    margin: 0.5em;
+}
+
+#sound-switch-input {
+    padding: 0.5em;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    padding-top: 0.2em;
+}
+
+@media screen and (max-width: 420px) {
+
+    #volume-range {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-appearance: none;
+        height: 10px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    #volume-range:hover {
+        opacity: 1;
+    }
+
+    #volume-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: #4CAF50;
+        cursor: pointer;
+        border-radius: 25px;
+    }
 }
