@@ -27,7 +27,6 @@ class TitleScreen extends React.Component {
             setLoop: true,
         })
 
-        console.log(this.state.startIntroAudio);
         if (this.state.startIntroAudio === true) {
             let audioSong = document.getElementById('song');
             audioSong.play();
@@ -60,7 +59,6 @@ class TitleScreen extends React.Component {
     }
 
     render() {
-        console.log(this.state.startIntroAudio);
         return (
             <React.Fragment>
                 <audio loop={this.state.setLoop} id="song" src={introSong}></audio>

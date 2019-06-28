@@ -26,15 +26,11 @@ export default class Options extends React.Component {
         setVolume.addEventListener('input', () => {
             let volume = setVolume.value / 100;
 
-            console.log(volume);
-
             this.setState({
                 volume: setVolume.value,
             })
 
-            console.log(this.state.volume);
-
-            let audioElements = document.querySelectorAll('audio');
+            let audioElements = document.querySelectorAll('#music audio');
 
             for (let i = 0; i < audioElements.length; i++) {
                 audioElements[i].volume = volume;
@@ -43,23 +39,25 @@ export default class Options extends React.Component {
     }
 
     soundToggle() {
-        let soundSwitch = document.getElementById('sound-switch-input');
-        soundSwitch.addEventListener('input', () => {
+        let audioElements = document.querySelectorAll('audio');
 
-            let audioElements = document.querySelectorAll('audio');
+        if (this.state.checked) {
+            this.setState({
+                checked: false,
+            })
 
-            if (!soundSwitch.checked) {
-                for (let i = 0; i < audioElements.length; i++) {
-                    audioElements[i].disabled = true;
-                }
-            } else {
-
-                for (let i = 0; i < audioElements.length; i++) {
-                    audioElements[i].disabled = false;
-                }
+            for (let i = 0; i < audioElements.length; i++) {
+                audioElements[i].muted = true;
             }
+        } else {
+            this.setState({
+                checked: true,
+            })
 
-        })
+            for (let i = 0; i < audioElements.length; i++) {
+                audioElements[i].muted = false;
+            }
+        }
     }
 
     render() {
