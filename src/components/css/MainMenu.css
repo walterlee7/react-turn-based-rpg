@@ -1,4 +1,4 @@
-.game-back {
+.close-menu-button {
     font-size: 15px;
     padding: 1em;
     margin-top: 4em;
@@ -6,6 +6,7 @@
     background-color: white;
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
+    outline: none;
 }
 
 .mainMenuContainer {

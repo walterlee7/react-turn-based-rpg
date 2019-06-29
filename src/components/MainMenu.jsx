@@ -64,7 +64,7 @@ class MainMenu extends React.Component {
         return (
             <div id="mainMenu">
                 <div className="mainMenu-container">
-                    <button onClick={() => this.closeMenu()} className="game-back">Close Menu</button>
+                    <button onClick={() => this.closeMenu()} className="close-menu-button">Close Menu</button>
                     <div>
                         <div className="subMenu-container">
                             <div className="subMenu-div">
