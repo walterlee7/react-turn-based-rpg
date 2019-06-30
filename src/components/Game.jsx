@@ -27,9 +27,22 @@ class Game extends React.Component {
             essence: 0,
             player1: {
                 playerLevelA: 1,
+                playerExperienceA: 0,
+                playerToLevel: 50,
                 playerHitPointsA: 30,
+                playerMaxHitPointsA: 30,
                 playerSpecialPointsA: 10,
+                playerMaxSpecialPointsA: 10,
                 playerTerrorPointsA: 0,
+                playerMaxTerrorPointsA: 100,
+                playerStrength: 1,
+                playerConstitution: 2,
+                playerIntelligence: 5,
+                playerSpirit: 5,
+                playerAttackPower: 1,
+                playerMagicPower: 5,
+                playerPhysicalDefense: 1,
+                playerMagicDefense: 5,
             },
             playerLevelB: 0,
             playerHitPointsB: 0,
@@ -53,55 +66,66 @@ class Game extends React.Component {
     }
 
     componentDidMount() {
-        this.changeText();
+        this.changeText(0);
     }
 
-    changeText() {
-        let lineArr = [
-            'You walk towards a decrepit looking house.',
-            'Lydia:',
-            'Lydia:',
-            'Gwen:',
-        ];
-        let lineBrr = [
-            '????: Is this really a good idea, Grandma Lydia?',
-            'Gwendolyn, I am never wrong. Do you have the necklace?',
-            'Good, I am going home…',
-            'I hate it when she does that!!!',
-        ];
-        let lineCrr = [
-            '',
-            'Gwen:',
-            'Gwen:',
-            '(releases a huge sigh)',
-        ];
-        let lineDrr = [
-            '',
-            'Yes, I do. It’s hard to forget a heavy chain with a huge cross attached to it.',
-            "Wait, are you not going in with me? ...Lydia is nowhere to be found…",
-            'Okay, I need to figure out what is messed up with this house.',
-        ];
+    changeText(num) {
+        switch (num) {
+            case 0:
+                let lineArr = [
+                    'You walk towards a decrepit looking house.',
+                    'Lydia:',
+                    'Lydia:',
+                    'Gwen:',
+                ];
+                let lineBrr = [
+                    '????: Is this really a good idea, Grandma Lydia?',
+                    'Gwendolyn, I am never wrong. Do you have the necklace?',
+                    'Good, I am going home…',
+                    'I hate it when she does that!!!',
+                ];
+                let lineCrr = [
+                    '',
+                    'Gwen:',
+                    'Gwen:',
+                    '(releases a huge sigh)',
+                ];
+                let lineDrr = [
+                    '',
+                    'Yes, I do. It’s hard to forget a heavy chain with a huge cross attached to it.',
+                    "Wait, are you not going in with me? ...Lydia is nowhere to be found…",
+                    'Okay, I need to figure out what is messed up with this house.',
+                ];
 
-        let textIndex = this.state.textNumber;
-        let newIndex = textIndex + 1;
+                let textIndex = this.state.textNumber;
+                let newIndex = textIndex + 1;
 
-        this.setState({
-            lineA: lineArr[textIndex],
-            lineB: lineBrr[textIndex],
-            lineC: lineCrr[textIndex],
-            lineD: lineDrr[textIndex],
-            textNumber: newIndex
-        })
+                this.setState({
+                    lineA: lineArr[textIndex],
+                    lineB: lineBrr[textIndex],
+                    lineC: lineCrr[textIndex],
+                    lineD: lineDrr[textIndex],
+                    textNumber: newIndex
+                })
 
-        console.log('text number: ' + this.state.textNumber);
+                console.log('text number: ' + this.state.textNumber);
 
-        if (this.state.textNumber === 4) {
-            this.setState({
-                choiceMenu: 'initial',
-                textMenu: 'none',
-            })
+                if (this.state.textNumber === 4) {
+                    this.setState({
+                        choiceMenu: 'initial',
+                        textMenu: 'none',
+                    })
+                }
+                break;
+            case 1:
+                this.setState({
+                    choiceMenu: 'initial',
+                    textMenu: 'none',
+                })
+                break;
+            default:
+                console.log('hello');
         }
-
     }
 
     openMainMenu() {
@@ -197,8 +221,9 @@ class Game extends React.Component {
                                 {this.state.lineD}
                             </div>
                             <br />
-                            <button id="textButton" onClick={() => this.changeText()}>Next</button>
+                            <button id="textButton" onClick={() => this.changeText(0)}>Next</button>
                             <br />
+                            <button id="textButton" onClick={() => this.changeText(1)}>Skip</button>
                         </div>
                         <div style={{ display: this.state.choiceMenu }} className="choice-container">
                             <Choice
