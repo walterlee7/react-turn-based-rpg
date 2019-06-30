@@ -25,6 +25,7 @@ class Game extends React.Component {
             floorNumber: '1st',
             floor: 'Front Yard',
             essence: 0,
+            lowHealth: 'black',
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
@@ -151,6 +152,13 @@ class Game extends React.Component {
             alert('HP is at 0. Game Over...')
         }
 
+        let healthLow = childNum.playerMaxHitPointsA * 0.3;
+        if (childNum.playerHitPointsA <= healthLow) {
+            this.setState({
+                lowHealth: 'red',
+            })
+        }
+
         if (childNum.playerTerrorPointsA >= 100) {
             childNum.playerTerrorPointsA = 100;
         }
@@ -252,14 +260,14 @@ class Game extends React.Component {
                                 <div className="playerInfo">
                                     LV: {this.state.player1.playerLevelA}
                                 </div>
-                                <div className="playerInfo">
-                                    HP: {this.state.player1.playerHitPointsA}
+                                <div className="playerInfo" style={{ color: this.state.lowHealth }}>
+                                    HP: {this.state.player1.playerHitPointsA}/{this.state.player1.playerMaxHitPointsA}
                                 </div>
                                 <div className="playerInfo">
-                                    SP: {this.state.player1.playerSpecialPointsA}
+                                    SP: {this.state.player1.playerSpecialPointsA}/{this.state.player1.playerMaxSpecialPointsA}
                                 </div>
                                 <div className="playerInfo">
-                                    TP: {this.state.player1.playerTerrorPointsA}
+                                    TP: {this.state.player1.playerTerrorPointsA}/{this.state.player1.playerMaxTerrorPointsA}
                                 </div>
                             </div>
                             <img id="playerImage" src={playerPortraits[0].url} alt="player" ></img>
