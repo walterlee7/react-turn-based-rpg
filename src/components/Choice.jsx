@@ -74,8 +74,7 @@ class Choice extends React.PureComponent {
     async checkMysteriousFlower() {
         await this.choiceUpdate();
         // console.log(this.state.player1);
-
-        console.dir(this.state.player1);
+        // console.dir(this.state.player1);
 
         this.setState({
             text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive <strong className="damage-text"> -5 damage and +5 terror</strong>.</p>
@@ -88,21 +87,33 @@ class Choice extends React.PureComponent {
             player1: {
                 playerLevelA: this.state.player1.playerLevelA,
                 playerExperienceA: this.state.player1.playerExperienceA,
+                playerToLevelA: this.state.player1.playerToLevelA,
                 playerHitPointsA: flowerDamage,
+                playerMaxHitPointsA: this.state.player1.playerMaxHitPointsA,
                 playerSpecialPointsA: this.state.player1.playerSpecialPointsA,
+                playerMaxSpecialPointsA: this.state.player1.playerMaxSpecialPointsA,
                 playerTerrorPointsA: flowerTerror,
+                playerMaxTerrorPointsA: this.state.player1.playerMaxTerrorPointsA,
+                playerStrengthA: this.state.player1.playerStrengthA,
+                playerConstitutionA: this.state.player1.playerConstitutionA,
+                playerIntelligenceA: this.state.player1.playerIntelligenceA,
+                playerSpiritA: this.state.player1.playerSpiritA,
+                playerAttackPowerA: this.state.player1.playerAttackPowerA,
+                playerMagicPowerA: this.state.player1.playerMagicPowerA,
+                playerPhysicalDefenseA: this.state.player1.playerPhysicalDefenseA,
+                playerMagicDefenseA: this.state.player1.playerMagicDefenseA,
             }
         })
 
-        console.log('player: ' + this.state.player1);
-        console.dir(this.state.player1);
+        // console.log('player: ' + this.state.player1);
+        // console.dir(this.state.player1);
 
         this.props.statUpdate(this.state.player1);
     }
 
     async checkMailbox() {
         await this.setState({
-            text: 'You check the mailbox and find 100 Essense.',
+            text: <p>You check the mailbox and find <strong className='loot-text'>+100 Essence</strong>.</p>,
             essence: 100,
         })
 

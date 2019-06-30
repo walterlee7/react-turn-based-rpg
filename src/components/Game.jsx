@@ -144,7 +144,7 @@ class Game extends React.Component {
 
     updateStats(childNum) {
         // console.log('childNumber: ' + childNumber);
-        console.dir(childNum);
+        // console.dir(childNum);
 
         if (childNum.playerHitPointsA <= 0) {
             childNum.playerHitPointsA = 0;
