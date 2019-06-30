@@ -223,7 +223,7 @@ class Game extends React.Component {
                             <br />
                             <button id="textButton" onClick={() => this.changeText(0)}>Next</button>
                             <br />
-                            <button id="textButton" onClick={() => this.changeText(1)}>Skip</button>
+                            <button id="skipTextButton" onClick={() => this.changeText(1)}>Skip</button>
                         </div>
                         <div style={{ display: this.state.choiceMenu }} className="choice-container">
                             <Choice

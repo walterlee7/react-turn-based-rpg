@@ -103,8 +103,21 @@
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
-#textButton:focus {
+#textButton:focus, #skipTextButton:focus {
     outline: none;
+}
+
+#textButton:hover, #skipTextButton:hover {
+    background-color: rgba(128, 128, 128, 0.438);
+    border: none;
+}
+
+#skipTextButton {
+    float: right;
+    margin-top: 1em;
+    margin-right: 5em;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 .main-bottom {
@@ -288,7 +301,7 @@
     .main-middle, .main-bottom {
         width: 775px;
         margin: 0 auto 0 auto;
-        height: auto;
+        height: 250px;
     }
 
     .playerInfo {
