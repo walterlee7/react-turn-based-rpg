@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/Inventory.css';
 
-export default class Inventory extends React.Component {
+export default class Inventory extends React.PureComponent {
     constructor(props) {
         super(props)
 
@@ -32,8 +32,8 @@ export default class Inventory extends React.Component {
         })
     }
 
-    async addEssence() {
-        await this.setState({
+    addEssence() {
+        this.setState({
             essence: this.props.data.essence,
         })
     }

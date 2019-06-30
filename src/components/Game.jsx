@@ -139,7 +139,7 @@ class Game extends React.Component {
 
     updateEssence(num) {
         this.setState({
-            essence: num,
+            essence: this.state.essence + num,
         })
 
         console.log(this.state.essence);

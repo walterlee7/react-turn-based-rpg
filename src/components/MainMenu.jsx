@@ -21,13 +21,16 @@ class MainMenu extends React.PureComponent {
             playerSpecialPointsA: 12,
             playerTerrorPointsA: 1,
         }
-    }
 
+        this.closeMenu = this.closeMenu.bind(this);
+
+    }
 
     closeMenu() {
         // console.log(this.props.data);
         console.log('close menu');
         this.props.close();
+        ReactDOM.unmountComponentAtNode(document.getElementById('subMenu-location'));
     }
 
     handleClick(num) {
@@ -70,28 +73,28 @@ class MainMenu extends React.PureComponent {
                             <div className="subMenu-div">
                                 <button onClick={() => this.handleClick(1)} className="subMenu">
                                     Status
-                            </button>
+                                </button>
                                 <button onClick={() => this.handleClick(2)} className="subMenu">
                                     Skills
-                            </button>
+                                </button>
                                 <button onClick={() => this.handleClick(3)} className="subMenu">
                                     Inventory
-                            </button>
+                                </button>
                                 <button onClick={() => this.handleClick(4)} className="subMenu">
                                     Equipment
-                            </button>
+                                </button>
                                 <button onClick={() => this.handleClick(5)} className="subMenu">
                                     Quests
-                            </button>
+                                </button>
                                 <button onClick={() => this.handleClick(6)} className="subMenu">
                                     Map
-                            </button>
+                                </button>
                                 <button onClick={() => this.handleClick(7)} className="subMenu">
                                     Guide
-                            </button>
+                                </button>
                                 <button onClick={() => this.handleClick(8)} className="subMenu">
                                     Options
-                            </button>
+                                </button>
                             </div>
                         </div>
                     </div>

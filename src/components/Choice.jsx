@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/Choice.css';
 
-class Choice extends React.Component {
+class Choice extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -45,7 +45,7 @@ class Choice extends React.Component {
         })
     }
 
-    async checkMysteriousFlower() {
+    checkMysteriousFlower() {
 
         // console.log(this.state.player1);
 
@@ -56,7 +56,7 @@ class Choice extends React.Component {
         let flowerDamage = this.props.data.playerHitPointsA - 5;
         let flowerTerror = this.props.data.playerTerrorPointsA + 5;
 
-        await this.setState({
+        this.setState({
             player1: {
                 playerLevelA: this.state.player1.playerLevelA,
                 playerHitPointsA: flowerDamage,
