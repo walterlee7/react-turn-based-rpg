@@ -26,6 +26,7 @@ class Game extends React.Component {
             floor: 'Front Yard',
             essence: 0,
             lowHealth: 'black',
+            lowHealthBlink: 'health-text',
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
@@ -156,6 +157,7 @@ class Game extends React.Component {
         if (childNum.playerHitPointsA <= healthLow) {
             this.setState({
                 lowHealth: 'red',
+                lowHealthBlink: 'blinking',
             })
         }
 
@@ -261,7 +263,7 @@ class Game extends React.Component {
                                     LV: {this.state.player1.playerLevelA}
                                 </div>
                                 <div className="playerInfo" style={{ color: this.state.lowHealth }}>
-                                    HP: {this.state.player1.playerHitPointsA}/{this.state.player1.playerMaxHitPointsA}
+                                    <div className={this.state.lowHealthBlink}>HP:</div> {this.state.player1.playerHitPointsA}/{this.state.player1.playerMaxHitPointsA}
                                 </div>
                                 <div className="playerInfo">
                                     SP: {this.state.player1.playerSpecialPointsA}/{this.state.player1.playerMaxSpecialPointsA}
