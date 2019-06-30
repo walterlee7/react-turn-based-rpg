@@ -24,6 +24,7 @@ class Game extends React.Component {
             location: 'House',
             floorNumber: '1st',
             floor: 'Front Yard',
+            essence: 0,
             playerLevelA: 1,
             playerHitPointsA: 30,
             playerSpecialPointsA: 10,
@@ -46,6 +47,7 @@ class Game extends React.Component {
         this.openMainMenu = this.openMainMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
         this.updateStats = this.updateStats.bind(this);
+        this.updateEssence = this.updateEssence.bind(this);
     }
 
     componentDidMount() {
@@ -135,6 +137,14 @@ class Game extends React.Component {
         })
     }
 
+    updateEssence(num) {
+        this.setState({
+            essence: num,
+        })
+
+        console.log(this.state.essence);
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -190,6 +200,7 @@ class Game extends React.Component {
                             <Choice
                                 data={this.state}
                                 statUpdate={this.updateStats}
+                                essenceUpdate={this.updateEssence}
                             />
                         </div>
                     </div>

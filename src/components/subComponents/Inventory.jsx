@@ -8,7 +8,14 @@ export default class Inventory extends React.Component {
         this.state = {
             itemsDisplay: 'none',
             keyItemsDisplay: 'none',
+            essence: 0,
         }
+
+        this.addEssence = this.addEssence.bind(this);
+    }
+
+    componentDidMount() {
+        this.addEssence();
     }
 
     itemsDisplay() {
@@ -25,6 +32,12 @@ export default class Inventory extends React.Component {
         })
     }
 
+    async addEssence() {
+        await this.setState({
+            essence: this.props.data.essence,
+        })
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -38,7 +51,7 @@ export default class Inventory extends React.Component {
                 </div>
                 <div className="inventory">
                     <div style={{ display: this.state.itemsDisplay }} className="items-container">
-                        No Item Data
+                        Essence: {this.state.essence}
                     </div>
                     <div style={{ display: this.state.keyItemsDisplay }} className="key-items-container">
                         Lydia's Necklace

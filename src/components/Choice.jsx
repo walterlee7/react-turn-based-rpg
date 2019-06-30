@@ -12,7 +12,8 @@ class Choice extends React.Component {
                 playerHitPointsA: 0,
                 playerSpecialPointsA: 0,
                 playerTerrorPointsA: 0,
-            }
+            },
+            essence: 0,
         }
 
         this.enterHouse = this.enterHouse.bind(this);
@@ -69,10 +70,13 @@ class Choice extends React.Component {
         this.props.statUpdate(this.state.player1);
     }
 
-    checkMailbox() {
-        this.setState({
-            text: 'You check the mailbox and...'
+    async checkMailbox() {
+        await this.setState({
+            text: 'You check the mailbox and find 100 Essense.',
+            essence: 100,
         })
+
+        this.props.essenceUpdate(this.state.essence);
     }
 
     runAway() {

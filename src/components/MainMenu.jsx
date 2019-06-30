@@ -11,7 +11,7 @@ import Guide from './subComponents/Guide';
 import Options from './subComponents/Options';
 
 
-class MainMenu extends React.Component {
+class MainMenu extends React.PureComponent {
     constructor(props) {
         super(props)
 
@@ -23,10 +23,10 @@ class MainMenu extends React.Component {
         }
     }
 
+
     closeMenu() {
-        console.log(this.props.data);
+        // console.log(this.props.data);
         console.log('close menu');
-        // this.props.statUpdate(this.state);
         this.props.close();
     }
 
@@ -38,7 +38,7 @@ class MainMenu extends React.Component {
             ReactDOM.render(<Skills />, document.getElementById('subMenu-location'));
         }
         else if (num === 3) {
-            ReactDOM.render(<Inventory />, document.getElementById('subMenu-location'));
+            ReactDOM.render(<Inventory data={this.props.data} />, document.getElementById('subMenu-location'));
         }
         else if (num === 4) {
             ReactDOM.render(<Equipment />, document.getElementById('subMenu-location'));
