@@ -9,15 +9,21 @@ export default class Guide extends React.Component {
             glossaryDisplay: 'none',
             tutorialDisplay: 'none',
             glossaryArray: [],
+            tutorialArray: [],
         }
     }
 
     glossaryDisplay() {
         let glossaryText = [
             "LV = Player Level",
+            "EXP = Experience",
             "HP = Hit Points",
             "SP = Special Points",
             "TP = Terror Points",
+            "STR = Strength",
+            "CON = Constitution",
+            "INT = Intelligence",
+            "SPI = Spirit",
         ];
 
         this.setState({
@@ -28,9 +34,15 @@ export default class Guide extends React.Component {
     }
 
     tutorialDisplay() {
+        let tutorialText = [
+            "When Terror Points reaches 100, you will won't be able take any actions during that battle turn, but Terror Points will go down by 50% on the next turn.",
+            "Game Over when all party member hit points reach zero.",
+        ];
+
         this.setState({
             tutorialDisplay: 'inline-block',
-            glossaryDisplay: 'none'
+            glossaryDisplay: 'none',
+            tutorialArray: tutorialText,
         })
     }
 
@@ -52,7 +64,9 @@ export default class Guide extends React.Component {
                         })}
                     </div>
                     <div style={{ display: this.state.tutorialDisplay }} className="tutorial-container">
-                        No Tutorial Data.
+                        {this.state.tutorialArray.map((text, index) => {
+                            return (<div key={index} className='tutorial-text'>{text}</div>);
+                        })}
                     </div>
                 </div>
             </React.Fragment>
