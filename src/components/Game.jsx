@@ -28,21 +28,21 @@ class Game extends React.Component {
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
-                playerToLevel: 50,
+                playerToLevelA: 50,
                 playerHitPointsA: 30,
                 playerMaxHitPointsA: 30,
                 playerSpecialPointsA: 10,
                 playerMaxSpecialPointsA: 10,
                 playerTerrorPointsA: 0,
                 playerMaxTerrorPointsA: 100,
-                playerStrength: 1,
-                playerConstitution: 2,
-                playerIntelligence: 5,
-                playerSpirit: 5,
-                playerAttackPower: 1,
-                playerMagicPower: 5,
-                playerPhysicalDefense: 1,
-                playerMagicDefense: 5,
+                playerStrengthA: 1,
+                playerConstitutionA: 2,
+                playerIntelligenceA: 5,
+                playerSpiritA: 5,
+                playerAttackPowerA: 1,
+                playerMagicPowerA: 5,
+                playerPhysicalDefenseA: 1,
+                playerMagicDefenseA: 5,
             },
             playerLevelB: 0,
             playerHitPointsB: 0,
@@ -142,25 +142,38 @@ class Game extends React.Component {
         })
     }
 
-    updateStats(childNumber) {
+    updateStats(childNum) {
         // console.log('childNumber: ' + childNumber);
-        console.dir(childNumber);
+        console.dir(childNum);
 
-        if (childNumber.playerHitPointsA <= 0) {
-            childNumber.playerHitPointsA = 0;
+        if (childNum.playerHitPointsA <= 0) {
+            childNum.playerHitPointsA = 0;
             alert('HP is at 0. Game Over...')
         }
 
-        if (childNumber.playerTerrorPointsA >= 100) {
-            childNumber.playerTerrorPointsA = 100;
+        if (childNum.playerTerrorPointsA >= 100) {
+            childNum.playerTerrorPointsA = 100;
         }
 
         this.setState({
             player1: {
-                playerLevelA: childNumber.playerLevelA,
-                playerHitPointsA: childNumber.playerHitPointsA,
-                playerSpecialPointsA: childNumber.playerSpecialPointsA,
-                playerTerrorPointsA: childNumber.playerTerrorPointsA
+                playerLevelA: childNum.playerLevelA,
+                playerExperienceA: childNum.playerExperienceA,
+                playerToLevelA: childNum.playerToLevelA,
+                playerHitPointsA: childNum.playerHitPointsA,
+                playerMaxHitPointsA: childNum.playerMaxHitPointsA,
+                playerSpecialPointsA: childNum.playerSpecialPointsA,
+                playerMaxSpecialPointsA: childNum.playerMaxSpecialPointsA,
+                playerTerrorPointsA: childNum.playerTerrorPointsA,
+                playerMaxTerrorPointsA: childNum.playerMaxTerrorPointsA,
+                playerStrengthA: childNum.playerStrengthA,
+                playerConstitutionA: childNum.playerConstitutionA,
+                playerIntelligenceA: childNum.playerIntelligenceA,
+                playerSpiritA: childNum.playerSpiritA,
+                playerAttackPowerA: childNum.playerAttackPowerA,
+                playerMagicPowerA: childNum.playerMagicPowerA,
+                playerPhysicalDefenseA: childNum.playerPhysicalDefenseA,
+                playerMagicDefenseA: childNum.playerMagicDefenseA,
             }
         })
     }

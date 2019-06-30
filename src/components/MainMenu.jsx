@@ -35,7 +35,7 @@ class MainMenu extends React.PureComponent {
 
     handleClick(num) {
         if (num === 1) {
-            ReactDOM.render(<Status />, document.getElementById('subMenu-location'));
+            ReactDOM.render(<Status data={this.props.data} />, document.getElementById('subMenu-location'));
         }
         else if (num === 2) {
             ReactDOM.render(<Skills />, document.getElementById('subMenu-location'));

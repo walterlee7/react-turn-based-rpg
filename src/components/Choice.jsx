@@ -8,10 +8,23 @@ class Choice extends React.PureComponent {
         this.state = {
             text: '',
             player1: {
-                playerLevelA: 0,
-                playerHitPointsA: 0,
-                playerSpecialPointsA: 0,
+                playerLevelA: 1,
+                playerExperienceA: 0,
+                playerToLevelA: 50,
+                playerHitPointsA: 30,
+                playerMaxHitPointsA: 30,
+                playerSpecialPointsA: 10,
+                playerMaxSpecialPointsA: 10,
                 playerTerrorPointsA: 0,
+                playerMaxTerrorPointsA: 100,
+                playerStrengthA: 1,
+                playerConstitutionA: 2,
+                playerIntelligenceA: 5,
+                playerSpiritA: 5,
+                playerAttackPowerA: 1,
+                playerMagicPowerA: 5,
+                playerPhysicalDefenseA: 1,
+                playerMagicDefenseA: 5,
             },
             essence: 0,
         }
@@ -23,18 +36,31 @@ class Choice extends React.PureComponent {
     }
 
     componentDidMount() {
-        this.update();
+        this.choiceUpdate();
     }
 
-    update() {
+    choiceUpdate() {
         console.log('update');
 
         this.setState({
             player1: {
                 playerLevelA: this.props.data.player1.playerLevelA,
+                playerExperienceA: this.props.data.player1.playerExperienceA,
+                playerToLevelA: this.props.data.player1.playerToLevelA,
                 playerHitPointsA: this.props.data.player1.playerHitPointsA,
+                playerMaxHitPointsA: this.props.data.player1.playerMaxHitPointsA,
                 playerSpecialPointsA: this.props.data.player1.playerSpecialPointsA,
+                playerMaxSpecialPointsA: this.props.data.player1.playerMaxSpecialPointsA,
                 playerTerrorPointsA: this.props.data.player1.playerTerrorPointsA,
+                playerMaxTerrorPointsA: this.props.data.player1.playerMaxTerrorPointsA,
+                playerStrengthA: this.props.data.player1.playerStrengthA,
+                playerConstitutionA: this.props.data.player1.playerConstitutionA,
+                playerIntelligenceA: this.props.data.player1.playerIntelligenceA,
+                playerSpiritA: this.props.data.player1.playerSpiritA,
+                playerAttackPowerA: this.props.data.player1.playerAttackPowerA,
+                playerMagicPowerA: this.props.data.player1.playerMagicPowerA,
+                playerPhysicalDefenseA: this.props.data.player1.playerPhysicalDefenseA,
+                playerMagicDefenseA: this.props.data.player1.playerPhysicalDefenseA,
             }
         })
     }
@@ -46,8 +72,10 @@ class Choice extends React.PureComponent {
     }
 
     async checkMysteriousFlower() {
-        await this.update();
+        await this.choiceUpdate();
         // console.log(this.state.player1);
+
+        console.dir(this.state.player1);
 
         this.setState({
             text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive <strong className="damage-text"> -5 damage and +5 terror</strong>.</p>
@@ -59,6 +87,7 @@ class Choice extends React.PureComponent {
         this.setState({
             player1: {
                 playerLevelA: this.state.player1.playerLevelA,
+                playerExperienceA: this.state.player1.playerExperienceA,
                 playerHitPointsA: flowerDamage,
                 playerSpecialPointsA: this.state.player1.playerSpecialPointsA,
                 playerTerrorPointsA: flowerTerror,
@@ -66,6 +95,7 @@ class Choice extends React.PureComponent {
         })
 
         console.log('player: ' + this.state.player1);
+        console.dir(this.state.player1);
 
         this.props.statUpdate(this.state.player1);
     }
