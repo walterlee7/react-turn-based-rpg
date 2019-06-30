@@ -31,10 +31,10 @@ class Choice extends React.PureComponent {
 
         this.setState({
             player1: {
-                playerLevelA: this.props.data.playerLevelA,
-                playerHitPointsA: this.props.data.playerHitPointsA,
-                playerSpecialPointsA: this.props.data.playerSpecialPointsA,
-                playerTerrorPointsA: this.props.data.playerTerrorPointsA,
+                playerLevelA: this.props.data.player1.playerLevelA,
+                playerHitPointsA: this.props.data.player1.playerHitPointsA,
+                playerSpecialPointsA: this.props.data.player1.playerSpecialPointsA,
+                playerTerrorPointsA: this.props.data.player1.playerTerrorPointsA,
             }
         })
     }
@@ -45,16 +45,16 @@ class Choice extends React.PureComponent {
         })
     }
 
-    checkMysteriousFlower() {
-
+    async checkMysteriousFlower() {
+        await this.update();
         // console.log(this.state.player1);
 
         this.setState({
-            text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive<strong className="damage-text"> -5 damage and +5 terror</strong>.</p>
+            text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive <strong className="damage-text"> -5 damage and +5 terror</strong>.</p>
         })
 
-        let flowerDamage = this.props.data.playerHitPointsA - 5;
-        let flowerTerror = this.props.data.playerTerrorPointsA + 5;
+        let flowerDamage = this.props.data.player1.playerHitPointsA - 5;
+        let flowerTerror = this.props.data.player1.playerTerrorPointsA + 5;
 
         this.setState({
             player1: {
@@ -92,16 +92,16 @@ class Choice extends React.PureComponent {
                 <div className="choice-button-container">
                     <button onClick={this.enterHouse} className="choice-button">
                         Enter House
-                </button>
+                    </button>
                     <button onClick={this.checkMysteriousFlower} className="choice-button">
                         Check Mysterious Flower
-                </button>
+                    </button>
                     <button onClick={this.checkMailbox} className="choice-button">
                         Check Mailbox
-                </button>
+                    </button>
                     <button onClick={this.runAway} className="choice-button">
                         Run Away
-                </button>
+                    </button>
                 </div>
                 <div className="choice-text-container">
                     <div className="choice-text">

@@ -2,7 +2,36 @@ import React from 'react';
 import '../css/Status.css';
 import { playerPortraits } from '../assets/playerPortraits/playerPortraits';
 
-export default class Status extends React.Component {
+export default class Status extends React.PureComponent {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            player1: {
+                playerLevelA: 0,
+                playerExperienceA: 0,
+                playerToLevel: 50,
+                playerHitPointsA: 0,
+                playerMaxHitPointsA: 30,
+                playerSpecialPointsA: 0,
+                playerMaxSpecialPointsA: 10,
+                playerTerrorPointsA: 0,
+                playerMaxTerrorPointsA: 100,
+                playerStrength: 1,
+                playerConstitution: 2,
+                playerIntelligence: 5,
+                playerSpirit: 5,
+                playerAttackPower: 1,
+                playerMagicPower: 5,
+                playerPhysicalDefense: 1,
+                playerMagicDefense: 5,
+            },
+        }
+
+        // this.addEssence = this.addEssence.bind(this);
+    }
+
+
     render() {
         return (
             <React.Fragment>

@@ -25,10 +25,12 @@ class Game extends React.Component {
             floorNumber: '1st',
             floor: 'Front Yard',
             essence: 0,
-            playerLevelA: 1,
-            playerHitPointsA: 30,
-            playerSpecialPointsA: 10,
-            playerTerrorPointsA: 0,
+            player1: {
+                playerLevelA: 1,
+                playerHitPointsA: 30,
+                playerSpecialPointsA: 10,
+                playerTerrorPointsA: 0,
+            },
             playerLevelB: 0,
             playerHitPointsB: 0,
             playerSpecialPointsB: 0,
@@ -118,7 +120,7 @@ class Game extends React.Component {
 
     updateStats(childNumber) {
         // console.log('childNumber: ' + childNumber);
-        // console.dir(childNumber);
+        console.dir(childNumber);
 
         if (childNumber.playerHitPointsA <= 0) {
             childNumber.playerHitPointsA = 0;
@@ -130,10 +132,12 @@ class Game extends React.Component {
         }
 
         this.setState({
-            playerLevelA: childNumber.playerLevelA,
-            playerHitPointsA: childNumber.playerHitPointsA,
-            playerSpecialPointsA: childNumber.playerSpecialPointsA,
-            playerTerrorPointsA: childNumber.playerTerrorPointsA
+            player1: {
+                playerLevelA: childNumber.playerLevelA,
+                playerHitPointsA: childNumber.playerHitPointsA,
+                playerSpecialPointsA: childNumber.playerSpecialPointsA,
+                playerTerrorPointsA: childNumber.playerTerrorPointsA
+            }
         })
     }
 
@@ -208,16 +212,16 @@ class Game extends React.Component {
                         <div className="party mainParty1">
                             <div className="playerInfo-container">
                                 <div className="playerInfo">
-                                    LV: {this.state.playerLevelA}
+                                    LV: {this.state.player1.playerLevelA}
                                 </div>
                                 <div className="playerInfo">
-                                    HP: {this.state.playerHitPointsA}
+                                    HP: {this.state.player1.playerHitPointsA}
                                 </div>
                                 <div className="playerInfo">
-                                    SP: {this.state.playerSpecialPointsA}
+                                    SP: {this.state.player1.playerSpecialPointsA}
                                 </div>
                                 <div className="playerInfo">
-                                    TP: {this.state.playerTerrorPointsA}
+                                    TP: {this.state.player1.playerTerrorPointsA}
                                 </div>
                             </div>
                             <img id="playerImage" src={playerPortraits[0].url} alt="player" ></img>
