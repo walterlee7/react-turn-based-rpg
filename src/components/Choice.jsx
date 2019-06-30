@@ -32,7 +32,7 @@ class Choice extends React.PureComponent {
         this.enterHouse = this.enterHouse.bind(this);
         this.checkMysteriousFlower = this.checkMysteriousFlower.bind(this);
         this.checkMailbox = this.checkMailbox.bind(this);
-        this.runAway = this.runAway.bind(this);
+        this.leaveArea = this.leaveArea.bind(this);
     }
 
     componentDidMount() {
@@ -120,7 +120,7 @@ class Choice extends React.PureComponent {
         this.props.essenceUpdate(this.state.essence);
     }
 
-    runAway() {
+    leaveArea() {
         this.setState({
             text: 'Not an Option...'
         })
@@ -140,8 +140,8 @@ class Choice extends React.PureComponent {
                     <button onClick={this.checkMailbox} className="choice-button">
                         Check Mailbox
                     </button>
-                    <button onClick={this.runAway} className="choice-button">
-                        Run Away
+                    <button onClick={this.leaveArea} className="choice-button">
+                        Leave Area
                     </button>
                 </div>
                 <div className="choice-text-container">

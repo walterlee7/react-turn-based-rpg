@@ -51,7 +51,12 @@ export default class Inventory extends React.PureComponent {
                 </div>
                 <div className="inventory">
                     <div style={{ display: this.state.itemsDisplay }} className="items-container">
-                        Essence: {this.state.essence}
+                        <div className="essence-container">
+                            Essence: {this.state.essence} - game currency.
+                        </div>
+                        <div className="item-text">
+                            First Aid x 10 - heals for 30% HP.
+                        </div>
                     </div>
                     <div style={{ display: this.state.keyItemsDisplay }} className="key-items-container">
                         Lydia's Necklace

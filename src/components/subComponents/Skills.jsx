@@ -58,7 +58,7 @@ export default class Skills extends React.Component {
                 </div>
                 <div className="skills">
                     <div style={{ display: this.state.physicalSkillsDisplay }} className="player1 physical-skill-container">
-                        Slash - Attack Power: 5, SP Cost: 2;
+                        Slash - Attack Power: 5, SP Cost: 1;
                     </div>
                     <div style={{ display: this.state.spiritSkillsDisplay }} className="player1 spirit-skill-container">
                         Shine - Magic Power: 8, SP Cost: 2;
