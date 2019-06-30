@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c0fcf3ae264e28a72d0be4a98abc8b37",
+    "revision": "852ff955c5f7f4b8f0e8e77ee1a2b41c",
     "url": "/react-turn-based-rpg/index.html"
   },
   {
-    "revision": "6fbfc06addf5ba1a7611",
-    "url": "/react-turn-based-rpg/static/css/main.611d4f9b.chunk.css"
+    "revision": "c9d472afd27888a1d819",
+    "url": "/react-turn-based-rpg/static/css/main.a4310743.chunk.css"
   },
   {
     "revision": "9deab55ffa2184f1e7ba",
     "url": "/react-turn-based-rpg/static/js/2.28e4e3cb.chunk.js"
   },
   {
-    "revision": "6fbfc06addf5ba1a7611",
-    "url": "/react-turn-based-rpg/static/js/main.7c08a8fe.chunk.js"
+    "revision": "c9d472afd27888a1d819",
+    "url": "/react-turn-based-rpg/static/js/main.245ac8cc.chunk.js"
   },
   {
     "revision": "402ea09176ef310217c2",
