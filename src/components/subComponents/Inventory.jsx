@@ -9,9 +9,11 @@ export default class Inventory extends React.PureComponent {
             itemsDisplay: 'none',
             keyItemsDisplay: 'none',
             essence: 0,
+            itemNumberFirstAid: 0,
         }
 
         this.addEssence = this.addEssence.bind(this);
+        this.useItem = this.useItem.bind(this);
     }
 
     componentDidMount() {
@@ -38,6 +40,10 @@ export default class Inventory extends React.PureComponent {
         })
     }
 
+    useItem() {
+        console.log("item used");
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -55,7 +61,13 @@ export default class Inventory extends React.PureComponent {
                             Essence: {this.state.essence} - game currency.
                         </div>
                         <div className="item-text">
-                            First Aid x 10 - heals for 30% HP.
+                            <button onClick={this.useItem} className="item-number-button">
+                                {this.state.itemNumberFirstAid}
+                            </button>
+                            <div className="item-description">
+                                First Aid - heals for 30% HP. First Aid - heals for 30% HP.
+                            </div>
+
                         </div>
                     </div>
                     <div style={{ display: this.state.keyItemsDisplay }} className="key-items-container">
