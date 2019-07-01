@@ -9,7 +9,7 @@ export default class Inventory extends React.PureComponent {
             itemsDisplay: 'none',
             keyItemsDisplay: 'none',
             essence: 0,
-            itemNumberFirstAid: 0,
+            itemNumberFirstAid: 5,
         }
 
         this.addEssence = this.addEssence.bind(this);
@@ -41,7 +41,13 @@ export default class Inventory extends React.PureComponent {
     }
 
     useItem() {
-        console.log("item used");
+        if (this.state.itemNumberFirstAid > 0) {
+            let used = this.state.itemNumberFirstAid - 1;
+
+            this.setState({
+                itemNumberFirstAid: used,
+            })
+        }
     }
 
     render() {
