@@ -27,7 +27,10 @@ class Game extends React.Component {
             essence: 0,
             lowHealth: 'black',
             lowHealthBlink: 'health-text',
-            itemNumberFirstAid: 5,
+            items: [
+                { itemNumberFirstAid: 5 },
+                { itemNumberWater: 3 },
+            ],
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
@@ -148,9 +151,9 @@ class Game extends React.Component {
 
     updateItems(childItem) {
         console.log(childItem);
-
         this.setState({
-            itemNumberFirstAid: childItem,
+            itemNumberFirstAid: childItem.itemNumberFirstAid,
+            itemNumberWater: childItem.itemNumberWater,
         })
     }
 

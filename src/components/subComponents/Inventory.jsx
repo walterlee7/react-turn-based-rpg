@@ -9,7 +9,10 @@ export default class Inventory extends React.PureComponent {
             itemsDisplay: 'none',
             keyItemsDisplay: 'none',
             essence: 0,
-            itemNumberFirstAid: 0,
+            items: [
+                { itemNumberFirstAid: 0 },
+                { itemNumberWater: 0 },
+            ],
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
@@ -63,7 +66,10 @@ export default class Inventory extends React.PureComponent {
                 playerPhysicalDefenseA: this.props.data.player1.playerPhysicalDefenseA,
                 playerMagicDefenseA: this.props.data.player1.playerPhysicalDefenseA,
             },
-            itemNumberFirstAid: this.props.data.itemNumberFirstAid,
+            items: {
+                itemNumberFirstAid: this.props.data.itemNumberFirstAid,
+                itemNumberWater: this.props.data.itemNumberWater,
+            },
         })
     }
 
@@ -89,7 +95,8 @@ export default class Inventory extends React.PureComponent {
 
     async useItem() {
         await this.inventoryUpdate();
-        console.log(this.props.data.itemNumberFirstAid);
+        console.log(this.props.data.items.itemNumberFirstAid);
+        console.log(this.props.data.items.itemNumberWater);
 
         if (this.state.itemNumberFirstAid > 0) {
             let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
@@ -151,7 +158,6 @@ export default class Inventory extends React.PureComponent {
                             <div className="item-description">
                                 First Aid - heals for 30% HP. First Aid - heals for 30% HP.
                             </div>
-
                         </div>
                     </div>
                     <div style={{ display: this.state.keyItemsDisplay }} className="key-items-container">
