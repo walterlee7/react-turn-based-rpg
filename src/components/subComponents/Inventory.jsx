@@ -108,47 +108,49 @@ export default class Inventory extends React.PureComponent {
         })
     }
 
-    async useItem() {
-        await this.inventoryUpdate();
-        console.log(this.props.data.items.itemNumber);
+    useItem() {
+        this.inventoryUpdate();
+        console.log(this.props.data.items);
 
-        if (this.state.itemNumber > 0) {
-            let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
-            let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
+        // if (this.state.items.itemNumber > 0) {
+        //     let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
+        //     let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
 
-            let used = this.props.data.items.itemNumber - 1;
+        //     let used = this.props.data.items.itemNumber - 1;
 
-            this.setState({
-                items: [
-                    { itemNumber: used },
-                ],
-                player1: {
-                    playerLevelA: this.state.player1.playerLevelA,
-                    playerExperienceA: this.state.player1.playerExperienceA,
-                    playerToLevelA: this.state.player1.playerToLevelA,
-                    playerHitPointsA: healApplied,
-                    playerMaxHitPointsA: this.state.player1.playerMaxHitPointsA,
-                    playerSpecialPointsA: this.state.player1.playerSpecialPointsA,
-                    playerMaxSpecialPointsA: this.state.player1.playerMaxSpecialPointsA,
-                    playerTerrorPointsA: this.state.player1.playerTerrorPointsA,
-                    playerMaxTerrorPointsA: this.state.player1.playerMaxTerrorPointsA,
-                    playerStrengthA: this.state.player1.playerStrengthA,
-                    playerConstitutionA: this.state.player1.playerConstitutionA,
-                    playerIntelligenceA: this.state.player1.playerIntelligenceA,
-                    playerSpiritA: this.state.player1.playerSpiritA,
-                    playerAttackPowerA: this.state.player1.playerAttackPowerA,
-                    playerMagicPowerA: this.state.player1.playerMagicPowerA,
-                    playerPhysicalDefenseA: this.state.player1.playerPhysicalDefenseA,
-                    playerMagicDefenseA: this.state.player1.playerMagicDefenseA,
-                }
-            })
+        //     this.setState({
+        //         items: [
+        //             {
+        //                 itemNumber: used
+        //             },
+        //         ],
+        //         player1: {
+        //             playerLevelA: this.state.player1.playerLevelA,
+        //             playerExperienceA: this.state.player1.playerExperienceA,
+        //             playerToLevelA: this.state.player1.playerToLevelA,
+        //             playerHitPointsA: healApplied,
+        //             playerMaxHitPointsA: this.state.player1.playerMaxHitPointsA,
+        //             playerSpecialPointsA: this.state.player1.playerSpecialPointsA,
+        //             playerMaxSpecialPointsA: this.state.player1.playerMaxSpecialPointsA,
+        //             playerTerrorPointsA: this.state.player1.playerTerrorPointsA,
+        //             playerMaxTerrorPointsA: this.state.player1.playerMaxTerrorPointsA,
+        //             playerStrengthA: this.state.player1.playerStrengthA,
+        //             playerConstitutionA: this.state.player1.playerConstitutionA,
+        //             playerIntelligenceA: this.state.player1.playerIntelligenceA,
+        //             playerSpiritA: this.state.player1.playerSpiritA,
+        //             playerAttackPowerA: this.state.player1.playerAttackPowerA,
+        //             playerMagicPowerA: this.state.player1.playerMagicPowerA,
+        //             playerPhysicalDefenseA: this.state.player1.playerPhysicalDefenseA,
+        //             playerMagicDefenseA: this.state.player1.playerMagicDefenseA,
+        //         }
+        //     })
 
-            console.log(this.state.items.itemNumber);
-            this.props.updateItems(this.state.items.itemNumber);
-            this.props.updateInventory(this.state.player1);
-        } else {
-            console.log('items all used');
-        }
+        //     console.log(this.state.items.itemNumber);
+        //     this.props.updateItems(this.state.items.itemNumber);
+        //     this.props.updateInventory(this.state.player1);
+        // } else {
+        //     console.log('items all used');
+        // }
     }
 
     render() {
