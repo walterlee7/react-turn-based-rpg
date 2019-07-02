@@ -27,6 +27,7 @@ class Game extends React.Component {
             essence: 0,
             lowHealth: 'black',
             lowHealthBlink: 'health-text',
+            itemNumberFirstAid: 5,
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
