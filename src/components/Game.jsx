@@ -28,8 +28,16 @@ class Game extends React.Component {
             lowHealth: 'black',
             lowHealthBlink: 'health-text',
             items: [
-                { itemNumberFirstAid: 5 },
-                { itemNumberWater: 3 },
+                {
+                    id: 'First Aid',
+                    itemNumber: 5,
+                    itemDescription: 'First Aid: heals for 30% HP.',
+                },
+                {
+                    id: 'Water',
+                    itemNumber: 3,
+                    itemDescription: 'Water: restores for 30% SP.',
+                },
             ],
             player1: {
                 playerLevelA: 1,

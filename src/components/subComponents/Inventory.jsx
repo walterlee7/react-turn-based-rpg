@@ -1,4 +1,5 @@
 import React from 'react';
+import InventoryItemList from './InventoryItemList';
 import '../css/Inventory.css';
 
 export default class Inventory extends React.PureComponent {
@@ -10,8 +11,14 @@ export default class Inventory extends React.PureComponent {
             keyItemsDisplay: 'none',
             essence: 0,
             items: [
-                { itemNumberFirstAid: 0 },
-                { itemNumberWater: 0 },
+                {
+                    itemNumberFirstAid: 0,
+                    itemDescription: '',
+                },
+                {
+                    itemNumberWater: 0,
+                    itemDescription: '',
+                },
             ],
             player1: {
                 playerLevelA: 1,
@@ -66,11 +73,19 @@ export default class Inventory extends React.PureComponent {
                 playerPhysicalDefenseA: this.props.data.player1.playerPhysicalDefenseA,
                 playerMagicDefenseA: this.props.data.player1.playerPhysicalDefenseA,
             },
-            items: [
-                { itemNumberFirstAid: this.props.data.itemNumberFirstAid },
-                { itemNumberWater: this.props.data.itemNumberWater },
-            ],
         })
+
+        // items: [
+        //     {
+        //         id: this.props.data.items.id,
+        //         itemNumber: this.props.data.items.itemNumber,
+        //         itemDescription: this.props.data.items.itemDescription,
+        //     },
+        //     {
+        //         itemNumber: this.props.data.items.itemNumber,
+        //         itemDescription: this.props.data.items.itemDescription,
+        //     },
+        // ],
     }
 
     itemsDisplay() {
@@ -95,18 +110,17 @@ export default class Inventory extends React.PureComponent {
 
     async useItem() {
         await this.inventoryUpdate();
-        console.log(this.props.data.items.itemNumberFirstAid);
-        console.log(this.props.data.items.itemNumberWater);
+        console.log(this.props.data.items.itemNumber);
 
-        if (this.state.itemNumberFirstAid > 0) {
+        if (this.state.itemNumber > 0) {
             let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
             let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
 
-            let used = this.props.data.items.itemNumberFirstAid - 1;
+            let used = this.props.data.items.itemNumber - 1;
 
             this.setState({
                 items: [
-                    { itemNumberFirstAid: used },
+                    { itemNumber: used },
                 ],
                 player1: {
                     playerLevelA: this.state.player1.playerLevelA,
@@ -129,8 +143,8 @@ export default class Inventory extends React.PureComponent {
                 }
             })
 
-            console.log(this.state.items.itemNumberFirstAid);
-            this.props.updateItems(this.state.items.itemNumberFirstAid);
+            console.log(this.state.items.itemNumber);
+            this.props.updateItems(this.state.items.itemNumber);
             this.props.updateInventory(this.state.player1);
         } else {
             console.log('items all used');
@@ -151,24 +165,30 @@ export default class Inventory extends React.PureComponent {
                 <div className="inventory">
                     <div style={{ display: this.state.itemsDisplay }} className="items-container">
                         <div className="essence-container">
-                            {this.state.essence} Essence - game currency.
+                            {this.state.essence} Essence: game currency.
                         </div>
-                        <div className="item-text">
+
+                        <InventoryItemList
+                            useItem={this.useItem}
+                            items={this.props.data.items}
+                        />
+
+                        {/* <div className="item-text">
                             <button onClick={this.useItem} className="item-number-button">
-                                {this.state.itemNumberFirstAid}
+                                {this.state.items[0].values}
                             </button>
                             <div className="item-description">
-                                First Aid - heals for 30% HP.
+                                First Aid: heals for 30% HP.
                             </div>
                         </div>
                         <div className="item-text">
                             <button onClick={this.useItem} className="item-number-button">
-                                {this.state.itemNumberWater}
+                                {this.state.items[1].values}
                             </button>
                             <div className="item-description">
-                                Water - restores for 30% SP.
+                                Water: restores for 30% SP.
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div style={{ display: this.state.keyItemsDisplay }} className="key-items-container">
                         Lydia's Necklace
