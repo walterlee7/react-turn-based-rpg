@@ -152,8 +152,10 @@ class Game extends React.Component {
     updateItems(childItem) {
         console.log(childItem);
         this.setState({
-            itemNumberFirstAid: childItem.itemNumberFirstAid,
-            itemNumberWater: childItem.itemNumberWater,
+            items: [
+                { itemNumberFirstAid: childItem.itemNumberFirstAid },
+                { itemNumberWater: childItem.itemNumberWater },
+            ]
         })
     }
 

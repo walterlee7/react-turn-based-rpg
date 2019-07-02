@@ -66,10 +66,10 @@ export default class Inventory extends React.PureComponent {
                 playerPhysicalDefenseA: this.props.data.player1.playerPhysicalDefenseA,
                 playerMagicDefenseA: this.props.data.player1.playerPhysicalDefenseA,
             },
-            items: {
-                itemNumberFirstAid: this.props.data.itemNumberFirstAid,
-                itemNumberWater: this.props.data.itemNumberWater,
-            },
+            items: [
+                { itemNumberFirstAid: this.props.data.itemNumberFirstAid },
+                { itemNumberWater: this.props.data.itemNumberWater },
+            ],
         })
     }
 
@@ -102,10 +102,12 @@ export default class Inventory extends React.PureComponent {
             let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
             let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
 
-            let used = this.props.data.itemNumberFirstAid - 1;
+            let used = this.props.data.items.itemNumberFirstAid - 1;
 
             this.setState({
-                itemNumberFirstAid: used,
+                items: [
+                    { itemNumberFirstAid: used },
+                ],
                 player1: {
                     playerLevelA: this.state.player1.playerLevelA,
                     playerExperienceA: this.state.player1.playerExperienceA,
@@ -127,8 +129,8 @@ export default class Inventory extends React.PureComponent {
                 }
             })
 
-            console.log(this.state.itemNumberFirstAid);
-            this.props.updateItems(this.state.itemNumberFirstAid);
+            console.log(this.state.items.itemNumberFirstAid);
+            this.props.updateItems(this.state.items.itemNumberFirstAid);
             this.props.updateInventory(this.state.player1);
         } else {
             console.log('items all used');
@@ -149,14 +151,22 @@ export default class Inventory extends React.PureComponent {
                 <div className="inventory">
                     <div style={{ display: this.state.itemsDisplay }} className="items-container">
                         <div className="essence-container">
-                            Essence: {this.state.essence} - game currency.
+                            {this.state.essence} Essence - game currency.
                         </div>
                         <div className="item-text">
                             <button onClick={this.useItem} className="item-number-button">
                                 {this.state.itemNumberFirstAid}
                             </button>
                             <div className="item-description">
-                                First Aid - heals for 30% HP. First Aid - heals for 30% HP.
+                                First Aid - heals for 30% HP.
+                            </div>
+                        </div>
+                        <div className="item-text">
+                            <button onClick={this.useItem} className="item-number-button">
+                                {this.state.itemNumberWater}
+                            </button>
+                            <div className="item-description">
+                                Water - restores for 30% SP.
                             </div>
                         </div>
                     </div>
