@@ -66,6 +66,7 @@ class Game extends React.Component {
         this.closeMenu = this.closeMenu.bind(this);
         this.updateStats = this.updateStats.bind(this);
         this.updateEssence = this.updateEssence.bind(this);
+        this.updateItems = this.updateItems.bind(this);
     }
 
     componentDidMount() {
@@ -145,9 +146,17 @@ class Game extends React.Component {
         })
     }
 
+    updateItems(childItem) {
+        console.log(childItem);
+
+        this.setState({
+            itemNumberFirstAid: childItem,
+        })
+    }
+
     updateStats(childNum) {
         // console.log('childNumber: ' + childNumber);
-        // console.dir(childNum);
+        //console.dir(childNum);
 
         if (childNum.playerHitPointsA <= 0) {
             childNum.playerHitPointsA = 0;
@@ -204,7 +213,9 @@ class Game extends React.Component {
                     <MainMenu
                         data={this.state}
                         close={this.closeMenu}
-                        statUpdate={this.updateStats} />
+                        statUpdate={this.updateStats}
+                        itemUpdate={this.updateItems}
+                    />
                 </div>
                 <div style={{ display: this.state.displayGame }} className="game-container">
                     <div className="main-top">

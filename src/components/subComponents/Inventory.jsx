@@ -88,14 +88,16 @@ export default class Inventory extends React.PureComponent {
     }
 
     async useItem() {
-        console.log(this.props.data);
+        await this.inventoryUpdate();
+        console.log(this.props.data.itemNumberFirstAid);
 
         if (this.state.itemNumberFirstAid > 0) {
-            let used = this.state.itemNumberFirstAid - 1;
             let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
             let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
 
-            await this.setState({
+            let used = this.props.data.itemNumberFirstAid - 1;
+
+            this.setState({
                 itemNumberFirstAid: used,
                 player1: {
                     playerLevelA: this.state.player1.playerLevelA,
@@ -118,6 +120,8 @@ export default class Inventory extends React.PureComponent {
                 }
             })
 
+            console.log(this.state.itemNumberFirstAid);
+            this.props.updateItems(this.state.itemNumberFirstAid);
             this.props.updateInventory(this.state.player1);
         } else {
             console.log('items all used');
