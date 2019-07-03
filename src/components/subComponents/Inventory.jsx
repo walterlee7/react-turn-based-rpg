@@ -75,7 +75,7 @@ export default class Inventory extends React.PureComponent {
         console.log(this.state.player1);
 
         this.props.data.items.map(item => {
-            console.log(item);
+            //console.log(item);
             this.setState({
                 id: item.id,
                 itemNumber: item.itemNumber,
@@ -107,10 +107,17 @@ export default class Inventory extends React.PureComponent {
         })
     }
 
-    useItem() {
-        this.inventoryUpdate();
+    useItem(num) {
+        //this.inventoryUpdate();
         console.log(this.props.data.items);
-        console.log(this.state.items);
+        //console.log(this.state.items);
+
+        console.log(num);
+
+
+
+        // let used = this.props.data.items.itemNumber - 1;
+
 
         this.props.updateItems(this.props.data.items);
         // this.props.updateInventory(this.state.player1);
