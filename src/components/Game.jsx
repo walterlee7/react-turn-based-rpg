@@ -185,6 +185,11 @@ class Game extends React.Component {
                 lowHealth: 'red',
                 lowHealthBlink: 'blinking',
             })
+        } else {
+            this.setState({
+                lowHealth: 'black',
+                lowHealthBlink: 'health-text',
+            })
         }
 
         if (childNum.playerTerrorPointsA >= 100) {
