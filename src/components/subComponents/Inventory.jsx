@@ -12,11 +12,8 @@ export default class Inventory extends React.PureComponent {
             essence: 0,
             items: [
                 {
-                    itemNumberFirstAid: 0,
-                    itemDescription: '',
-                },
-                {
-                    itemNumberWater: 0,
+                    id: '',
+                    itemNumber: 0,
                     itemDescription: '',
                 },
             ],
@@ -47,7 +44,7 @@ export default class Inventory extends React.PureComponent {
 
     componentDidMount() {
         this.addEssence();
-        this.inventoryUpdate();
+        // this.inventoryUpdate();
     }
 
     inventoryUpdate() {
@@ -75,17 +72,19 @@ export default class Inventory extends React.PureComponent {
             },
         })
 
-        // items: [
-        //     {
-        //         id: this.props.data.items.id,
-        //         itemNumber: this.props.data.items.itemNumber,
-        //         itemDescription: this.props.data.items.itemDescription,
-        //     },
-        //     {
-        //         itemNumber: this.props.data.items.itemNumber,
-        //         itemDescription: this.props.data.items.itemDescription,
-        //     },
-        // ],
+        console.log(this.state.player1);
+
+        this.props.data.items.map(item => {
+            console.log(item);
+            this.setState({
+                id: item.id,
+                itemNumber: item.itemNumber,
+                itemDescription: item.itemDescription,
+            })
+            return 'success';
+        })
+
+        console.log(this.state.items);
     }
 
     itemsDisplay() {
@@ -111,6 +110,11 @@ export default class Inventory extends React.PureComponent {
     useItem() {
         this.inventoryUpdate();
         console.log(this.props.data.items);
+        console.log(this.state.items);
+
+        this.props.updateItems(this.props.data.items);
+        // this.props.updateInventory(this.state.player1);
+
 
         // if (this.state.items.itemNumber > 0) {
         //     let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
@@ -175,22 +179,6 @@ export default class Inventory extends React.PureComponent {
                             items={this.props.data.items}
                         />
 
-                        {/* <div className="item-text">
-                            <button onClick={this.useItem} className="item-number-button">
-                                {this.state.items[0].values}
-                            </button>
-                            <div className="item-description">
-                                First Aid: heals for 30% HP.
-                            </div>
-                        </div>
-                        <div className="item-text">
-                            <button onClick={this.useItem} className="item-number-button">
-                                {this.state.items[1].values}
-                            </button>
-                            <div className="item-description">
-                                Water: restores for 30% SP.
-                            </div>
-                        </div> */}
                     </div>
                     <div style={{ display: this.state.keyItemsDisplay }} className="key-items-container">
                         Lydia's Necklace
