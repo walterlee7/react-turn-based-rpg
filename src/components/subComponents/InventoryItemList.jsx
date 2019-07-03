@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InventoryItemList = (props) => {
-    console.log(props.useItem);
+    // console.log(props.useItem);
 
     let listItems = props.items.map((item, index) => {
         // console.log(item);

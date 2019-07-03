@@ -107,13 +107,22 @@ export default class Inventory extends React.PureComponent {
         })
     }
 
-    useItem(num) {
+    useItem(itemId) {
         //this.inventoryUpdate();
         console.log(this.props.data.items);
         //console.log(this.state.items);
 
-        console.log(num);
+        console.log(itemId);
 
+        const itemUpdate = this.props.data.items.filter(item => {
+            if (item.id === itemId) {
+                return item
+            } else {
+                return null;
+            }
+        });
+
+        console.log(itemUpdate);
 
 
         // let used = this.props.data.items.itemNumber - 1;
