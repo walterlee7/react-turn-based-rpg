@@ -44,7 +44,6 @@ export default class Inventory extends React.PureComponent {
 
     componentDidMount() {
         this.addEssence();
-        // this.inventoryUpdate();
     }
 
     inventoryUpdate() {
@@ -71,20 +70,6 @@ export default class Inventory extends React.PureComponent {
                 playerMagicDefenseA: this.props.data.player1.playerPhysicalDefenseA,
             },
         })
-
-        console.log(this.state.player1);
-
-        this.props.data.items.map(item => {
-            //console.log(item);
-            this.setState({
-                id: item.id,
-                itemNumber: item.itemNumber,
-                itemDescription: item.itemDescription,
-            })
-            return 'success';
-        })
-
-        console.log(this.state.items);
     }
 
     itemsDisplay() {
@@ -110,7 +95,6 @@ export default class Inventory extends React.PureComponent {
     useItem(itemId) {
         this.inventoryUpdate();
         console.log(this.props.data.items);
-        //console.log(this.state.items);
 
         console.log(itemId);
 
@@ -119,10 +103,23 @@ export default class Inventory extends React.PureComponent {
                 let used = item.itemNumber - 1;
                 console.log(used);
 
-                item["itemNumber"] = used;
+                let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
+                let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
 
+                let waterUsed = this.props.data.player1.playerMaxSpecialPointsA * 0.3;
+                let spApplied = this.props.data.player1.playerSpecialPointsA + waterUsed;
+
+                if (used >= 0) {
+                    item["itemNumber"] = used;
+                    if (item.id === "First Aid") {
+                        this.props.data.player1.playerHitPointsA = healApplied;
+                    }
+                    if (item.id === "Water") {
+                        this.props.data.player1.playerSpecialPointsA = spApplied;
+                    }
+
+                }
                 console.log(item);
-
                 return item
             } else {
                 return null;
@@ -131,53 +128,8 @@ export default class Inventory extends React.PureComponent {
 
         console.log(itemUpdate);
 
-
-        // let used = this.props.data.items.itemNumber - 1;
-
-
         this.props.updateItems(this.props.data.items);
-        // this.props.updateInventory(this.state.player1);
-
-
-        // if (this.state.items.itemNumber > 0) {
-        //     let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
-        //     let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
-
-        //     let used = this.props.data.items.itemNumber - 1;
-
-        //     this.setState({
-        //         items: [
-        //             {
-        //                 itemNumber: used
-        //             },
-        //         ],
-        //         player1: {
-        //             playerLevelA: this.state.player1.playerLevelA,
-        //             playerExperienceA: this.state.player1.playerExperienceA,
-        //             playerToLevelA: this.state.player1.playerToLevelA,
-        //             playerHitPointsA: healApplied,
-        //             playerMaxHitPointsA: this.state.player1.playerMaxHitPointsA,
-        //             playerSpecialPointsA: this.state.player1.playerSpecialPointsA,
-        //             playerMaxSpecialPointsA: this.state.player1.playerMaxSpecialPointsA,
-        //             playerTerrorPointsA: this.state.player1.playerTerrorPointsA,
-        //             playerMaxTerrorPointsA: this.state.player1.playerMaxTerrorPointsA,
-        //             playerStrengthA: this.state.player1.playerStrengthA,
-        //             playerConstitutionA: this.state.player1.playerConstitutionA,
-        //             playerIntelligenceA: this.state.player1.playerIntelligenceA,
-        //             playerSpiritA: this.state.player1.playerSpiritA,
-        //             playerAttackPowerA: this.state.player1.playerAttackPowerA,
-        //             playerMagicPowerA: this.state.player1.playerMagicPowerA,
-        //             playerPhysicalDefenseA: this.state.player1.playerPhysicalDefenseA,
-        //             playerMagicDefenseA: this.state.player1.playerMagicDefenseA,
-        //         }
-        //     })
-
-        //     console.log(this.state.items.itemNumber);
-        //     this.props.updateItems(this.state.items.itemNumber);
-        //     this.props.updateInventory(this.state.player1);
-        // } else {
-        //     console.log('items all used');
-        // }
+        this.props.updateInventory(this.props.data.player1);
     }
 
     render() {
