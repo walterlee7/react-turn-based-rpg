@@ -158,15 +158,15 @@ class Game extends React.Component {
     }
 
     updateItems(childItem) {
-        console.log(childItem);
+        //console.log(childItem);
         childItem.map(item => {
-            console.log(item);
+            //console.log(item);
             this.setState({
                 id: item.id,
                 itemNumber: item.itemNumber,
                 itemDescription: item.itemDescription,
             })
-            return 'success';
+            return null;
         })
     }
 

@@ -89,23 +89,20 @@ export default class Inventory extends React.PureComponent {
 
     useItem(itemId) {
         this.inventoryUpdate();
-        console.log(this.props.data);
-        console.log(this.props.data.items);
+        //console.log(this.props.data.items);
 
-        console.log(itemId);
+        //console.log(itemId);
 
-        const itemUpdate = this.props.data.items.filter(item => {
+        this.props.data.items.filter(item => {
             if (item.id === itemId && item.itemNumber > 0) {
                 let used = item.itemNumber - 1;
-                console.log(used);
+                //console.log(used);
 
                 let firstAidHeal = this.props.data.player1.playerMaxHitPointsA * 0.3;
                 let healApplied = this.props.data.player1.playerHitPointsA + firstAidHeal;
 
                 let waterUsed = this.props.data.player1.playerMaxSpecialPointsA * 0.3;
                 let spApplied = this.props.data.player1.playerSpecialPointsA + waterUsed;
-
-                let iCounter = this.props.data.inventoryCounter + 1;
 
                 if (used >= 0) {
                     item["itemNumber"] = used;
@@ -116,14 +113,12 @@ export default class Inventory extends React.PureComponent {
                         this.props.data.player1.playerSpecialPointsA = spApplied;
                     }
                 }
-                console.log(item);
+                //console.log(item);
                 return item
             } else {
                 return null;
             }
         });
-
-        console.log(itemUpdate);
 
         this.props.updateItems(this.props.data.items);
         this.props.updateStats(this.props.data.player1);
