@@ -83,8 +83,9 @@ export default class Status extends React.PureComponent {
                     <div className="player1 status-text">
                         TO LV: {this.state.player1.playerToLevelA}
                     </div>
-                    <div className="player1 status-text">
-                        HP: {this.state.player1.playerHitPointsA}/{this.state.player1.playerMaxHitPointsA}
+                    <div className="player1 status-text" style={{ color: this.props.data.lowHealth }}>
+                        <div className={this.props.data.lowHealthBlink}>HP:</div>
+                        {this.state.player1.playerHitPointsA}/{this.state.player1.playerMaxHitPointsA}
                     </div>
                     <div className="player1 status-text">
                         SP: {this.state.player1.playerSpecialPointsA}/{this.state.player1.playerMaxSpecialPointsA}

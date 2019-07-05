@@ -114,7 +114,7 @@ export default class Inventory extends React.PureComponent {
                     }
                 }
                 //console.log(item);
-                return item
+                return item;
             } else {
                 return null;
             }
