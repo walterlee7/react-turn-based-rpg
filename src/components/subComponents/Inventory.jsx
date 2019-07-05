@@ -11,13 +11,6 @@ export default class Inventory extends React.PureComponent {
             itemsDisplay: 'none',
             keyItemsDisplay: 'none',
             essence: 0,
-            items: [
-                {
-                    id: '',
-                    itemNumber: 0,
-                    itemDescription: '',
-                },
-            ],
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
@@ -41,6 +34,7 @@ export default class Inventory extends React.PureComponent {
 
         this.addEssence = this.addEssence.bind(this);
         this.useItem = this.useItem.bind(this);
+        this.inventoryUpdate = this.inventoryUpdate.bind(this);
     }
 
     componentDidMount() {
@@ -95,12 +89,13 @@ export default class Inventory extends React.PureComponent {
 
     useItem(itemId) {
         this.inventoryUpdate();
+        console.log(this.props.data);
         console.log(this.props.data.items);
 
         console.log(itemId);
 
         const itemUpdate = this.props.data.items.filter(item => {
-            if (item.id === itemId) {
+            if (item.id === itemId && item.itemNumber > 0) {
                 let used = item.itemNumber - 1;
                 console.log(used);
 
@@ -110,6 +105,8 @@ export default class Inventory extends React.PureComponent {
                 let waterUsed = this.props.data.player1.playerMaxSpecialPointsA * 0.3;
                 let spApplied = this.props.data.player1.playerSpecialPointsA + waterUsed;
 
+                let iCounter = this.props.data.inventoryCounter + 1;
+
                 if (used >= 0) {
                     item["itemNumber"] = used;
                     if (item.id === "First Aid") {
@@ -118,7 +115,6 @@ export default class Inventory extends React.PureComponent {
                     if (item.id === "Water") {
                         this.props.data.player1.playerSpecialPointsA = spApplied;
                     }
-
                 }
                 console.log(item);
                 return item
@@ -130,7 +126,7 @@ export default class Inventory extends React.PureComponent {
         console.log(itemUpdate);
 
         this.props.updateItems(this.props.data.items);
-        this.props.updateInventory(this.props.data.player1);
+        this.props.updateStats(this.props.data.player1);
     }
 
     render() {
@@ -213,6 +209,7 @@ export default class Inventory extends React.PureComponent {
                     </button>
                 </div>
                 <div className="inventory">
+                    <div style={{ backgroundColor: 'white' }}>{this.props.data.inventoryCounter}</div>
                     <div style={{ display: this.state.itemsDisplay }} className="items-container">
                         <div className="essence-container">
                             {this.state.essence} Essence: game currency.

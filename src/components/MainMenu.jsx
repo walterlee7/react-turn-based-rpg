@@ -43,7 +43,7 @@ class MainMenu extends React.PureComponent {
         else if (num === 3) {
             ReactDOM.render(<Inventory
                 data={this.props.data}
-                updateInventory={this.props.statUpdate}
+                updateStats={this.props.statUpdate}
                 updateItems={this.props.itemUpdate}
             />, document.getElementById('subMenu-location'));
         }
