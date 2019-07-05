@@ -1,5 +1,6 @@
 import React from 'react';
 import InventoryItemList from './InventoryItemList';
+import { playerPortraits } from '../assets/playerPortraits/playerPortraits';
 import '../css/Inventory.css';
 
 export default class Inventory extends React.PureComponent {
@@ -135,6 +136,74 @@ export default class Inventory extends React.PureComponent {
     render() {
         return (
             <React.Fragment>
+                <div className="party mainParty1">
+                    <div className="playerInfo-container">
+                        <div className="playerInfo">
+                            LV: {this.props.data.player1.playerLevelA}
+                        </div>
+                        <div className="playerInfo" style={{ color: this.props.data.lowHealth }}>
+                            <div className={this.props.data.lowHealthBlink}>HP:</div> {this.props.data.player1.playerHitPointsA}/{this.props.data.player1.playerMaxHitPointsA}
+                        </div>
+                        <div className="playerInfo">
+                            SP: {this.props.data.player1.playerSpecialPointsA}/{this.props.data.player1.playerMaxSpecialPointsA}
+                        </div>
+                        <div className="playerInfo">
+                            TP: {this.props.data.player1.playerTerrorPointsA}/{this.props.data.player1.playerMaxTerrorPointsA}
+                        </div>
+                    </div>
+                    <img id="playerImage" src={playerPortraits[0].url} alt="player" ></img>
+                </div>
+                {/* <div className="party mainParty2">
+                    <div className="playerInfo-container">
+                        <div className="playerInfo">
+                            LV: {this.state.playerLevelB}
+                        </div>
+                        <div className="playerInfo">
+                            HP: {this.state.playerHitPointsB}
+                        </div>
+                        <div className="playerInfo">
+                            SP: {this.state.playerSpecialPointsB}
+                        </div>
+                        <div className="playerInfo">
+                            TP: {this.state.playerTerrorPointsB}
+                        </div>
+                    </div>
+                    <img id="playerImage" src={Image} alt="cloud" ></img>
+                </div>
+                <div className="party mainParty3">
+                    <div className="playerInfo-container">
+                        <div className="playerInfo">
+                            LV: {this.state.playerLevelC}
+                        </div>
+                        <div className="playerInfo">
+                            HP: {this.state.playerHitPointsC}
+                        </div>
+                        <div className="playerInfo">
+                            SP: {this.state.playerSpecialPointsC}
+                        </div>
+                        <div className="playerInfo">
+                            TP: {this.state.playerTerrorPointsC}
+                        </div>
+                    </div>
+                    <img id="playerImage" src={Image} alt="cloud" ></img>
+                </div>
+                <div className="party mainParty4">
+                    <div className="playerInfo-container">
+                        <div className="playerInfo">
+                            LV: {this.state.playerLevelD}
+                        </div>
+                        <div className="playerInfo">
+                            HP: {this.state.playerHitPointsD}
+                        </div>
+                        <div className="playerInfo">
+                            SP: {this.state.playerSpecialPointsD}
+                        </div>
+                        <div className="playerInfo">
+                            TP: {this.state.playerTerrorPointsD}
+                        </div>
+                    </div>
+                    <img id="playerImage" src={Image} alt="cloud" ></img>
+                </div> */}
                 <div className="inventory-button-container">
                     <button onClick={() => this.itemsDisplay()} className="inventoryButton">
                         Items
@@ -159,7 +228,7 @@ export default class Inventory extends React.PureComponent {
                         Lydia's Necklace
                     </div>
                 </div>
-            </React.Fragment>
+            </React.Fragment >
         )
     }
 }
