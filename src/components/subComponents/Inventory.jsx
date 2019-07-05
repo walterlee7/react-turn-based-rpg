@@ -120,6 +120,13 @@ export default class Inventory extends React.PureComponent {
             }
         });
 
+        let lowHealth = this.props.data.player1.playerMaxHitPointsA * 0.3;
+
+        if (this.props.data.player1.playerHitPointsA >= lowHealth) {
+            this.props.data.lowHealth = 'black';
+            this.props.data.lowHealthBlink = 'health-text';
+        }
+
         this.props.updateItems(this.props.data.items);
         this.props.updateStats(this.props.data.player1);
     }
