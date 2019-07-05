@@ -71,8 +71,8 @@ class Choice extends React.PureComponent {
         })
     }
 
-    async checkMysteriousFlower() {
-        await this.choiceUpdate();
+    checkMysteriousFlower() {
+        this.choiceUpdate();
         // console.log(this.state.player1);
         // console.dir(this.state.player1);
 
@@ -83,32 +83,12 @@ class Choice extends React.PureComponent {
         let flowerDamage = this.props.data.player1.playerHitPointsA - 5;
         let flowerTerror = this.props.data.player1.playerTerrorPointsA + 5;
 
-        this.setState({
-            player1: {
-                playerLevelA: this.state.player1.playerLevelA,
-                playerExperienceA: this.state.player1.playerExperienceA,
-                playerToLevelA: this.state.player1.playerToLevelA,
-                playerHitPointsA: flowerDamage,
-                playerMaxHitPointsA: this.state.player1.playerMaxHitPointsA,
-                playerSpecialPointsA: this.state.player1.playerSpecialPointsA,
-                playerMaxSpecialPointsA: this.state.player1.playerMaxSpecialPointsA,
-                playerTerrorPointsA: flowerTerror,
-                playerMaxTerrorPointsA: this.state.player1.playerMaxTerrorPointsA,
-                playerStrengthA: this.state.player1.playerStrengthA,
-                playerConstitutionA: this.state.player1.playerConstitutionA,
-                playerIntelligenceA: this.state.player1.playerIntelligenceA,
-                playerSpiritA: this.state.player1.playerSpiritA,
-                playerAttackPowerA: this.state.player1.playerAttackPowerA,
-                playerMagicPowerA: this.state.player1.playerMagicPowerA,
-                playerPhysicalDefenseA: this.state.player1.playerPhysicalDefenseA,
-                playerMagicDefenseA: this.state.player1.playerMagicDefenseA,
-            }
-        })
+        this.props.data.player1.playerHitPointsA = flowerDamage;
+        this.props.data.player1.playerTerrorPointsA = flowerTerror;
 
         // console.log('player: ' + this.state.player1);
-        // console.dir(this.state.player1);
 
-        this.props.statUpdate(this.state.player1);
+        this.props.statUpdate(this.props.data.player1);
     }
 
     async checkMailbox() {
