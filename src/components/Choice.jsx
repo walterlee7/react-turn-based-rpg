@@ -26,7 +26,6 @@ class Choice extends React.PureComponent {
                 playerPhysicalDefenseA: 1,
                 playerMagicDefenseA: 5,
             },
-            essence: 0,
         }
 
         this.enterHouse = this.enterHouse.bind(this);
@@ -91,13 +90,14 @@ class Choice extends React.PureComponent {
         this.props.statUpdate(this.props.data.player1);
     }
 
-    async checkMailbox() {
-        await this.setState({
+    checkMailbox() {
+        this.setState({
             text: <p>You check the mailbox and find <strong className='loot-text'>+100 Essence</strong>.</p>,
-            essence: 100,
         })
 
-        this.props.essenceUpdate(this.state.essence);
+        let essenceUpdate = this.props.data.essence + 100;
+
+        this.props.essenceUpdate(essenceUpdate);
     }
 
     leaveArea() {
