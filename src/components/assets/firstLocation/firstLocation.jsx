@@ -15,6 +15,10 @@ import bossRoom from './bossRoom.jpg';
 
 export const firstLocationImages = [
     {
+        id: 0,
+        level: 'House'
+    },
+    {
         id: 1,
         floor: '1st',
         location: 'Front Yard',
