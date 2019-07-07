@@ -68,7 +68,7 @@ class Choice extends React.PureComponent {
 
     enterHouse() {
         this.setState({
-            text: 'House is locked for now...'
+            frontYardDisplay: 'none'
         })
 
         let hallway = {
@@ -118,28 +118,32 @@ class Choice extends React.PureComponent {
 
     render() {
         return (
-            <div className="choice" style={{ display: this.state.frontYardDisplay }}>
-                <div className='choice-title'>What do you do?</div>
-                <div className="choice-button-container">
-                    <button onClick={this.enterHouse} className="choice-button">
-                        Enter House
+            <React.Fragment>
+                <div className="choice" style={{ display: this.state.frontYardDisplay }}>
+                    <div className='choice-title'>What do you do?</div>
+                    <div className="choice-button-container">
+                        <button onClick={this.enterHouse} className="choice-button">
+                            Enter House
                     </button>
-                    <button onClick={this.checkMysteriousFlower} className="choice-button">
-                        Check Mysterious Flower
+                        <button onClick={this.checkMysteriousFlower} className="choice-button">
+                            Check Mysterious Flower
                     </button>
-                    <button onClick={this.checkMailbox} className="choice-button">
-                        Check Mailbox
+                        <button onClick={this.checkMailbox} className="choice-button">
+                            Check Mailbox
                     </button>
-                    <button onClick={this.leaveArea} className="choice-button">
-                        Leave Area
+                        <button onClick={this.leaveArea} className="choice-button">
+                            Leave Area
                     </button>
-                </div>
-                <div className="choice-text-container">
-                    <div className="choice-text">
-                        {this.state.text}
+                    </div>
+                    <div className="choice-text-container">
+                        <div className="choice-text">
+                            {this.state.text}
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div className="hallway" />
+            </React.Fragment>
+
         )
     }
 }
