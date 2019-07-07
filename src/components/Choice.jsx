@@ -141,7 +141,7 @@ class Choice extends React.PureComponent {
                         </div>
                     </div>
                 </div>
-                <div className="hallway" />
+                <div className="location-change" />
             </React.Fragment>
 
         )
