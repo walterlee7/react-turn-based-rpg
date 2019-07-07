@@ -22,8 +22,9 @@ class Game extends React.Component {
             textMenu: 'initial',
             textNumber: 0,
             location: 'House',
-            floorNumber: '1st',
-            floor: 'Front Yard',
+            floorNumber: firstLocationImages[0].floor,
+            floor: firstLocationImages[0].location,
+            locationImage: firstLocationImages[0].url,
             essence: 0,
             lowHealth: 'black',
             lowHealthBlink: 'health-text',
@@ -241,7 +242,7 @@ class Game extends React.Component {
                 <div style={{ display: this.state.displayGame }} className="game-container">
                     <div className="main-top">
                         <div className="mainTopDiv">
-                            <img className="mainImage" src={firstLocationImages[0].url} alt="location"></img>
+                            <img className="mainImage" src={this.state.locationImage} alt="location"></img>
                             <div className="mainMenuDiv">
                                 <div id="mainMenuContainer">
                                     <div className="mainLocation">
