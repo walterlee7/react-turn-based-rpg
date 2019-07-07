@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/Choice.css';
+import { firstLocationImages } from './assets/firstLocation/firstLocation';
 
 class Choice extends React.PureComponent {
     constructor(props) {
@@ -7,6 +8,7 @@ class Choice extends React.PureComponent {
 
         this.state = {
             text: '',
+            frontYardDisplay: 'initial',
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
@@ -68,6 +70,14 @@ class Choice extends React.PureComponent {
         this.setState({
             text: 'House is locked for now...'
         })
+
+        let hallway = {
+            floorNumber: firstLocationImages[2].floor,
+            floor: firstLocationImages[2].location,
+            locationImage: firstLocationImages[2].url,
+        }
+
+        this.props.locationUpdate(hallway);
     }
 
     checkMysteriousFlower() {
@@ -108,7 +118,7 @@ class Choice extends React.PureComponent {
 
     render() {
         return (
-            <div className="choice">
+            <div className="choice" style={{ display: this.state.frontYardDisplay }}>
                 <div className='choice-title'>What do you do?</div>
                 <div className="choice-button-container">
                     <button onClick={this.enterHouse} className="choice-button">

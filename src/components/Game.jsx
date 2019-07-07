@@ -79,6 +79,7 @@ class Game extends React.Component {
         this.updateStats = this.updateStats.bind(this);
         this.updateEssence = this.updateEssence.bind(this);
         this.updateItems = this.updateItems.bind(this);
+        this.updateLocation = this.updateLocation.bind(this);
     }
 
     componentDidMount() {
@@ -224,8 +225,16 @@ class Game extends React.Component {
         this.setState({
             essence: num,
         })
-
         console.log(this.state.essence);
+    }
+
+    updateLocation(childNum) {
+        this.setState({
+            floorNumber: childNum.floorNumber,
+            floor: childNum.floor,
+            locationImage: childNum.locationImage,
+        })
+        console.log('location updated');
     }
 
     render() {
@@ -287,6 +296,7 @@ class Game extends React.Component {
                                 data={this.state}
                                 statUpdate={this.updateStats}
                                 essenceUpdate={this.updateEssence}
+                                locationUpdate={this.updateLocation}
                             />
                         </div>
                     </div>
