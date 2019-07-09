@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './css/Choice.css';
+import Hallway from './subChoice/Hallway';
 import { firstLocationImages } from './assets/firstLocation/firstLocation';
 
 class Choice extends React.PureComponent {
@@ -78,6 +80,13 @@ class Choice extends React.PureComponent {
         }
 
         this.props.locationUpdate(hallway);
+
+        ReactDOM.render(<Hallway
+            data={this.props.data}
+            statUpdate={this.statUpdate}
+            essenceUpdate={this.essenceUpdate}
+            updateLocation={this.props.locationUpdate}
+        />, document.getElementById('location-change'));
     }
 
     checkMysteriousFlower() {
@@ -141,7 +150,7 @@ class Choice extends React.PureComponent {
                         </div>
                     </div>
                 </div>
-                <div className="location-change" />
+                <div id="location-change" />
             </React.Fragment>
 
         )

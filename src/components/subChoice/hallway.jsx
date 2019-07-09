@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Choice.css';
+import './sub-choice-css/Hallway.css';
 import { firstLocationImages } from '../assets/firstLocation/firstLocation';
 
 class Hallway extends React.PureComponent {
@@ -30,7 +30,7 @@ class Hallway extends React.PureComponent {
             },
         }
 
-        this.enterHouse = this.enterHouse.bind(this);
+        this.enterTopHallway = this.enterTopHallway.bind(this);
         this.checkMysteriousFlower = this.checkMysteriousFlower.bind(this);
         this.checkMailbox = this.checkMailbox.bind(this);
         this.leaveArea = this.leaveArea.bind(this);
@@ -66,18 +66,20 @@ class Hallway extends React.PureComponent {
         })
     }
 
-    enterHouse() {
+    enterTopHallway() {
         this.setState({
             frontYardDisplay: 'none'
         })
 
-        let hallway = {
-            floorNumber: firstLocationImages[2].floor,
-            floor: firstLocationImages[2].location,
-            locationImage: firstLocationImages[2].url,
+        let topHallway = {
+            floorNumber: firstLocationImages[8].floor,
+            floor: firstLocationImages[8].location,
+            locationImage: firstLocationImages[8].url,
         }
 
-        this.props.locationUpdate(hallway);
+        console.log(this.props);
+
+        this.props.updateLocation(topHallway);
     }
 
     checkMysteriousFlower() {
@@ -117,29 +119,30 @@ class Hallway extends React.PureComponent {
     }
 
     render() {
+        console.log(firstLocationImages);
         return (
             <React.Fragment>
                 <div className="choice" style={{ display: this.state.frontYardDisplay }}>
                     <div className='choice-title'>What do you do?</div>
                     <div className="choice-button-container">
-                        <button onClick={this.enterHouse} className="choice-button">
-                            Enter House
-                    </button>
-                        <button onClick={this.checkMysteriousFlower} className="choice-button">
+                        <button onClick={this.enterTopHallway} className="choice-button">
+                            Go to Second Floor
+                        </button>
+                        {/* <button onClick={this.checkMysteriousFlower} className="choice-button">
                             Check Mysterious Flower
-                    </button>
+                        </button>
                         <button onClick={this.checkMailbox} className="choice-button">
                             Check Mailbox
-                    </button>
+                        </button>
                         <button onClick={this.leaveArea} className="choice-button">
                             Leave Area
-                    </button>
+                        </button> */}
                     </div>
-                    <div className="choice-text-container">
+                    {/* <div className="choice-text-container">
                         <div className="choice-text">
                             {this.state.text}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </React.Fragment>
         )
