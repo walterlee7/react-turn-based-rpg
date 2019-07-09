@@ -34,9 +34,6 @@ class Hallway extends React.PureComponent {
 
         this.enterTopHallway = this.enterTopHallway.bind(this);
         this.enterFrontYard = this.enterFrontYard.bind(this);
-        this.checkMysteriousFlower = this.checkMysteriousFlower.bind(this);
-        this.checkMailbox = this.checkMailbox.bind(this);
-        this.leaveArea = this.leaveArea.bind(this);
     }
 
     componentDidMount() {
@@ -114,42 +111,6 @@ class Hallway extends React.PureComponent {
         this.props.updateLocation(topHallway);
     }
 
-    checkMysteriousFlower() {
-        this.choiceUpdate();
-        // console.log(this.state.player1);
-        // console.dir(this.state.player1);
-
-        this.setState({
-            text: <p>The mysterious flower releases a spirit shock when you try to touch it, you receive <strong className="damage-text"> -5 damage and +5 terror</strong>.</p>
-        })
-
-        let flowerDamage = this.props.data.player1.playerHitPointsA - 5;
-        let flowerTerror = this.props.data.player1.playerTerrorPointsA + 5;
-
-        this.props.data.player1.playerHitPointsA = flowerDamage;
-        this.props.data.player1.playerTerrorPointsA = flowerTerror;
-
-        // console.log('player: ' + this.state.player1);
-
-        this.props.statUpdate(this.props.data.player1);
-    }
-
-    checkMailbox() {
-        this.setState({
-            text: <p>You check the mailbox and find <strong className='loot-text'>+100 Essence</strong>.</p>,
-        })
-
-        let essenceUpdate = this.props.data.essence + 100;
-
-        this.props.essenceUpdate(essenceUpdate);
-    }
-
-    leaveArea() {
-        this.setState({
-            text: 'Not an Option...'
-        })
-    }
-
     render() {
         console.log(firstLocationImages);
         return (
@@ -163,12 +124,6 @@ class Hallway extends React.PureComponent {
                         <button onClick={this.enterFrontYard} className="choice-button">
                             Go to Front Yard
                         </button>
-                        {/* <button onClick={this.checkMailbox} className="choice-button">
-                            Check Mailbox
-                        </button>
-                        <button onClick={this.leaveArea} className="choice-button">
-                            Leave Area
-                        </button> */}
                     </div>
                     {/* <div className="choice-text-container">
                         <div className="choice-text">
