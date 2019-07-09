@@ -27,6 +27,7 @@ Future Additions:
 - JSON
 - Sound
 - Map
+- Roman Puzzle
 
 Far Future:
 - Shop

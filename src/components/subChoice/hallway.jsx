@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './sub-choice-css/Hallway.css';
+import Choice from '../Choice';
 import { firstLocationImages } from '../assets/firstLocation/firstLocation';
 
 class Hallway extends React.PureComponent {
@@ -8,7 +10,7 @@ class Hallway extends React.PureComponent {
 
         this.state = {
             text: '',
-            frontYardDisplay: 'initial',
+            hallwayDisplay: 'initial',
             player1: {
                 playerLevelA: 1,
                 playerExperienceA: 0,
@@ -31,6 +33,7 @@ class Hallway extends React.PureComponent {
         }
 
         this.enterTopHallway = this.enterTopHallway.bind(this);
+        this.enterFrontYard = this.enterFrontYard.bind(this);
         this.checkMysteriousFlower = this.checkMysteriousFlower.bind(this);
         this.checkMailbox = this.checkMailbox.bind(this);
         this.leaveArea = this.leaveArea.bind(this);
@@ -64,6 +67,35 @@ class Hallway extends React.PureComponent {
                 playerMagicDefenseA: this.props.data.player1.playerPhysicalDefenseA,
             }
         })
+    }
+
+    enterFrontYard() {
+        this.setState({
+            hallwayDisplay: 'none'
+        })
+
+        ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
+
+        ReactDOM.render(<Choice
+            data={this.props.data}
+            statUpdate={this.props.statUpdate}
+            essenceUpdate={this.props.essenceUpdate}
+            locationUpdate={this.props.updateLocation}
+        />, document.getElementById('location-change'));
+
+        console.log(this.props.choice);
+
+        this.props.choice.frontYardDisplay = "initial";
+
+        let frontYard = {
+            floorNumber: firstLocationImages[1].floor,
+            floor: firstLocationImages[1].location,
+            locationImage: firstLocationImages[1].url,
+        }
+
+        console.log(this.props);
+
+        this.props.updateLocation(frontYard);
     }
 
     enterTopHallway() {
@@ -122,16 +154,16 @@ class Hallway extends React.PureComponent {
         console.log(firstLocationImages);
         return (
             <React.Fragment>
-                <div className="choice" style={{ display: this.state.frontYardDisplay }}>
+                <div className="choice" style={{ display: this.state.hallwayDisplay }}>
                     <div className='choice-title'>What do you do?</div>
                     <div className="choice-button-container">
                         <button onClick={this.enterTopHallway} className="choice-button">
                             Go to Second Floor
                         </button>
-                        {/* <button onClick={this.checkMysteriousFlower} className="choice-button">
-                            Check Mysterious Flower
+                        <button onClick={this.enterFrontYard} className="choice-button">
+                            Go to Front Yard
                         </button>
-                        <button onClick={this.checkMailbox} className="choice-button">
+                        {/* <button onClick={this.checkMailbox} className="choice-button">
                             Check Mailbox
                         </button>
                         <button onClick={this.leaveArea} className="choice-button">
@@ -143,6 +175,7 @@ class Hallway extends React.PureComponent {
                             {this.state.text}
                         </div>
                     </div> */}
+                    <div id="location-change" />
                 </div>
             </React.Fragment>
         )
