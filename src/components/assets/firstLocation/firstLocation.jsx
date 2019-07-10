@@ -92,18 +92,12 @@ export const firstLocationImages = [
     },
     {
         id: 13,
-        floor: '2nd',
-        location: 'Master Bedroom',
-        url: masterBedroom
-    },
-    {
-        id: 14,
         floor: '3rd',
         location: 'Attic',
         url: attic
     },
     {
-        id: 15,
+        id: 14,
         floor: '2nd',
         location: 'Room',
         url: bossRoom
