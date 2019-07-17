@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './sub-choice-css/Hallway.css';
 import Choice from '../Choice';
+import TopHallway from './TopHallway';
 import { firstLocationImages } from '../assets/firstLocation/firstLocation';
 
 class Hallway extends React.PureComponent {
@@ -107,6 +108,13 @@ class Hallway extends React.PureComponent {
         }
 
         ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
+
+        ReactDOM.render(<TopHallway
+            data={this.props.data}
+            statUpdate={this.props.statUpdate}
+            essenceUpdate={this.props.essenceUpdate}
+            locationUpdate={this.props.updateLocation}
+        />, document.getElementById('location-change'));
 
         console.log(this.props);
 

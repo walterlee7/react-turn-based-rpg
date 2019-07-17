@@ -32,8 +32,6 @@ class Hallway extends React.PureComponent {
             },
         }
 
-        this.enterTopHallway = this.enterTopHallway.bind(this);
-        this.enterFrontYard = this.enterFrontYard.bind(this);
         this.enterFirstBedroom = this.enterFirstBedroom.bind(this);
         this.enterSecondBedroom = this.enterSecondBedroom.bind(this);
         this.enterThirdBedroom = this.enterThirdBedroom.bind(this);
@@ -70,35 +68,6 @@ class Hallway extends React.PureComponent {
         })
     }
 
-    enterFrontYard() {
-        this.setState({
-            hallwayDisplay: 'none'
-        })
-
-        ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
-
-        ReactDOM.render(<Choice
-            data={this.props.data}
-            statUpdate={this.props.statUpdate}
-            essenceUpdate={this.props.essenceUpdate}
-            locationUpdate={this.props.updateLocation}
-        />, document.getElementById('location-change'));
-
-        console.log(this.props.choice);
-
-        this.props.choice.frontYardDisplay = "initial";
-
-        let frontYard = {
-            floorNumber: firstLocationImages[1].floor,
-            floor: firstLocationImages[1].location,
-            locationImage: firstLocationImages[1].url,
-        }
-
-        console.log(this.props);
-
-        this.props.updateLocation(frontYard);
-    }
-
     enterFirstBedroom() {
         console.log('first bedroom');
 
@@ -112,7 +81,7 @@ class Hallway extends React.PureComponent {
 
         console.log(this.props);
 
-        this.props.updateLocation(firstBedroom);
+        this.props.locationUpdate(firstBedroom);
     }
 
     enterSecondBedroom() {
@@ -128,7 +97,7 @@ class Hallway extends React.PureComponent {
 
         console.log(this.props);
 
-        this.props.updateLocation(secondBedroom);
+        this.props.locationUpdate(secondBedroom);
     }
 
     enterThirdBedroom() {
@@ -144,7 +113,7 @@ class Hallway extends React.PureComponent {
 
         console.log(this.props);
 
-        this.props.updateLocation(thirdBedroom);
+        this.props.locationUpdate(thirdBedroom);
     }
 
     enterMasterBedroom() {
@@ -160,25 +129,7 @@ class Hallway extends React.PureComponent {
 
         console.log(this.props);
 
-        this.props.updateLocation(masterBedroom);
-    }
-
-    enterTopHallway() {
-        this.setState({
-            frontYardDisplay: 'none'
-        })
-
-        let topHallway = {
-            floorNumber: firstLocationImages[8].floor,
-            floor: firstLocationImages[8].location,
-            locationImage: firstLocationImages[8].url,
-        }
-
-        ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
-
-        console.log(this.props);
-
-        this.props.updateLocation(topHallway);
+        this.props.locationUpdate(masterBedroom);
     }
 
     render() {
