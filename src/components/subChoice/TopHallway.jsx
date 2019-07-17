@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './sub-choice-css/Hallway.css';
-import Choice from '../Choice';
 import { firstLocationImages } from '../assets/firstLocation/firstLocation';
 
 class Hallway extends React.PureComponent {
