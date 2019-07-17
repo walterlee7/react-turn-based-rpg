@@ -106,6 +106,8 @@ class Hallway extends React.PureComponent {
             locationImage: firstLocationImages[8].url,
         }
 
+        ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
+
         console.log(this.props);
 
         this.props.updateLocation(topHallway);
