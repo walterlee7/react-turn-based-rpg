@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-turn-based-rpg/precache-manifest.f4f1a90368a63c86d881bb57b10516ec.js"
+  "/react-turn-based-rpg/precache-manifest.1b0c37a1874aa668ab4059bcd59bb66f.js"
 );
 
 self.addEventListener('message', (event) => {
