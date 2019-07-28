@@ -82,12 +82,12 @@ class SecondBedroom extends React.PureComponent {
             data={this.props.data}
             statUpdate={this.props.statUpdate}
             essenceUpdate={this.props.essenceUpdate}
-            locationUpdate={this.props.updateLocation}
+            locationUpdate={this.props.locationUpdate}
         />, document.getElementById('location-change'));
 
         console.log(this.props);
 
-        this.props.updateLocation(topHallway);
+        this.props.locationUpdate(topHallway);
     }
 
     render() {
