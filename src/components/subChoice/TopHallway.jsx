@@ -5,9 +5,10 @@ import FirstBedroom from './FirstBedroom';
 import SecondBedroom from './SecondBedroom';
 import ThirdBedroom from './ThirdBedroom';
 import MasterBedroom from './MasterBedroom';
+import Hallway from './Hallway';
 import { firstLocationImages } from '../assets/firstLocation/firstLocation';
 
-class Hallway extends React.PureComponent {
+class TopHallway extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -39,6 +40,7 @@ class Hallway extends React.PureComponent {
         this.enterSecondBedroom = this.enterSecondBedroom.bind(this);
         this.enterThirdBedroom = this.enterThirdBedroom.bind(this);
         this.enterMasterBedroom = this.enterMasterBedroom.bind(this);
+        this.enterHallway = this.enterHallway.bind(this);
     }
 
     componentDidMount() {
@@ -165,6 +167,29 @@ class Hallway extends React.PureComponent {
         this.props.locationUpdate(masterBedroom);
     }
 
+    enterHallway() {
+        console.log('hallway');
+
+        let hallway = {
+            floorNumber: firstLocationImages[2].floor,
+            floor: firstLocationImages[2].location,
+            locationImage: firstLocationImages[2].url,
+        }
+
+        ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
+
+        ReactDOM.render(<Hallway
+            data={this.props.data}
+            statUpdate={this.props.statUpdate}
+            essenceUpdate={this.props.essenceUpdate}
+            updateLocation={this.props.locationUpdate}
+        />, document.getElementById('location-change'));
+
+        console.log(this.props);
+
+        this.props.locationUpdate(hallway);
+    }
+
     render() {
         console.log(firstLocationImages);
         return (
@@ -184,6 +209,10 @@ class Hallway extends React.PureComponent {
                         <button onClick={this.enterMasterBedroom} className="choice-button">
                             Go to Master Bedroom
                         </button>
+                        <button onClick={this.enterHallway}
+                            className="choice-button">
+                            Back to Hallway
+                        </button>
                     </div>
                     {/* <div className="choice-text-container">
                         <div className="choice-text">
@@ -197,4 +226,4 @@ class Hallway extends React.PureComponent {
     }
 }
 
-export default Hallway;
+export default TopHallway;
