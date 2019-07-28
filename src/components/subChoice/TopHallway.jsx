@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './sub-choice-css/Hallway.css';
+import FirstBedroom from './FirstBedroom';
+import SecondBedroom from './SecondBedroom';
+import ThirdBedroom from './ThirdBedroom';
+import MasterBedroom from './MasterBedroom';
 import { firstLocationImages } from '../assets/firstLocation/firstLocation';
 
 class Hallway extends React.PureComponent {
@@ -78,6 +82,15 @@ class Hallway extends React.PureComponent {
 
         ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
 
+        console.log(this.props.locationUpdate);
+
+        ReactDOM.render(<FirstBedroom
+            data={this.props.data}
+            statUpdate={this.props.statUpdate}
+            essenceUpdate={this.props.essenceUpdate}
+            locationUpdate={this.props.locationUpdate}
+        />, document.getElementById('location-change'));
+
         console.log(this.props);
 
         this.props.locationUpdate(firstBedroom);
@@ -93,6 +106,13 @@ class Hallway extends React.PureComponent {
         }
 
         ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
+
+        ReactDOM.render(<SecondBedroom
+            data={this.props.data}
+            statUpdate={this.props.statUpdate}
+            essenceUpdate={this.props.essenceUpdate}
+            locationUpdate={this.props.updateLocation}
+        />, document.getElementById('location-change'));
 
         console.log(this.props);
 
@@ -110,6 +130,13 @@ class Hallway extends React.PureComponent {
 
         ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
 
+        ReactDOM.render(<ThirdBedroom
+            data={this.props.data}
+            statUpdate={this.props.statUpdate}
+            essenceUpdate={this.props.essenceUpdate}
+            locationUpdate={this.props.updateLocation}
+        />, document.getElementById('location-change'));
+
         console.log(this.props);
 
         this.props.locationUpdate(thirdBedroom);
@@ -125,6 +152,13 @@ class Hallway extends React.PureComponent {
         }
 
         ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
+
+        ReactDOM.render(<MasterBedroom
+            data={this.props.data}
+            statUpdate={this.props.statUpdate}
+            essenceUpdate={this.props.essenceUpdate}
+            locationUpdate={this.props.updateLocation}
+        />, document.getElementById('location-change'));
 
         console.log(this.props);
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './sub-choice-css/Hallway.css';
-import Choice from '../Choice';
 import TopHallway from './TopHallway';
 import { firstLocationImages } from '../assets/firstLocation/firstLocation';
 
@@ -34,7 +33,6 @@ class ThirdBedroom extends React.PureComponent {
         }
 
         this.enterTopHallway = this.enterTopHallway.bind(this);
-        this.enterFrontYard = this.enterFrontYard.bind(this);
     }
 
     componentDidMount() {
@@ -65,35 +63,6 @@ class ThirdBedroom extends React.PureComponent {
                 playerMagicDefenseA: this.props.data.player1.playerPhysicalDefenseA,
             }
         })
-    }
-
-    enterFrontYard() {
-        this.setState({
-            hallwayDisplay: 'none'
-        })
-
-        ReactDOM.unmountComponentAtNode(document.getElementById('location-change'));
-
-        ReactDOM.render(<Choice
-            data={this.props.data}
-            statUpdate={this.props.statUpdate}
-            essenceUpdate={this.props.essenceUpdate}
-            locationUpdate={this.props.updateLocation}
-        />, document.getElementById('location-change'));
-
-        console.log(this.props.choice);
-
-        this.props.choice.frontYardDisplay = "initial";
-
-        let frontYard = {
-            floorNumber: firstLocationImages[1].floor,
-            floor: firstLocationImages[1].location,
-            locationImage: firstLocationImages[1].url,
-        }
-
-        console.log(this.props);
-
-        this.props.updateLocation(frontYard);
     }
 
     enterTopHallway() {
@@ -129,10 +98,7 @@ class ThirdBedroom extends React.PureComponent {
                     <div className='choice-title'>What do you do?</div>
                     <div className="choice-button-container">
                         <button onClick={this.enterTopHallway} className="choice-button">
-                            Go to Second Floor
-                        </button>
-                        <button onClick={this.enterFrontYard} className="choice-button">
-                            Go to Front Yard
+                            Go to Hallway
                         </button>
                     </div>
                     {/* <div className="choice-text-container">
