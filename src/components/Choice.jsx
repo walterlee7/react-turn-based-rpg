@@ -82,7 +82,6 @@ class Choice extends React.PureComponent {
         this.props.locationUpdate(hallway);
 
         ReactDOM.render(<Hallway
-            choice={this.state}
             data={this.props.data}
             statUpdate={this.props.statUpdate}
             essenceUpdate={this.props.essenceUpdate}

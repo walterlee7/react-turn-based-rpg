@@ -83,7 +83,7 @@ class Hallway extends React.PureComponent {
 
         console.log(this.props.choice);
 
-        this.props.choice.frontYardDisplay = "initial";
+        this.props.data.frontYardDisplay = "initial";
 
         let frontYard = {
             floorNumber: firstLocationImages[1].floor,
